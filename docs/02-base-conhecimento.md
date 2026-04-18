@@ -4,15 +4,12 @@
 
 Descreva se usou os arquivos da pasta `data`, por exemplo:
 
-| Arquivo | Formato | Utilização no Agente |
-|---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| Arquivo                   | Formato | Utilização no Agente                                                        |
+| ------------------------- | ------- | --------------------------------------------------------------------------- |
+| `clientes.csv`            | CSV     | Armazena dados simulados de clientes (idade, renda, histórico de crédito)   |
+| `simulacoes_credito.csv`  | CSV     | Base com exemplos de simulações de crédito e classificação de risco         |
+| `regras_credito.json`     | JSON    | Define regras de decisão (comprometimento de renda, classificação de risco) |
+| `parametros_credito.json` | JSON    | Contém taxas, limites e parâmetros usados no cálculo das parcelas           |
 
 ---
 
@@ -20,7 +17,17 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Os dados originais foram adaptados para atender ao contexto de simulação de crédito, com foco em análise de risco.
+
+As principais modificações foram:
+
+Criação de uma variável de comprometimento de renda (%)
+Inclusão de uma coluna de classificação de risco (baixo, médio, alto)
+Padronização dos dados para evitar inconsistências (valores nulos, formatos diferentes)
+Anonimização completa dos dados (nomes fictícios e dados simulados)
+Redução do escopo para variáveis essenciais, evitando complexidade desnecessária
+
+Além disso, foram criados dados sintéticos para simular diferentes cenários de crédito, permitindo ao agente aprender padrões de decisão.
 
 ---
 
@@ -29,12 +36,33 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos CSV e JSON são carregados no início da aplicação utilizando Python (pandas e json).
+As regras de crédito são mantidas separadas em arquivos estruturados, garantindo flexibilidade e facilidade de manutenção.
+
+Exemplo:
+
+CSV → carregado com pandas
+JSON → carregado como dicionário
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+A integração foi feita de forma híbrida:
+
+Regras de negócio (não vão para o LLM):
+Cálculo da parcela
+Cálculo do comprometimento de renda
+Classificação de risco
+LLM (IA generativa):
+Recebe apenas o resultado final já calculado
+Gera explicações e recomendações
+
+👉 Ou seja:
+
+O LLM não acessa diretamente os dados brutos
+Ele trabalha apenas com um contexto estruturado e validado
+
+Isso reduz significativamente o risco de alucinação.
 
 ---
 
@@ -44,12 +72,19 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 ```
 Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Idade: 32 anos
+- Renda mensal: R$ 4.500
+- Valor solicitado: R$ 10.000
+- Prazo: 12 meses
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+Resultados Calculados:
+- Valor da parcela: R$ 950
+- Comprometimento da renda: 21,1%
+- Classificação de risco: Médio
+
+Regras Aplicadas:
+- Até 20%: Baixo risco
+- 20% a 30%: Médio risco
+- Acima de 30%: Alto risco
 ...
 ```
