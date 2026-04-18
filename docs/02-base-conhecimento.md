@@ -4,12 +4,14 @@
 
 Descreva se usou os arquivos da pasta `data`, por exemplo:
 
-| Arquivo                   | Formato | Utilização no Agente                                                        |
-| ------------------------- | ------- | --------------------------------------------------------------------------- |
-| `clientes.csv`            | CSV     | Armazena dados simulados de clientes (idade, renda, histórico de crédito)   |
-| `simulacoes_credito.csv`  | CSV     | Base com exemplos de simulações de crédito e classificação de risco         |
-| `regras_credito.json`     | JSON    | Define regras de decisão (comprometimento de renda, classificação de risco) |
-| `parametros_credito.json` | JSON    | Contém taxas, limites e parâmetros usados no cálculo das parcelas           |
+| Arquivo                     | Formato | Utilização no Agente                                                                                             |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| `clientes.csv`              | CSV     | Contém dados cadastrais e socioeconômicos dos clientes, como idade, renda e perfil básico                        |
+| `emprestimos_ativos.csv`    | CSV     | Reúne informações dos contratos de crédito ativos, como valor do empréstimo, prazo e saldo                       |
+| `historico_credito.csv`     | CSV     | Armazena indicadores de risco e histórico de crédito do cliente, como inadimplência e sinais de default          |
+| `base_modelagem_agente.csv` | CSV     | Base consolidada para uso principal do agente, reunindo atributos de cliente, crédito e risco em uma única visão |
+| `regras_credito.json`       | JSON    | Define as regras fixas de classificação de risco e apoio à resposta do agente                                    |
+
 
 ---
 
