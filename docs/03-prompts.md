@@ -157,3 +157,5 @@ Para te ajudar com essa análise, preciso de algumas informações como sua rend
 - Uso de few-shot examples melhora consistência das respostas
 - Limitar o escopo do agente aumenta confiabilidade
 - Estrutura fixa de resposta melhora a experiência do usuário
+
+- Realizei teste com CHATgpt, Copilot e identifiquei comportamento diferente no comportamento de resposta, principalmente com envio de perguntas aleatórias, o copilot sempre responde, o CHATgpt ele não alucina em todas as respostas, mas também deu resposta fora do escopo.
