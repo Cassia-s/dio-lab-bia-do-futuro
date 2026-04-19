@@ -26,7 +26,7 @@ st.markdown(
         background: #06101d;
         border-right: 1px solid rgba(255,255,255,0.06);
     }
-    .brand-card, .sidebar-card, .result-card, .chat-card {
+    .brand-card, .sidebar-card, .result-card {
         background: rgba(17, 26, 43, 0.88);
         border: 1px solid rgba(255,255,255,0.08);
         border-radius: 18px;
@@ -68,14 +68,6 @@ st.markdown(
     .good { color: #31d17c; font-weight: 700; }
     .warn { color: #f5c451; font-weight: 700; }
     .bad { color: #ff6961; font-weight: 700; }
-    .score-pill {
-        display: inline-block;
-        padding: 7px 12px;
-        border-radius: 10px;
-        font-weight: 700;
-        background: rgba(49, 209, 124, 0.12);
-        color: #31d17c;
-    }
     .metric-box {
         background: rgba(12, 20, 34, 0.85);
         border: 1px solid rgba(255,255,255,0.06);
@@ -105,22 +97,11 @@ st.markdown(
 # =========================================================
 # Caminhos e arquivos
 # =========================================================
-@st.cache_data
-def load_clients_base() -> Tuple[pd.DataFrame, str]:
-    possible_paths = [
-        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",
-        BASE_DIR / "data" / "clientes.csv",
-        BASE_DIR / "perfil_sidebar_clientes.csv",
-        BASE_DIR / "clientes.csv",
-    ]
-
-    for path in possible_paths:
-        if path.exists():
-            df = pd.read_csv(path)
-            df.columns = [str(c).strip() for c in df.columns]
-            return df, f"Base carregada: {path.name}"
-
-    return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
+BASE_DIR = Path(__file__).parent
+DATA_DIRS = [
+    BASE_DIR / "data",
+    BASE_DIR,
+]
 
 DEFAULT_RULES = {
     "thresholds": {"baixo_max": 0.20, "medio_max": 0.30},
@@ -160,35 +141,21 @@ def load_rules() -> Dict[str, Any]:
 
 
 @st.cache_data
-def load_clients_base() -> pd.DataFrame:
-    csv_path = find_first_existing(
-        [
-            "perfil_sidebar_clientes.csv",
-            "base_modelagem_agente_personalizada.csv",
-            "base_modelagem_agente.csv",
-            "clientes.csv",
-        ]
-    )
-    xlsx_path = find_first_existing(
-        [
-            "base_conhecimento_agente_personalizada.xlsx",
-            "base_conhecimento_agente.xlsx",
-            "base_conhecimento_agente(1).xlsx",
-        ]
-    )
+def load_clients_base() -> Tuple[pd.DataFrame, str]:
+    possible_paths = [
+        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",
+        BASE_DIR / "data" / "clientes.csv",
+        BASE_DIR / "perfil_sidebar_clientes.csv",
+        BASE_DIR / "clientes.csv",
+    ]
 
-    if csv_path:
-        df = pd.read_csv(csv_path)
-    elif xlsx_path:
-        try:
-            df = pd.read_excel(xlsx_path, sheet_name=0)
-        except Exception:
-            return pd.DataFrame()
-    else:
-        return pd.DataFrame()
+    for path in possible_paths:
+        if path.exists():
+            df = pd.read_csv(path)
+            df.columns = [str(c).strip() for c in df.columns]
+            return df, f"Base carregada: {path.name}"
 
-    df.columns = [str(c).strip() for c in df.columns]
-    return df
+    return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
 
 
 # =========================================================
@@ -198,7 +165,6 @@ def format_brl(value: float) -> str:
     return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
-
 def pmt(monthly_rate: float, n_periods: int, principal: float) -> float:
     if n_periods <= 0:
         return 0.0
@@ -206,7 +172,6 @@ def pmt(monthly_rate: float, n_periods: int, principal: float) -> float:
         return principal / n_periods
     factor = (1 + monthly_rate) ** n_periods
     return principal * (monthly_rate * factor) / (factor - 1)
-
 
 
 def classify_risk(comprometimento: float, possui_default: bool, rules: Dict[str, Any]) -> Tuple[str, str]:
@@ -231,7 +196,6 @@ def classify_risk(comprometimento: float, possui_default: bool, rules: Dict[str,
     return risco, mensagem
 
 
-
 def recommendation_text(risco: str, renda: float) -> str:
     if risco == "Baixo":
         return (
@@ -250,10 +214,8 @@ def recommendation_text(risco: str, renda: float) -> str:
     )
 
 
-
 def normalize(text: str) -> str:
     return " ".join(str(text).strip().lower().split())
-
 
 
 def pick_col(df: pd.DataFrame, options: list[str]) -> Optional[str]:
@@ -268,23 +230,20 @@ def pick_col(df: pd.DataFrame, options: list[str]) -> Optional[str]:
     return None
 
 
-
 def infer_client_row(df: pd.DataFrame, full_name: str) -> Tuple[Optional[pd.Series], Optional[str]]:
     if df.empty:
         return None, "A base de clientes não foi encontrada."
 
     name_col = pick_col(df, ["nome_cliente", "nome", "full_name", "name"])
     if not name_col:
-        return None, "A base carregada não possui coluna de nome do cliente."
+        return None, f"A base foi carregada, mas não encontrei coluna de nome. Colunas disponíveis: {list(df.columns)}"
 
     working = df.copy()
     working["__name_norm__"] = working[name_col].astype(str).map(normalize)
     target = normalize(full_name)
 
     exact = working[working["__name_norm__"] == target]
-    if len(exact) == 1:
-        return exact.iloc[0], None
-    if len(exact) > 1:
+    if len(exact) >= 1:
         return exact.iloc[0], None
 
     contains = working[working["__name_norm__"].str.contains(target, na=False)]
@@ -292,10 +251,9 @@ def infer_client_row(df: pd.DataFrame, full_name: str) -> Tuple[Optional[pd.Seri
         return contains.iloc[0], None
     if len(contains) > 1:
         sugestoes = ", ".join(contains[name_col].astype(str).head(5).tolist())
-        return None, f"Encontrei mais de um nome parecido. Tente informar exatamente um destes: {sugestoes}."
+        return None, f"Encontrei mais de um nome parecido. Tente um destes: {sugestoes}"
 
-    return None, "Não encontrei esse nome na base. Digite o nome completo exatamente como está cadastrado no histórico."
-
+    return None, "Não encontrei esse nome na base. Digite exatamente o nome cadastrado no histórico."
 
 
 def get_value(row: pd.Series, options: list[str], default: Any = None) -> Any:
@@ -308,7 +266,6 @@ def get_value(row: pd.Series, options: list[str], default: Any = None) -> Any:
     return default
 
 
-
 def summarize_client(row: pd.Series) -> Dict[str, Any]:
     nome = str(get_value(row, ["nome_cliente", "nome", "name"], "Cliente"))
     primeiro_nome = str(get_value(row, ["primeiro_nome"], nome.split()[0] if nome else "Cliente"))
@@ -317,7 +274,7 @@ def summarize_client(row: pd.Series) -> Dict[str, Any]:
 
     score = get_value(row, ["score_credito", "score", "credit_score"], 720)
     historico_pagamentos = str(get_value(row, ["historico_pagamentos", "payment_history"], "Pontual"))
-    consultas = int(float(get_value(row, ["consultas_ultimo_ano", "consultas", "consultas no ultimo ano"], 2)))
+    consultas = int(float(get_value(row, ["consultas_ultimo_ano", "consultas"], 2)))
     emprestimos_anteriores = int(float(get_value(row, ["emprestimos_anteriores", "previous_loans"], 1)))
     ultimo_emprestimo = str(get_value(row, ["ultimo_emprestimo", "status_ultimo_emprestimo"], "Pago em dia"))
     idade = int(float(get_value(row, ["idade", "age"], 32)))
@@ -342,14 +299,12 @@ def summarize_client(row: pd.Series) -> Dict[str, Any]:
     }
 
 
-
 def score_label(score: int) -> str:
     if score >= 700:
         return "Bom"
     if score >= 550:
         return "Moderado"
     return "Baixo"
-
 
 
 def score_class(score: int) -> str:
@@ -360,11 +315,10 @@ def score_class(score: int) -> str:
     return "bad"
 
 
-
 def local_agent_response(context: Dict[str, Any]) -> str:
     nome = context["primeiro_nome"]
-    risco = context["risco"]
-    risco_txt = risco.lower()
+    risco_txt = context["risco"].lower()
+
     historico_extra = (
         f"Você possui histórico de pagamentos {context['historico_pagamentos'].lower()} e score de crédito {context['score_credito']}, "
         "o que ajuda na leitura do seu perfil."
@@ -379,7 +333,6 @@ def local_agent_response(context: Dict[str, Any]) -> str:
         f"{context['mensagem_base']} {historico_extra}\n\n"
         f"Recomendação: {context['recomendacao']}"
     )
-
 
 
 def build_context(cliente: Dict[str, Any], valor: float, prazo: int, taxa: float, rules: Dict[str, Any]) -> Dict[str, Any]:
@@ -433,7 +386,6 @@ Resultados Calculados:
         "possui_default": cliente["possui_default"],
     }
 
-
 # =========================================================
 # Sessão
 # =========================================================
@@ -458,21 +410,17 @@ def init_session() -> None:
         st.session_state.analise = None
 
 
-
 def reset_chat() -> None:
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": (
-                "Nova conversa iniciada. Digite seu nome completo para eu buscar seu histórico na base."
-            ),
+            "content": "Nova conversa iniciada. Digite seu nome completo para eu buscar seu histórico na base.",
         }
     ]
     st.session_state.step = "nome"
     st.session_state.cliente = None
     st.session_state.dados_simulacao = {"valor": None, "prazo": None, "taxa": None}
     st.session_state.analise = None
-
 
 
 def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
@@ -502,18 +450,17 @@ def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
             if value < 0 or value > 15:
                 return False, None, "Informe uma taxa mensal válida entre 0 e 15."
             return True, value, ""
+
     except ValueError:
         return False, None, f"Não consegui entender {FIELD_LABELS[step]}. Tente novamente."
 
     return False, None, "Entrada inválida."
 
 
-
 def next_step(step: str) -> Optional[str]:
     flow = ["nome", "valor", "prazo", "taxa"]
     idx = flow.index(step)
     return flow[idx + 1] if idx + 1 < len(flow) else None
-
 
 
 def prompt_for_step(step: str, cliente: Optional[Dict[str, Any]] = None) -> str:
@@ -524,7 +471,6 @@ def prompt_for_step(step: str, cliente: Optional[Dict[str, Any]] = None) -> str:
         "taxa": f"Ótimo. Qual taxa de juros mensal você deseja simular, {primeiro_nome}? (Ex.: 2,5)",
     }
     return prompts.get(step, "Pode me informar o próximo dado?")
-
 
 # =========================================================
 # Sidebar
@@ -558,6 +504,7 @@ def render_sidebar(cliente: Optional[Dict[str, Any]]) -> None:
                 unsafe_allow_html=True,
             )
             st.write("")
+
             st.markdown(
                 f"""
                 <div class='sidebar-card'>
@@ -571,12 +518,15 @@ def render_sidebar(cliente: Optional[Dict[str, Any]]) -> None:
                 unsafe_allow_html=True,
             )
             st.write("")
+
+            historico_class = "good" if cliente["historico_pagamentos"].strip().lower() == "pontual" else "warn"
+
             st.markdown(
                 f"""
                 <div class='sidebar-card'>
                     <div class='section-title'>Resumo do seu histórico</div>
                     <div class='muted'>Histórico de pagamentos</div>
-                    <div class='{score_class(cliente['score_credito']) if cliente['historico_pagamentos'].lower() == 'pontual' else 'warn'}' style='margin-bottom:14px;'>
+                    <div class='{historico_class}' style='margin-bottom:14px;'>
                         {cliente['historico_pagamentos']}
                     </div>
                     <div class='muted'>Consultas no último ano</div>
@@ -605,19 +555,24 @@ def render_sidebar(cliente: Optional[Dict[str, Any]]) -> None:
             reset_chat()
             st.rerun()
 
-
 # =========================================================
 # App principal
 # =========================================================
 rules = load_rules()
-clients_df = load_clients_base()
+clients_df, base_status = load_clients_base()
 init_session()
 render_sidebar(st.session_state.cliente)
 
 col_header, col_button = st.columns([6, 1])
+
 with col_header:
     st.title("Converse com o CreditAI")
-    st.markdown("<div class='chat-hint'>Estou aqui para te ajudar a tomar decisões financeiras melhores.</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='chat-hint'>Estou aqui para te ajudar a tomar decisões financeiras melhores.</div>",
+        unsafe_allow_html=True,
+    )
+    st.caption(base_status)
+
 with col_button:
     st.write("")
 
@@ -669,6 +624,7 @@ if user_input:
 
     cliente = st.session_state.cliente
     dados = st.session_state.dados_simulacao
+
     analise = build_context(
         cliente=cliente,
         valor=float(dados["valor"]),
@@ -676,13 +632,13 @@ if user_input:
         taxa=float(dados["taxa"]),
         rules=rules,
     )
+
     st.session_state.analise = analise
     st.session_state.step = "finalizado"
 
     resposta = local_agent_response({**analise, **cliente})
     st.session_state.messages.append({"role": "assistant", "content": resposta})
     st.rerun()
-
 
 if st.session_state.analise and st.session_state.cliente:
     cliente = st.session_state.cliente
@@ -692,9 +648,11 @@ if st.session_state.analise and st.session_state.cliente:
     st.markdown("### 📊 Resultado da Simulação")
 
     left, right = st.columns(2)
+
     with left:
         st.markdown("<div class='result-card'>", unsafe_allow_html=True)
         st.markdown("#### Dados do Cliente")
+
         items = [
             ("Nome", cliente["nome"]),
             ("Idade", f"{cliente['idade']} anos"),
@@ -704,17 +662,21 @@ if st.session_state.analise and st.session_state.cliente:
             ("Taxa mensal", f"{analise['taxa']:.2f}%"),
             ("Histórico de inadimplência/default", "Sim" if cliente["possui_default"] else "Não"),
         ]
+
         for label, value in items:
             st.markdown(
                 f"<div class='metric-box' style='margin-bottom:10px;'><div class='small-label'>{label}</div><div class='small-value'>{value}</div></div>",
                 unsafe_allow_html=True,
             )
+
         st.markdown("</div>", unsafe_allow_html=True)
 
     with right:
         st.markdown("<div class='result-card'>", unsafe_allow_html=True)
         st.markdown("#### Resultados Calculados")
+
         risco_class = "good" if analise["risco"] == "Baixo" else "warn" if analise["risco"] == "Médio" else "bad"
+
         results = [
             ("Valor da parcela", format_brl(analise["parcela"])),
             ("Comprometimento da renda", f"{analise['comprometimento']:.1%}"),
@@ -722,6 +684,7 @@ if st.session_state.analise and st.session_state.cliente:
             ("Explicação base", analise["mensagem_base"]),
             ("Recomendação base", analise["recomendacao"]),
         ]
+
         for row in results:
             if len(row) == 3:
                 label, value, klass = row
@@ -729,20 +692,24 @@ if st.session_state.analise and st.session_state.cliente:
             else:
                 label, value = row
                 value_html = value
+
             st.markdown(
                 f"<div class='metric-box' style='margin-bottom:10px;'><div class='small-label'>{label}</div><div class='small-value'>{value_html}</div></div>",
                 unsafe_allow_html=True,
             )
+
         st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
     st.markdown("### 📌 Considerando seu histórico")
+
     historico_texto = (
         f"Você possui histórico de pagamentos {cliente['historico_pagamentos'].lower()} e um score de crédito de {cliente['score_credito']}, "
         "o que fortalece a leitura do seu perfil. "
         if cliente["score_credito"] >= 700 and not cliente["possui_default"]
         else f"Seu histórico mostra score de crédito {cliente['score_credito']} e requer uma análise mais cuidadosa do comprometimento da renda. "
     )
+
     st.markdown(
         f"""
         <div class='result-card'>
