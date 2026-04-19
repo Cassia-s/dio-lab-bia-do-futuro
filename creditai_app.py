@@ -108,13 +108,11 @@ def recommendation_text(risco: str, parcela: float, renda: float) -> str:
             "A operação exige atenção. Uma alternativa é alongar o prazo ou reduzir o valor solicitado "
             "para deixar a parcela mais leve no orçamento."
         )
-    reducao_ideal = max(parcela - (renda * 0.30), 0)
-valor_ajuste = format_brl(reducao_ideal)
-return (
-    "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado, aumentar "
-    f"o prazo ou buscar uma parcela cerca de {valor_ajuste} menor para voltar a uma faixa mais segura."
+    parcela_segura = renda * 0.30
+    return (
+    "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado ou aumentar "
+    f"o prazo. Para uma faixa mais segura, a parcela ideal seria em torno de {format_brl(parcela_segura)}."
 )
-    )
 
 
 
