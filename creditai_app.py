@@ -1,27 +1,28 @@
 import json
 from pathlib import Path
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
-import numpy as np
 import pandas as pd
+import requests
 import streamlit as st
 
-st.set_page_config(page_title="CreditAI - Simulador de Crédito", page_icon="💳", layout="wide")
+st.set_page_config(page_title="CreditAI Chat", page_icon="💬", layout="wide")
 
 # =========================================================
-# Configurações e caminhos
+# Configurações
 # =========================================================
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "agente_credito_base"
 BASE_PATH = DATA_DIR / "base_modelagem_agente.csv"
 RULES_PATH = DATA_DIR / "regras_credito.json"
+OLLAMA_URL = "http://localhost:11434/api/generate"
+DEFAULT_MODEL = "llama3"
 
 DEFAULT_RULES = {
     "thresholds": {
         "baixo_max": 0.20,
         "medio_max": 0.30
     },
-    "peso_default": True,
     "mensagens": {
         "baixo": "O comprometimento da renda está em um patamar saudável.",
         "medio": "O comprometimento da renda exige atenção antes da contratação.",
@@ -29,8 +30,16 @@ DEFAULT_RULES = {
     }
 }
 
+FIELD_LABELS = {
+    "idade": "idade",
+    "renda": "renda mensal",
+    "valor": "valor do empréstimo",
+    "prazo": "prazo em meses",
+    "historico": "histórico de inadimplência"
+}
+
 # =========================================================
-# Utilitários de carregamento
+# Carregamento de dados
 # =========================================================
 @st.cache_data
 def load_rules() -> Dict[str, Any]:
@@ -47,19 +56,15 @@ def load_base() -> pd.DataFrame:
     return pd.DataFrame()
 
 
-@st.cache_data
-def load_optional_csv(name: str) -> pd.DataFrame:
-    path = DATA_DIR / name
-    if path.exists():
-        return pd.read_csv(path)
-    return pd.DataFrame()
+# =========================================================
+# Funções utilitárias
+# =========================================================
+def format_brl(value: float) -> str:
+    return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
-# =========================================================
-# Funções de negócio
-# =========================================================
+
 def pmt(monthly_rate: float, n_periods: int, principal: float) -> float:
-    """Calcula a parcela mensal de um financiamento."""
     if n_periods <= 0:
         return 0.0
     if monthly_rate == 0:
@@ -81,90 +86,33 @@ def classify_risk(comprometimento: float, possui_default: bool, rules: Dict[str,
     else:
         risco = "Alto"
 
-    # Penalização por histórico de default
     if possui_default:
         if risco == "Baixo":
             risco = "Médio"
         elif risco == "Médio":
             risco = "Alto"
 
-    mensagem_base = rules.get("mensagens", {}).get(risco.lower(), "")
-    return risco, mensagem_base
+    mensagem = rules.get("mensagens", {}).get(risco.lower(), "")
+    return risco, mensagem
 
 
 
-def recommendation_text(risco: str, comprometimento: float, parcela: float, renda: float) -> str:
+def recommendation_text(risco: str, parcela: float, renda: float) -> str:
     if risco == "Baixo":
         return (
-            "A operação está em uma faixa mais confortável. Ainda assim, é recomendável manter "
-            "uma reserva financeira para imprevistos e evitar concentrar grande parte da renda em dívidas."
+            "A operação está em uma faixa mais confortável. Mesmo assim, vale manter uma reserva "
+            "financeira e evitar assumir novas dívidas no curto prazo."
         )
     if risco == "Médio":
         return (
-            "Vale avaliar se existe espaço real no orçamento para essa parcela. Caso queira reduzir o risco, "
-            "uma alternativa é aumentar o prazo ou diminuir o valor solicitado."
+            "A operação exige atenção. Uma alternativa é alongar o prazo ou reduzir o valor solicitado "
+            "para deixar a parcela mais leve no orçamento."
         )
     reducao_ideal = max(parcela - (renda * 0.30), 0)
+    valor_ajuste = format_brl(reducao_ideal)
     return (
-        "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado, aumentar o prazo "
-        f"ou buscar uma parcela cerca de R$ {reducao_ideal:,.2f} menor para voltar a uma faixa mais segura."
-        .replace(",", "X").replace(".", ",").replace("X", ".")
-    )
-
-
-
-def format_brl(value: float) -> str:
-    return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-
-
-
-def montar_contexto(
-    renda_mensal: float,
-    valor_solicitado: float,
-    prazo_meses: int,
-    taxa_mensal: float,
-    parcela: float,
-    comprometimento: float,
-    risco: str,
-    possui_default: bool,
-    idade: int,
-) -> str:
-    return f"""
-Dados do Cliente:
-- Idade: {idade} anos
-- Renda mensal: {format_brl(renda_mensal)}
-- Valor solicitado: {format_brl(valor_solicitado)}
-- Prazo: {prazo_meses} meses
-- Taxa mensal: {taxa_mensal:.2f}%
-- Histórico de default: {'Sim' if possui_default else 'Não'}
-
-Resultados Calculados:
-- Valor da parcela: {format_brl(parcela)}
-- Comprometimento da renda: {comprometimento:.1%}
-- Classificação de risco: {risco}
-""".strip()
-
-
-
-def gerar_resposta_agente(
-    renda_mensal: float,
-    valor_solicitado: float,
-    prazo_meses: int,
-    parcela: float,
-    comprometimento: float,
-    risco: str,
-    possui_default: bool,
-    mensagem_base: str,
-) -> str:
-    historico_txt = "Além disso, existe sinalização de histórico de default, o que aumenta a atenção nessa análise." if possui_default else "Não há sinalização de default na simulação informada."
-
-    return (
-        f"Resumo da situação: para um crédito de {format_brl(valor_solicitado)} em {prazo_meses} meses, "
-        f"a parcela estimada fica em {format_brl(parcela)}.\n\n"
-        f"Interpretação do risco: o comprometimento da renda está em {comprometimento:.1%}, "
-        f"classificando a operação como risco {risco.lower()}.\n\n"
-        f"Explicação: {mensagem_base} {historico_txt}\n\n"
-        f"Recomendação: {recommendation_text(risco, comprometimento, parcela, renda_mensal)}"
+        "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado, aumentar "
+        f"o prazo ou buscar uma parcela cerca de {valor_ajuste} menor para voltar a uma faixa mais segura."
     )
 
 
@@ -174,7 +122,6 @@ def infer_profile_stats(df: pd.DataFrame, renda_mensal: float, idade: int) -> Op
         return None
 
     candidates = df.copy()
-
     renda_cols = [c for c in candidates.columns if "income" in c.lower() or "renda" in c.lower()]
     idade_cols = [c for c in candidates.columns if "age" in c.lower() or "idade" in c.lower()]
     default_cols = [c for c in candidates.columns if "default" in c.lower() or "inad" in c.lower()]
@@ -212,132 +159,321 @@ def infer_profile_stats(df: pd.DataFrame, renda_mensal: float, idade: int) -> Op
 
 
 # =========================================================
-# Interface
+# Prompt e integração com Ollama
+# =========================================================
+def build_system_prompt() -> str:
+    return """
+Você é o CreditAI, um agente financeiro inteligente especializado em simulação e análise de crédito.
+
+Seu objetivo é explicar o resultado de uma simulação de crédito com base em valores já calculados pelo sistema.
+
+REGRAS:
+1. Utilize exclusivamente os dados fornecidos no contexto.
+2. Nunca invente valores, taxas ou informações financeiras.
+3. Você não recalcula nada. Os cálculos já foram feitos pelo sistema.
+4. Seu papel é interpretar o resultado e explicar de forma clara, acessível e profissional.
+5. Sempre explique o motivo da classificação de risco.
+6. Sempre ofereça uma recomendação prática.
+7. Nunca peça para o usuário informar o risco. O risco já vem pronto no contexto.
+8. Se a pergunta estiver fora do escopo de crédito, informe sua limitação e redirecione.
+9. Não forneça dados sigilosos, senhas ou informações de terceiros.
+
+FORMATO DA RESPOSTA:
+- Resumo da situação
+- Interpretação do risco
+- Explicação
+- Recomendação
+""".strip()
+
+
+
+def call_ollama(system_prompt: str, context: str, model: str) -> str:
+    prompt = f"""
+{system_prompt}
+
+CONTEXTO DA ANÁLISE:
+{context}
+
+Gere a resposta final do agente seguindo exatamente o formato pedido.
+""".strip()
+
+    response = requests.post(
+        OLLAMA_URL,
+        json={"model": model, "prompt": prompt, "stream": False},
+        timeout=120,
+    )
+    response.raise_for_status()
+    data = response.json()
+    return data.get("response", "").strip()
+
+
+# =========================================================
+# Fluxo de conversa
+# =========================================================
+def init_session() -> None:
+    if "messages" not in st.session_state:
+        st.session_state.messages = [
+            {
+                "role": "assistant",
+                "content": (
+                    "Olá! Eu sou o CreditAI. Vou te ajudar a simular um crédito. "
+                    "Me informe sua idade para começarmos."
+                ),
+            }
+        ]
+    if "step" not in st.session_state:
+        st.session_state.step = "idade"
+    if "dados_cliente" not in st.session_state:
+        st.session_state.dados_cliente = {
+            "idade": None,
+            "renda": None,
+            "valor": None,
+            "prazo": None,
+            "historico": None,
+        }
+    if "analise" not in st.session_state:
+        st.session_state.analise = None
+
+
+
+def reset_chat() -> None:
+    st.session_state.messages = [
+        {
+            "role": "assistant",
+            "content": "Conversa reiniciada. Me informe sua idade para começarmos uma nova simulação.",
+        }
+    ]
+    st.session_state.step = "idade"
+    st.session_state.dados_cliente = {
+        "idade": None,
+        "renda": None,
+        "valor": None,
+        "prazo": None,
+        "historico": None,
+    }
+    st.session_state.analise = None
+
+
+
+def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
+    cleaned = text.strip().lower().replace("r$", "").replace(".", "").replace(",", ".")
+
+    try:
+        if step == "idade":
+            value = int(cleaned)
+            if value < 18 or value > 100:
+                return False, None, "Informe uma idade válida entre 18 e 100 anos."
+            return True, value, ""
+
+        if step == "renda":
+            value = float(cleaned)
+            if value <= 0:
+                return False, None, "Informe uma renda mensal maior que zero."
+            return True, value, ""
+
+        if step == "valor":
+            value = float(cleaned)
+            if value <= 0:
+                return False, None, "Informe um valor de empréstimo maior que zero."
+            return True, value, ""
+
+        if step == "prazo":
+            value = int(cleaned)
+            if value < 3 or value > 120:
+                return False, None, "Informe um prazo válido entre 3 e 120 meses."
+            return True, value, ""
+
+        if step == "historico":
+            if cleaned in {"sim", "s", "teve", "inadimplente"}:
+                return True, True, ""
+            if cleaned in {"nao", "não", "n", "nunca"}:
+                return True, False, ""
+            return False, None, "Responda apenas com 'sim' ou 'não'."
+
+    except ValueError:
+        return False, None, f"Não consegui entender sua {FIELD_LABELS[step]}. Tente novamente."
+
+    return False, None, "Entrada inválida."
+
+
+
+def next_step(current_step: str) -> Optional[str]:
+    flow = ["idade", "renda", "valor", "prazo", "historico"]
+    idx = flow.index(current_step)
+    return flow[idx + 1] if idx + 1 < len(flow) else None
+
+
+
+def prompt_for_step(step: str) -> str:
+    prompts = {
+        "idade": "Me informe sua idade.",
+        "renda": "Agora me informe sua renda mensal em reais.",
+        "valor": "Qual o valor do empréstimo que você deseja simular?",
+        "prazo": "Em quantos meses você quer pagar esse empréstimo?",
+        "historico": "Você já teve inadimplência ou default antes? Responda com sim ou não.",
+    }
+    return prompts.get(step, "Pode me informar o próximo dado?")
+
+
+
+def build_context(dados: Dict[str, Any], taxa_mensal: float, rules: Dict[str, Any]) -> Dict[str, Any]:
+    renda = float(dados["renda"])
+    valor = float(dados["valor"])
+    prazo = int(dados["prazo"])
+    idade = int(dados["idade"])
+    historico = bool(dados["historico"])
+
+    monthly_rate = taxa_mensal / 100
+    parcela = pmt(monthly_rate, prazo, valor)
+    comprometimento = parcela / renda if renda else 0
+    risco, mensagem_base = classify_risk(comprometimento, historico, rules)
+
+    contexto = f"""
+Dados do Cliente:
+- Idade: {idade} anos
+- Renda mensal: {format_brl(renda)}
+- Valor solicitado: {format_brl(valor)}
+- Prazo: {prazo} meses
+- Taxa mensal: {taxa_mensal:.2f}%
+- Histórico de inadimplência/default: {'Sim' if historico else 'Não'}
+
+Resultados Calculados:
+- Valor da parcela: {format_brl(parcela)}
+- Comprometimento da renda: {comprometimento:.1%}
+- Classificação de risco: {risco}
+- Explicação base: {mensagem_base}
+- Recomendação base: {recommendation_text(risco, parcela, renda)}
+""".strip()
+
+    return {
+        "contexto": contexto,
+        "parcela": parcela,
+        "comprometimento": comprometimento,
+        "risco": risco,
+        "idade": idade,
+        "renda": renda,
+    }
+
+
+# =========================================================
+# Interface principal
 # =========================================================
 rules = load_rules()
 base_df = load_base()
-clientes_df = load_optional_csv("clientes.csv")
-emprestimos_df = load_optional_csv("emprestimos_ativos.csv")
-historico_df = load_optional_csv("historico_credito.csv")
-
-st.title("💳 CreditAI - Simulador de Crédito")
-st.caption("Simulação de crédito com classificação de risco e explicação em linguagem natural.")
+init_session()
 
 with st.sidebar:
     st.header("Configurações")
-    taxa_mensal = st.slider("Taxa de juros mensal (%)", min_value=0.0, max_value=8.0, value=2.5, step=0.1)
-    mostrar_contexto = st.checkbox("Mostrar contexto enviado ao agente", value=True)
-    mostrar_bases = st.checkbox("Mostrar visão rápida das bases", value=False)
+    taxa_mensal = st.slider("Taxa de juros mensal (%)", 0.0, 8.0, 2.5, 0.1)
+    model_name = st.text_input("Modelo no Ollama", value=DEFAULT_MODEL)
+    mostrar_contexto = st.checkbox("Mostrar contexto da análise", value=True)
+    mostrar_base = st.checkbox("Mostrar visão rápida da base", value=False)
 
     st.divider()
-    st.write("**Arquivos encontrados**")
-    st.write(f"Base consolidada: {'✅' if not base_df.empty else '❌'}")
-    st.write(f"Clientes: {'✅' if not clientes_df.empty else '❌'}")
-    st.write(f"Empréstimos: {'✅' if not emprestimos_df.empty else '❌'}")
-    st.write(f"Histórico: {'✅' if not historico_df.empty else '❌'}")
+    st.caption("Use este app com o Ollama rodando localmente em http://localhost:11434")
+    if st.button("Reiniciar conversa", use_container_width=True):
+        reset_chat()
+        st.rerun()
 
-col1, col2 = st.columns([1, 1])
+st.title("💬 CreditAI - Chat de Simulação de Crédito")
+st.caption("Conversa guiada com cálculo automático de parcela, classificação de risco e resposta via Ollama.")
 
-with col1:
-    st.subheader("Entrada do cliente")
-    renda_mensal = st.number_input("Renda mensal (R$)", min_value=0.0, value=4500.0, step=100.0)
-    valor_solicitado = st.number_input("Valor do empréstimo (R$)", min_value=0.0, value=10000.0, step=500.0)
-    prazo_meses = st.slider("Prazo (meses)", min_value=3, max_value=72, value=12, step=1)
-    idade = st.slider("Idade", min_value=18, max_value=80, value=32)
-    possui_default = st.toggle("Cliente possui histórico de default?", value=False)
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-    simular = st.button("Simular crédito", type="primary", use_container_width=True)
+user_input = st.chat_input("Digite sua resposta aqui...")
 
-with col2:
-    st.subheader("Como o app funciona")
-    st.markdown(
-        """
-        1. O usuário informa renda, valor, prazo e perfil básico.  
-        2. O sistema calcula a parcela estimada.  
-        3. O sistema mede o comprometimento da renda.  
-        4. O risco é classificado com regras fixas.  
-        5. O agente explica o resultado em linguagem natural.  
-        """
-    )
+if user_input:
+    st.session_state.messages.append({"role": "user", "content": user_input})
 
-if simular:
-    if renda_mensal <= 0 or valor_solicitado <= 0 or prazo_meses <= 0:
-        st.error("Preencha renda, valor solicitado e prazo com valores válidos.")
+    current_step = st.session_state.step
+    valid, parsed_value, error_msg = parse_step_input(current_step, user_input)
+
+    if not valid:
+        st.session_state.messages.append({"role": "assistant", "content": error_msg})
+        st.rerun()
+
+    st.session_state.dados_cliente[current_step] = parsed_value
+    upcoming_step = next_step(current_step)
+
+    if upcoming_step is not None:
+        st.session_state.step = upcoming_step
+        st.session_state.messages.append({"role": "assistant", "content": prompt_for_step(upcoming_step)})
+        st.rerun()
+
+    try:
+        analise = build_context(st.session_state.dados_cliente, taxa_mensal, rules)
+        st.session_state.analise = analise
+        resposta = call_ollama(build_system_prompt(), analise["contexto"], model_name)
+        st.session_state.messages.append({"role": "assistant", "content": resposta})
+        st.session_state.step = "finalizado"
+        st.rerun()
+    except requests.exceptions.ConnectionError:
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": (
+                    "Não consegui conectar ao Ollama. Verifique se ele está aberto e rodando localmente. "
+                    "Exemplo: `ollama run llama3`."
+                ),
+            }
+        )
+        st.rerun()
+    except requests.exceptions.HTTPError as exc:
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"O Ollama respondeu com erro HTTP: {exc}. Confira o nome do modelo informado na barra lateral.",
+            }
+        )
+        st.rerun()
+    except Exception as exc:
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"Ocorreu um erro inesperado durante a análise: {exc}",
+            }
+        )
+        st.rerun()
+
+if st.session_state.analise:
+    st.divider()
+    st.subheader("Resumo técnico da simulação")
+    k1, k2, k3 = st.columns(3)
+    k1.metric("Parcela estimada", format_brl(st.session_state.analise["parcela"]))
+    k2.metric("Comprometimento da renda", f"{st.session_state.analise['comprometimento']:.1%}")
+    k3.metric("Classificação de risco", st.session_state.analise["risco"])
+
+    stats = infer_profile_stats(base_df, st.session_state.analise["renda"], st.session_state.analise["idade"])
+    if stats:
+        st.subheader("Comparativo com a base histórica")
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Clientes comparáveis", stats["qtd_clientes"])
+        c2.metric("Renda média do grupo", format_brl(stats["renda_media"]))
+        if "taxa_default" in stats:
+            c3.metric("Taxa média de default do grupo", f"{stats['taxa_default']:.1%}")
+        else:
+            c3.metric("Idade média do grupo", f"{stats['idade_media']:.1f} anos")
+
+    if mostrar_contexto:
+        st.subheader("Contexto enviado ao modelo")
+        st.code(st.session_state.analise["contexto"], language="text")
+
+if mostrar_base:
+    st.divider()
+    st.subheader("Prévia da base consolidada")
+    if not base_df.empty:
+        st.dataframe(base_df.head(30), use_container_width=True)
     else:
-        monthly_rate = taxa_mensal / 100
-        parcela = pmt(monthly_rate, prazo_meses, valor_solicitado)
-        comprometimento = parcela / renda_mensal if renda_mensal else 0
-        risco, mensagem_base = classify_risk(comprometimento, possui_default, rules)
+        st.info("A base consolidada não foi encontrada na pasta agente_credito_base.")
 
-        resposta = gerar_resposta_agente(
-            renda_mensal=renda_mensal,
-            valor_solicitado=valor_solicitado,
-            prazo_meses=prazo_meses,
-            parcela=parcela,
-            comprometimento=comprometimento,
-            risco=risco,
-            possui_default=possui_default,
-            mensagem_base=mensagem_base,
-        )
-
-        contexto = montar_contexto(
-            renda_mensal=renda_mensal,
-            valor_solicitado=valor_solicitado,
-            prazo_meses=prazo_meses,
-            taxa_mensal=taxa_mensal,
-            parcela=parcela,
-            comprometimento=comprometimento,
-            risco=risco,
-            possui_default=possui_default,
-            idade=idade,
-        )
-
-        st.divider()
-        k1, k2, k3 = st.columns(3)
-        k1.metric("Parcela estimada", format_brl(parcela))
-        k2.metric("Comprometimento da renda", f"{comprometimento:.1%}")
-        k3.metric("Classificação de risco", risco)
-
-        st.subheader("Resposta do agente")
-        st.success(resposta)
-
-        profile_stats = infer_profile_stats(base_df, renda_mensal, idade)
-        if profile_stats:
-            st.subheader("Comparativo com a base histórica")
-            c1, c2, c3 = st.columns(3)
-            c1.metric("Clientes comparáveis", profile_stats["qtd_clientes"])
-            c2.metric("Renda média do grupo", format_brl(profile_stats["renda_media"]))
-            if "taxa_default" in profile_stats:
-                c3.metric("Taxa média de default do grupo", f"{profile_stats['taxa_default']:.1%}")
-            else:
-                c3.metric("Idade média do grupo", f"{profile_stats['idade_media']:.1f} anos")
-
-        if mostrar_contexto:
-            st.subheader("Contexto montado para o agente")
-            st.code(contexto, language="text")
-
-if mostrar_bases:
-    st.divider()
-    st.subheader("Prévia das bases carregadas")
-
-    tabs = st.tabs(["Base consolidada", "Clientes", "Empréstimos", "Histórico"])
-
-    with tabs[0]:
-        st.dataframe(base_df.head(20), use_container_width=True)
-    with tabs[1]:
-        st.dataframe(clientes_df.head(20), use_container_width=True)
-    with tabs[2]:
-        st.dataframe(emprestimos_df.head(20), use_container_width=True)
-    with tabs[3]:
-        st.dataframe(historico_df.head(20), use_container_width=True)
-
-st.divider()
-with st.expander("Notas técnicas do projeto"):
+with st.expander("Notas técnicas"):
     st.markdown(
         """
-        - A decisão de risco é baseada em regras fixas, não no modelo de linguagem.
-        - O agente apenas interpreta os resultados e gera uma explicação em linguagem natural.
-        - Isso reduz alucinação e aumenta a transparência da solução.
-        - Caso queira, você pode conectar uma API de LLM depois, mantendo a mesma estrutura de contexto.
+        - O usuário informa apenas dados simples no chat.
+        - O sistema calcula parcela, comprometimento e risco antes de enviar o contexto ao modelo.
+        - O Ollama recebe apenas o contexto calculado e responde como explicador da análise.
+        - Isso mantém a lógica financeira controlada e reduz alucinação.
         """
     )
