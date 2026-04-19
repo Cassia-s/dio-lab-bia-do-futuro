@@ -105,12 +105,22 @@ st.markdown(
 # =========================================================
 # Caminhos e arquivos
 # =========================================================
-BASE_DIR = Path(__file__).parent
-DATA_DIRS = [
-    BASE_DIR / "agente_credito_base_personalizada",
-    BASE_DIR / "agente_credito_base",
-    BASE_DIR,
-]
+@st.cache_data
+def load_clients_base() -> Tuple[pd.DataFrame, str]:
+    possible_paths = [
+        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",
+        BASE_DIR / "data" / "clientes.csv",
+        BASE_DIR / "perfil_sidebar_clientes.csv",
+        BASE_DIR / "clientes.csv",
+    ]
+
+    for path in possible_paths:
+        if path.exists():
+            df = pd.read_csv(path)
+            df.columns = [str(c).strip() for c in df.columns]
+            return df, f"Base carregada: {path.name}"
+
+    return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
 
 DEFAULT_RULES = {
     "thresholds": {"baixo_max": 0.20, "medio_max": 0.30},
