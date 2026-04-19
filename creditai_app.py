@@ -1,59 +1,184 @@
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, Optional, Tuple
 
 import pandas as pd
-import requests
 import streamlit as st
 
-st.set_page_config(page_title="CreditAI Chat", page_icon="💬", layout="wide")
+st.set_page_config(page_title="CreditAI", page_icon="💬", layout="wide")
 
 # =========================================================
-# Configurações
+# Configuração visual
+# =========================================================
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(180deg, #07111f 0%, #091427 100%);
+        color: #f5f7fb;
+    }
+    .main .block-container {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        max-width: 1400px;
+    }
+    [data-testid="stSidebar"] {
+        background: #06101d;
+        border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .brand-card, .sidebar-card, .result-card, .chat-card {
+        background: rgba(17, 26, 43, 0.88);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+    }
+    .brand-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.1rem;
+    }
+    .brand-sub {
+        color: #aab6d3;
+        font-size: 0.96rem;
+        margin-bottom: 0;
+    }
+    .client-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #7c4dff 0%, #9f67ff 100%);
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-right: 12px;
+    }
+    .section-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .muted {
+        color: #9aa8c5;
+        font-size: 0.93rem;
+    }
+    .good { color: #31d17c; font-weight: 700; }
+    .warn { color: #f5c451; font-weight: 700; }
+    .bad { color: #ff6961; font-weight: 700; }
+    .score-pill {
+        display: inline-block;
+        padding: 7px 12px;
+        border-radius: 10px;
+        font-weight: 700;
+        background: rgba(49, 209, 124, 0.12);
+        color: #31d17c;
+    }
+    .metric-box {
+        background: rgba(12, 20, 34, 0.85);
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 16px;
+        padding: 14px;
+    }
+    .small-label {
+        color: #97a5c3;
+        font-size: 0.82rem;
+        margin-bottom: 4px;
+    }
+    .small-value {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #f4f7fb;
+    }
+    .chat-hint {
+        color: #95a3c0;
+        margin-top: -4px;
+        margin-bottom: 12px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# =========================================================
+# Caminhos e arquivos
 # =========================================================
 BASE_DIR = Path(__file__).parent
-DATA_DIR = BASE_DIR / "agente_credito_base"
-BASE_PATH = DATA_DIR / "base_modelagem_agente.csv"
-RULES_PATH = DATA_DIR / "regras_credito.json"
-OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "llama3"
+DATA_DIRS = [
+    BASE_DIR / "agente_credito_base_personalizada",
+    BASE_DIR / "agente_credito_base",
+    BASE_DIR,
+]
 
 DEFAULT_RULES = {
-    "thresholds": {
-        "baixo_max": 0.20,
-        "medio_max": 0.30
-    },
+    "thresholds": {"baixo_max": 0.20, "medio_max": 0.30},
     "mensagens": {
         "baixo": "O comprometimento da renda está em um patamar saudável.",
         "medio": "O comprometimento da renda exige atenção antes da contratação.",
-        "alto": "O comprometimento da renda está elevado e aumenta o risco financeiro."
-    }
+        "alto": "O comprometimento da renda está elevado e aumenta o risco financeiro.",
+    },
 }
 
 FIELD_LABELS = {
-    "idade": "idade",
-    "renda": "renda mensal",
+    "nome": "nome completo",
     "valor": "valor do empréstimo",
     "prazo": "prazo em meses",
-    "historico": "histórico de inadimplência"
+    "taxa": "taxa de juros mensal",
 }
 
 # =========================================================
-# Carregamento de dados
+# Utilidades de arquivos
 # =========================================================
+def find_first_existing(possible_names: list[str]) -> Optional[Path]:
+    for data_dir in DATA_DIRS:
+        for name in possible_names:
+            path = data_dir / name
+            if path.exists():
+                return path
+    return None
+
+
 @st.cache_data
 def load_rules() -> Dict[str, Any]:
-    if RULES_PATH.exists():
-        with open(RULES_PATH, "r", encoding="utf-8") as f:
+    rules_path = find_first_existing(["regras_credito.json"])
+    if rules_path:
+        with open(rules_path, "r", encoding="utf-8") as f:
             return json.load(f)
     return DEFAULT_RULES
 
 
 @st.cache_data
-def load_base() -> pd.DataFrame:
-    if BASE_PATH.exists():
-        return pd.read_csv(BASE_PATH)
-    return pd.DataFrame()
+def load_clients_base() -> pd.DataFrame:
+    csv_path = find_first_existing(
+        [
+            "perfil_sidebar_clientes.csv",
+            "base_modelagem_agente_personalizada.csv",
+            "base_modelagem_agente.csv",
+            "clientes.csv",
+        ]
+    )
+    xlsx_path = find_first_existing(
+        [
+            "base_conhecimento_agente_personalizada.xlsx",
+            "base_conhecimento_agente.xlsx",
+            "base_conhecimento_agente(1).xlsx",
+        ]
+    )
+
+    if csv_path:
+        df = pd.read_csv(csv_path)
+    elif xlsx_path:
+        try:
+            df = pd.read_excel(xlsx_path, sheet_name=0)
+        except Exception:
+            return pd.DataFrame()
+    else:
+        return pd.DataFrame()
+
+    df.columns = [str(c).strip() for c in df.columns]
+    return df
 
 
 # =========================================================
@@ -97,7 +222,7 @@ def classify_risk(comprometimento: float, possui_default: bool, rules: Dict[str,
 
 
 
-def recommendation_text(risco: str, parcela: float, renda: float) -> str:
+def recommendation_text(risco: str, renda: float) -> str:
     if risco == "Baixo":
         return (
             "A operação está em uma faixa mais confortável. Mesmo assim, vale manter uma reserva "
@@ -110,104 +235,197 @@ def recommendation_text(risco: str, parcela: float, renda: float) -> str:
         )
     parcela_segura = renda * 0.30
     return (
-    "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado ou aumentar "
-    f"o prazo. Para uma faixa mais segura, a parcela ideal seria em torno de {format_brl(parcela_segura)}."
-)
+        "O risco está elevado. Para melhorar a simulação, considere reduzir o valor solicitado ou aumentar "
+        f"o prazo. Para uma faixa mais segura, a parcela ideal seria em torno de {format_brl(parcela_segura)}."
+    )
 
 
 
-def infer_profile_stats(df: pd.DataFrame, renda_mensal: float, idade: int) -> Optional[Dict[str, Any]]:
+def normalize(text: str) -> str:
+    return " ".join(str(text).strip().lower().split())
+
+
+
+def pick_col(df: pd.DataFrame, options: list[str]) -> Optional[str]:
+    lower_map = {c.lower(): c for c in df.columns}
+    for opt in options:
+        if opt.lower() in lower_map:
+            return lower_map[opt.lower()]
+    for col in df.columns:
+        c = col.lower()
+        if any(opt.lower() in c for opt in options):
+            return col
+    return None
+
+
+
+def infer_client_row(df: pd.DataFrame, full_name: str) -> Tuple[Optional[pd.Series], Optional[str]]:
     if df.empty:
-        return None
+        return None, "A base de clientes não foi encontrada."
 
-    candidates = df.copy()
-    renda_cols = [c for c in candidates.columns if "income" in c.lower() or "renda" in c.lower()]
-    idade_cols = [c for c in candidates.columns if "age" in c.lower() or "idade" in c.lower()]
-    default_cols = [c for c in candidates.columns if "default" in c.lower() or "inad" in c.lower()]
+    name_col = pick_col(df, ["nome_cliente", "nome", "full_name", "name"])
+    if not name_col:
+        return None, "A base carregada não possui coluna de nome do cliente."
 
-    if not renda_cols or not idade_cols:
-        return None
+    working = df.copy()
+    working["__name_norm__"] = working[name_col].astype(str).map(normalize)
+    target = normalize(full_name)
 
-    renda_col = renda_cols[0]
-    idade_col = idade_cols[0]
+    exact = working[working["__name_norm__"] == target]
+    if len(exact) == 1:
+        return exact.iloc[0], None
+    if len(exact) > 1:
+        return exact.iloc[0], None
 
-    candidates[renda_col] = pd.to_numeric(candidates[renda_col], errors="coerce")
-    candidates[idade_col] = pd.to_numeric(candidates[idade_col], errors="coerce")
-    candidates = candidates.dropna(subset=[renda_col, idade_col])
+    contains = working[working["__name_norm__"].str.contains(target, na=False)]
+    if len(contains) == 1:
+        return contains.iloc[0], None
+    if len(contains) > 1:
+        sugestoes = ", ".join(contains[name_col].astype(str).head(5).tolist())
+        return None, f"Encontrei mais de um nome parecido. Tente informar exatamente um destes: {sugestoes}."
 
-    faixa = candidates[
-        (candidates[renda_col].between(renda_mensal * 0.7, renda_mensal * 1.3))
-        & (candidates[idade_col].between(idade - 5, idade + 5))
-    ]
+    return None, "Não encontrei esse nome na base. Digite o nome completo exatamente como está cadastrado no histórico."
 
-    if faixa.empty:
-        faixa = candidates
 
-    result = {
-        "qtd_clientes": int(len(faixa)),
-        "renda_media": float(faixa[renda_col].mean()),
-        "idade_media": float(faixa[idade_col].mean()),
+
+def get_value(row: pd.Series, options: list[str], default: Any = None) -> Any:
+    for opt in options:
+        for col in row.index:
+            if opt.lower() == str(col).lower() or opt.lower() in str(col).lower():
+                value = row[col]
+                if pd.notna(value):
+                    return value
+    return default
+
+
+
+def summarize_client(row: pd.Series) -> Dict[str, Any]:
+    nome = str(get_value(row, ["nome_cliente", "nome", "name"], "Cliente"))
+    primeiro_nome = str(get_value(row, ["primeiro_nome"], nome.split()[0] if nome else "Cliente"))
+    iniciais = str(get_value(row, ["iniciais"], "".join([p[0] for p in nome.split()[:2]]).upper()))
+    cliente_desde = str(get_value(row, ["cliente_desde"], "Mar/2023"))
+
+    score = get_value(row, ["score_credito", "score", "credit_score"], 720)
+    historico_pagamentos = str(get_value(row, ["historico_pagamentos", "payment_history"], "Pontual"))
+    consultas = int(float(get_value(row, ["consultas_ultimo_ano", "consultas", "consultas no ultimo ano"], 2)))
+    emprestimos_anteriores = int(float(get_value(row, ["emprestimos_anteriores", "previous_loans"], 1)))
+    ultimo_emprestimo = str(get_value(row, ["ultimo_emprestimo", "status_ultimo_emprestimo"], "Pago em dia"))
+    idade = int(float(get_value(row, ["idade", "age"], 32)))
+    renda = float(get_value(row, ["renda_mensal", "renda", "income"], 5400))
+
+    default_raw = str(get_value(row, ["possui_default", "inadimplencia", "default", "historico_default"], "não")).strip().lower()
+    possui_default = default_raw in {"1", "true", "sim", "s", "yes"}
+
+    return {
+        "nome": nome,
+        "primeiro_nome": primeiro_nome,
+        "iniciais": iniciais,
+        "cliente_desde": cliente_desde,
+        "score_credito": int(float(score)),
+        "historico_pagamentos": historico_pagamentos,
+        "consultas_ultimo_ano": consultas,
+        "emprestimos_anteriores": emprestimos_anteriores,
+        "ultimo_emprestimo": ultimo_emprestimo,
+        "idade": idade,
+        "renda_mensal": renda,
+        "possui_default": possui_default,
     }
 
-    if default_cols:
-        default_col = default_cols[0]
-        faixa[default_col] = pd.to_numeric(faixa[default_col], errors="coerce").fillna(0)
-        result["taxa_default"] = float(faixa[default_col].mean())
-
-    return result
 
 
-# =========================================================
-# Prompt e integração com Ollama
-# =========================================================
-def build_system_prompt() -> str:
-    return """
-Você é o CreditAI, um agente financeiro inteligente especializado em simulação e análise de crédito.
-
-Seu objetivo é explicar o resultado de uma simulação de crédito com base em valores já calculados pelo sistema.
-
-REGRAS:
-1. Utilize exclusivamente os dados fornecidos no contexto.
-2. Nunca invente valores, taxas ou informações financeiras.
-3. Você não recalcula nada. Os cálculos já foram feitos pelo sistema.
-4. Seu papel é interpretar o resultado e explicar de forma clara, acessível e profissional.
-5. Sempre explique o motivo da classificação de risco.
-6. Sempre ofereça uma recomendação prática.
-7. Nunca peça para o usuário informar o risco. O risco já vem pronto no contexto.
-8. Se a pergunta estiver fora do escopo de crédito, informe sua limitação e redirecione.
-9. Não forneça dados sigilosos, senhas ou informações de terceiros.
-
-FORMATO DA RESPOSTA:
-- Resumo da situação
-- Interpretação do risco
-- Explicação
-- Recomendação
-""".strip()
+def score_label(score: int) -> str:
+    if score >= 700:
+        return "Bom"
+    if score >= 550:
+        return "Moderado"
+    return "Baixo"
 
 
 
-def call_ollama(system_prompt: str, context: str, model: str) -> str:
-    prompt = f"""
-{system_prompt}
+def score_class(score: int) -> str:
+    if score >= 700:
+        return "good"
+    if score >= 550:
+        return "warn"
+    return "bad"
 
-CONTEXTO DA ANÁLISE:
-{context}
 
-Gere a resposta final do agente seguindo exatamente o formato pedido.
-""".strip()
 
-    response = requests.post(
-        OLLAMA_URL,
-        json={"model": model, "prompt": prompt, "stream": False},
-        timeout=120,
+def local_agent_response(context: Dict[str, Any]) -> str:
+    nome = context["primeiro_nome"]
+    risco = context["risco"]
+    risco_txt = risco.lower()
+    historico_extra = (
+        f"Você possui histórico de pagamentos {context['historico_pagamentos'].lower()} e score de crédito {context['score_credito']}, "
+        "o que ajuda na leitura do seu perfil."
+        if context["score_credito"] >= 700 and not context["possui_default"]
+        else "Seu histórico merece atenção adicional na análise de crédito."
     )
-    response.raise_for_status()
-    data = response.json()
-    return data.get("response", "").strip()
+
+    return (
+        f"Olá, {nome}! Analisei sua simulação. Para um crédito de {format_brl(context['valor'])} em {context['prazo']} meses, "
+        f"com taxa de {context['taxa']:.2f}% ao mês, a parcela estimada fica em {format_brl(context['parcela'])}.\n\n"
+        f"Isso representa {context['comprometimento']:.1%} da sua renda mensal, classificando a operação como risco {risco_txt}.\n\n"
+        f"{context['mensagem_base']} {historico_extra}\n\n"
+        f"Recomendação: {context['recomendacao']}"
+    )
+
+
+
+def build_context(cliente: Dict[str, Any], valor: float, prazo: int, taxa: float, rules: Dict[str, Any]) -> Dict[str, Any]:
+    renda = float(cliente["renda_mensal"])
+    monthly_rate = taxa / 100
+    parcela = pmt(monthly_rate, prazo, valor)
+    comprometimento = parcela / renda if renda else 0
+    risco, mensagem_base = classify_risk(comprometimento, cliente["possui_default"], rules)
+    recomendacao = recommendation_text(risco, renda)
+
+    contexto_texto = f"""
+Dados do Cliente:
+- Nome: {cliente['nome']}
+- Idade: {cliente['idade']} anos
+- Renda mensal: {format_brl(renda)}
+- Valor solicitado: {format_brl(valor)}
+- Prazo: {prazo} meses
+- Taxa mensal: {taxa:.2f}%
+- Histórico de inadimplência/default: {'Sim' if cliente['possui_default'] else 'Não'}
+- Score de crédito: {cliente['score_credito']}
+- Histórico de pagamentos: {cliente['historico_pagamentos']}
+- Empréstimos anteriores: {cliente['emprestimos_anteriores']}
+
+Resultados Calculados:
+- Valor da parcela: {format_brl(parcela)}
+- Comprometimento da renda: {comprometimento:.1%}
+- Classificação de risco: {risco}
+- Explicação base: {mensagem_base}
+- Recomendação base: {recomendacao}
+""".strip()
+
+    return {
+        "nome": cliente["nome"],
+        "primeiro_nome": cliente["primeiro_nome"],
+        "idade": cliente["idade"],
+        "renda": renda,
+        "valor": valor,
+        "prazo": prazo,
+        "taxa": taxa,
+        "parcela": parcela,
+        "comprometimento": comprometimento,
+        "risco": risco,
+        "mensagem_base": mensagem_base,
+        "recomendacao": recomendacao,
+        "contexto_texto": contexto_texto,
+        "score_credito": cliente["score_credito"],
+        "historico_pagamentos": cliente["historico_pagamentos"],
+        "consultas_ultimo_ano": cliente["consultas_ultimo_ano"],
+        "emprestimos_anteriores": cliente["emprestimos_anteriores"],
+        "ultimo_emprestimo": cliente["ultimo_emprestimo"],
+        "possui_default": cliente["possui_default"],
+    }
 
 
 # =========================================================
-# Fluxo de conversa
+# Sessão
 # =========================================================
 def init_session() -> None:
     if "messages" not in st.session_state:
@@ -215,21 +433,17 @@ def init_session() -> None:
             {
                 "role": "assistant",
                 "content": (
-                    "Olá! Eu sou o CreditAI. Vou te ajudar a simular um crédito. "
-                    "Me informe sua idade para começarmos."
+                    "Olá! Eu sou o CreditAI. Para começar, digite seu nome completo para eu localizar "
+                    "seu histórico e personalizar a simulação."
                 ),
             }
         ]
     if "step" not in st.session_state:
-        st.session_state.step = "idade"
-    if "dados_cliente" not in st.session_state:
-        st.session_state.dados_cliente = {
-            "idade": None,
-            "renda": None,
-            "valor": None,
-            "prazo": None,
-            "historico": None,
-        }
+        st.session_state.step = "nome"
+    if "cliente" not in st.session_state:
+        st.session_state.cliente = None
+    if "dados_simulacao" not in st.session_state:
+        st.session_state.dados_simulacao = {"valor": None, "prazo": None, "taxa": None}
     if "analise" not in st.session_state:
         st.session_state.analise = None
 
@@ -239,36 +453,27 @@ def reset_chat() -> None:
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Conversa reiniciada. Me informe sua idade para começarmos uma nova simulação.",
+            "content": (
+                "Nova conversa iniciada. Digite seu nome completo para eu buscar seu histórico na base."
+            ),
         }
     ]
-    st.session_state.step = "idade"
-    st.session_state.dados_cliente = {
-        "idade": None,
-        "renda": None,
-        "valor": None,
-        "prazo": None,
-        "historico": None,
-    }
+    st.session_state.step = "nome"
+    st.session_state.cliente = None
+    st.session_state.dados_simulacao = {"valor": None, "prazo": None, "taxa": None}
     st.session_state.analise = None
 
 
 
 def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
-    cleaned = text.strip().lower().replace("r$", "").replace(".", "").replace(",", ".")
+    raw = text.strip()
+    cleaned = raw.lower().replace("r$", "").replace(".", "").replace(",", ".")
 
     try:
-        if step == "idade":
-            value = int(cleaned)
-            if value < 18 or value > 100:
-                return False, None, "Informe uma idade válida entre 18 e 100 anos."
-            return True, value, ""
-
-        if step == "renda":
-            value = float(cleaned)
-            if value <= 0:
-                return False, None, "Informe uma renda mensal maior que zero."
-            return True, value, ""
+        if step == "nome":
+            if len(raw.split()) < 2:
+                return False, None, "Digite seu nome completo para eu localizar seu histórico corretamente."
+            return True, raw, ""
 
         if step == "valor":
             value = float(cleaned)
@@ -282,110 +487,138 @@ def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
                 return False, None, "Informe um prazo válido entre 3 e 120 meses."
             return True, value, ""
 
-        if step == "historico":
-            if cleaned in {"sim", "s", "teve", "inadimplente"}:
-                return True, True, ""
-            if cleaned in {"nao", "não", "n", "nunca"}:
-                return True, False, ""
-            return False, None, "Responda apenas com 'sim' ou 'não'."
-
+        if step == "taxa":
+            value = float(cleaned)
+            if value < 0 or value > 15:
+                return False, None, "Informe uma taxa mensal válida entre 0 e 15."
+            return True, value, ""
     except ValueError:
-        return False, None, f"Não consegui entender sua {FIELD_LABELS[step]}. Tente novamente."
+        return False, None, f"Não consegui entender {FIELD_LABELS[step]}. Tente novamente."
 
     return False, None, "Entrada inválida."
 
 
 
-def next_step(current_step: str) -> Optional[str]:
-    flow = ["idade", "renda", "valor", "prazo", "historico"]
-    idx = flow.index(current_step)
+def next_step(step: str) -> Optional[str]:
+    flow = ["nome", "valor", "prazo", "taxa"]
+    idx = flow.index(step)
     return flow[idx + 1] if idx + 1 < len(flow) else None
 
 
 
-def prompt_for_step(step: str) -> str:
+def prompt_for_step(step: str, cliente: Optional[Dict[str, Any]] = None) -> str:
+    primeiro_nome = cliente["primeiro_nome"] if cliente else ""
     prompts = {
-        "idade": "Me informe sua idade.",
-        "renda": "Agora me informe sua renda mensal em reais.",
-        "valor": "Qual o valor do empréstimo que você deseja simular?",
-        "prazo": "Em quantos meses você quer pagar esse empréstimo?",
-        "historico": "Você já teve inadimplência ou default antes? Responda com sim ou não.",
+        "valor": f"Perfeito, {primeiro_nome}. Encontrei seu histórico. Qual valor você deseja solicitar?",
+        "prazo": f"Agora me diga o prazo que deseja para pagamento, {primeiro_nome} (em meses).",
+        "taxa": f"Ótimo. Qual taxa de juros mensal você deseja simular, {primeiro_nome}? (Ex.: 2,5)",
     }
     return prompts.get(step, "Pode me informar o próximo dado?")
 
 
+# =========================================================
+# Sidebar
+# =========================================================
+def render_sidebar(cliente: Optional[Dict[str, Any]]) -> None:
+    with st.sidebar:
+        st.markdown(
+            """
+            <div class='brand-card'>
+                <div class='brand-title'>CreditAI</div>
+                <p class='brand-sub'>Seu Educador Financeiro</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        st.write("")
 
-def build_context(dados: Dict[str, Any], taxa_mensal: float, rules: Dict[str, Any]) -> Dict[str, Any]:
-    renda = float(dados["renda"])
-    valor = float(dados["valor"])
-    prazo = int(dados["prazo"])
-    idade = int(dados["idade"])
-    historico = bool(dados["historico"])
+        if cliente:
+            st.markdown(
+                f"""
+                <div class='sidebar-card'>
+                    <div style='display:flex; align-items:center;'>
+                        <div class='client-avatar'>{cliente['iniciais']}</div>
+                        <div>
+                            <div style='font-size:1.15rem; font-weight:700; color:#f6f8fb;'>{cliente['nome']}</div>
+                            <div class='muted'>Cliente desde {cliente['cliente_desde']}</div>
+                        </div>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.write("")
+            st.markdown(
+                f"""
+                <div class='sidebar-card'>
+                    <div class='section-title'>Score de crédito</div>
+                    <div class='{score_class(cliente['score_credito'])}' style='font-size:1.6rem; font-weight:700;'>
+                        {score_label(cliente['score_credito'])}
+                    </div>
+                    <div class='muted' style='margin-top:4px;'>Pontuação: {cliente['score_credito']}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.write("")
+            st.markdown(
+                f"""
+                <div class='sidebar-card'>
+                    <div class='section-title'>Resumo do seu histórico</div>
+                    <div class='muted'>Histórico de pagamentos</div>
+                    <div class='{score_class(cliente['score_credito']) if cliente['historico_pagamentos'].lower() == 'pontual' else 'warn'}' style='margin-bottom:14px;'>
+                        {cliente['historico_pagamentos']}
+                    </div>
+                    <div class='muted'>Consultas no último ano</div>
+                    <div style='margin-bottom:14px; color:#f4f7fb; font-weight:700;'>{cliente['consultas_ultimo_ano']}</div>
+                    <div class='muted'>Empréstimos anteriores</div>
+                    <div style='margin-bottom:14px; color:#f4f7fb; font-weight:700;'>{cliente['emprestimos_anteriores']}</div>
+                    <div class='muted'>Último empréstimo</div>
+                    <div class='good'>{cliente['ultimo_emprestimo']}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                """
+                <div class='sidebar-card'>
+                    <div class='section-title'>Base histórica</div>
+                    <div class='muted'>Digite seu nome completo no chat para eu localizar seu cadastro e carregar automaticamente seu histórico.</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
-    monthly_rate = taxa_mensal / 100
-    parcela = pmt(monthly_rate, prazo, valor)
-    comprometimento = parcela / renda if renda else 0
-    risco, mensagem_base = classify_risk(comprometimento, historico, rules)
-
-    contexto = f"""
-Dados do Cliente:
-- Idade: {idade} anos
-- Renda mensal: {format_brl(renda)}
-- Valor solicitado: {format_brl(valor)}
-- Prazo: {prazo} meses
-- Taxa mensal: {taxa_mensal:.2f}%
-- Histórico de inadimplência/default: {'Sim' if historico else 'Não'}
-
-Resultados Calculados:
-- Valor da parcela: {format_brl(parcela)}
-- Comprometimento da renda: {comprometimento:.1%}
-- Classificação de risco: {risco}
-- Explicação base: {mensagem_base}
-- Recomendação base: {recommendation_text(risco, parcela, renda)}
-""".strip()
-
-    return {
-        "contexto": contexto,
-        "parcela": parcela,
-        "comprometimento": comprometimento,
-        "risco": risco,
-        "idade": idade,
-        "renda": renda,
-    }
+        st.write("")
+        if st.button("Nova conversa", use_container_width=True):
+            reset_chat()
+            st.rerun()
 
 
 # =========================================================
-# Interface principal
+# App principal
 # =========================================================
 rules = load_rules()
-base_df = load_base()
+clients_df = load_clients_base()
 init_session()
+render_sidebar(st.session_state.cliente)
 
-with st.sidebar:
-    st.header("Configurações")
-    taxa_mensal = st.slider("Taxa de juros mensal (%)", 0.0, 8.0, 2.5, 0.1)
-    model_name = st.text_input("Modelo no Ollama", value=DEFAULT_MODEL)
-    mostrar_contexto = st.checkbox("Mostrar contexto da análise", value=True)
-    mostrar_base = st.checkbox("Mostrar visão rápida da base", value=False)
-
-    st.divider()
-    st.caption("Use este app com o Ollama rodando localmente em http://localhost:11434")
-    if st.button("Reiniciar conversa", use_container_width=True):
-        reset_chat()
-        st.rerun()
-
-st.title("💬 CreditAI - Chat de Simulação de Crédito")
-st.caption("Conversa guiada com cálculo automático de parcela, classificação de risco e resposta via Ollama.")
+col_header, col_button = st.columns([6, 1])
+with col_header:
+    st.title("Converse com o CreditAI")
+    st.markdown("<div class='chat-hint'>Estou aqui para te ajudar a tomar decisões financeiras melhores.</div>", unsafe_allow_html=True)
+with col_button:
+    st.write("")
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-user_input = st.chat_input("Digite sua resposta aqui...")
+user_input = st.chat_input("Digite sua mensagem...")
 
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
-
     current_step = st.session_state.step
     valid, parsed_value, error_msg = parse_step_input(current_step, user_input)
 
@@ -393,86 +626,128 @@ if user_input:
         st.session_state.messages.append({"role": "assistant", "content": error_msg})
         st.rerun()
 
-    st.session_state.dados_cliente[current_step] = parsed_value
-    upcoming_step = next_step(current_step)
+    if current_step == "nome":
+        row, err = infer_client_row(clients_df, parsed_value)
+        if err:
+            st.session_state.messages.append({"role": "assistant", "content": err})
+            st.rerun()
 
-    if upcoming_step is not None:
-        st.session_state.step = upcoming_step
-        st.session_state.messages.append({"role": "assistant", "content": prompt_for_step(upcoming_step)})
-        st.rerun()
-
-    try:
-        analise = build_context(st.session_state.dados_cliente, taxa_mensal, rules)
-        st.session_state.analise = analise
-        resposta = call_ollama(build_system_prompt(), analise["contexto"], model_name)
-        st.session_state.messages.append({"role": "assistant", "content": resposta})
-        st.session_state.step = "finalizado"
-        st.rerun()
-    except requests.exceptions.ConnectionError:
+        cliente = summarize_client(row)
+        st.session_state.cliente = cliente
+        st.session_state.step = "valor"
         st.session_state.messages.append(
             {
                 "role": "assistant",
                 "content": (
-                    "Não consegui conectar ao Ollama. Verifique se ele está aberto e rodando localmente. "
-                    "Exemplo: `ollama run llama3`."
+                    f"Olá, {cliente['primeiro_nome']}! 👋 Encontrei seu histórico. "
+                    f"Vejo que sua renda mensal cadastrada é {format_brl(cliente['renda_mensal'])} e seu score atual é {cliente['score_credito']}.\n\n"
+                    f"{prompt_for_step('valor', cliente)}"
                 ),
             }
         )
         st.rerun()
-    except requests.exceptions.HTTPError as exc:
+
+    st.session_state.dados_simulacao[current_step] = parsed_value
+    upcoming_step = next_step(current_step)
+
+    if upcoming_step is not None:
+        st.session_state.step = upcoming_step
         st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": f"O Ollama respondeu com erro HTTP: {exc}. Confira o nome do modelo informado na barra lateral.",
-            }
-        )
-        st.rerun()
-    except Exception as exc:
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": f"Ocorreu um erro inesperado durante a análise: {exc}",
-            }
+            {"role": "assistant", "content": prompt_for_step(upcoming_step, st.session_state.cliente)}
         )
         st.rerun()
 
-if st.session_state.analise:
-    st.divider()
-    st.subheader("Resumo técnico da simulação")
-    k1, k2, k3 = st.columns(3)
-    k1.metric("Parcela estimada", format_brl(st.session_state.analise["parcela"]))
-    k2.metric("Comprometimento da renda", f"{st.session_state.analise['comprometimento']:.1%}")
-    k3.metric("Classificação de risco", st.session_state.analise["risco"])
-
-    stats = infer_profile_stats(base_df, st.session_state.analise["renda"], st.session_state.analise["idade"])
-    if stats:
-        st.subheader("Comparativo com a base histórica")
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Clientes comparáveis", stats["qtd_clientes"])
-        c2.metric("Renda média do grupo", format_brl(stats["renda_media"]))
-        if "taxa_default" in stats:
-            c3.metric("Taxa média de default do grupo", f"{stats['taxa_default']:.1%}")
-        else:
-            c3.metric("Idade média do grupo", f"{stats['idade_media']:.1f} anos")
-
-    if mostrar_contexto:
-        st.subheader("Contexto enviado ao modelo")
-        st.code(st.session_state.analise["contexto"], language="text")
-
-if mostrar_base:
-    st.divider()
-    st.subheader("Prévia da base consolidada")
-    if not base_df.empty:
-        st.dataframe(base_df.head(30), use_container_width=True)
-    else:
-        st.info("A base consolidada não foi encontrada na pasta agente_credito_base.")
-
-with st.expander("Notas técnicas"):
-    st.markdown(
-        """
-        - O usuário informa apenas dados simples no chat.
-        - O sistema calcula parcela, comprometimento e risco antes de enviar o contexto ao modelo.
-        - O Ollama recebe apenas o contexto calculado e responde como explicador da análise.
-        - Isso mantém a lógica financeira controlada e reduz alucinação.
-        """
+    cliente = st.session_state.cliente
+    dados = st.session_state.dados_simulacao
+    analise = build_context(
+        cliente=cliente,
+        valor=float(dados["valor"]),
+        prazo=int(dados["prazo"]),
+        taxa=float(dados["taxa"]),
+        rules=rules,
     )
+    st.session_state.analise = analise
+    st.session_state.step = "finalizado"
+
+    resposta = local_agent_response({**analise, **cliente})
+    st.session_state.messages.append({"role": "assistant", "content": resposta})
+    st.rerun()
+
+
+if st.session_state.analise and st.session_state.cliente:
+    cliente = st.session_state.cliente
+    analise = st.session_state.analise
+
+    st.write("")
+    st.markdown("### 📊 Resultado da Simulação")
+
+    left, right = st.columns(2)
+    with left:
+        st.markdown("<div class='result-card'>", unsafe_allow_html=True)
+        st.markdown("#### Dados do Cliente")
+        items = [
+            ("Nome", cliente["nome"]),
+            ("Idade", f"{cliente['idade']} anos"),
+            ("Renda mensal", format_brl(cliente["renda_mensal"])),
+            ("Valor solicitado", format_brl(analise["valor"])),
+            ("Prazo", f"{analise['prazo']} meses"),
+            ("Taxa mensal", f"{analise['taxa']:.2f}%"),
+            ("Histórico de inadimplência/default", "Sim" if cliente["possui_default"] else "Não"),
+        ]
+        for label, value in items:
+            st.markdown(
+                f"<div class='metric-box' style='margin-bottom:10px;'><div class='small-label'>{label}</div><div class='small-value'>{value}</div></div>",
+                unsafe_allow_html=True,
+            )
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    with right:
+        st.markdown("<div class='result-card'>", unsafe_allow_html=True)
+        st.markdown("#### Resultados Calculados")
+        risco_class = "good" if analise["risco"] == "Baixo" else "warn" if analise["risco"] == "Médio" else "bad"
+        results = [
+            ("Valor da parcela", format_brl(analise["parcela"])),
+            ("Comprometimento da renda", f"{analise['comprometimento']:.1%}"),
+            ("Classificação de risco", analise["risco"], risco_class),
+            ("Explicação base", analise["mensagem_base"]),
+            ("Recomendação base", analise["recomendacao"]),
+        ]
+        for row in results:
+            if len(row) == 3:
+                label, value, klass = row
+                value_html = f"<span class='{klass}'>{value}</span>"
+            else:
+                label, value = row
+                value_html = value
+            st.markdown(
+                f"<div class='metric-box' style='margin-bottom:10px;'><div class='small-label'>{label}</div><div class='small-value'>{value_html}</div></div>",
+                unsafe_allow_html=True,
+            )
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    st.write("")
+    st.markdown("### 📌 Considerando seu histórico")
+    historico_texto = (
+        f"Você possui histórico de pagamentos {cliente['historico_pagamentos'].lower()} e um score de crédito de {cliente['score_credito']}, "
+        "o que fortalece a leitura do seu perfil. "
+        if cliente["score_credito"] >= 700 and not cliente["possui_default"]
+        else f"Seu histórico mostra score de crédito {cliente['score_credito']} e requer uma análise mais cuidadosa do comprometimento da renda. "
+    )
+    st.markdown(
+        f"""
+        <div class='result-card'>
+            <div style='font-size:1.15rem; font-weight:700; margin-bottom:8px;'>Análise complementar</div>
+            <div class='muted' style='font-size:1rem; line-height:1.7;'>
+                {historico_texto}
+                Hoje você tem {cliente['consultas_ultimo_ano']} consulta(s) no último ano e {cliente['emprestimos_anteriores']} empréstimo(s) anterior(es).<br><br>
+                Com base na simulação atual, a principal atenção está no valor da parcela em relação à sua renda mensal.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    with st.expander("Ver contexto técnico da análise"):
+        st.code(analise["contexto_texto"], language="text")
+
+st.caption("CreditAI pode cometer erros. Sempre confirme as informações antes de tomar decisões financeiras.")
