@@ -143,10 +143,10 @@ def load_rules() -> Dict[str, Any]:
 @st.cache_data
 def load_clients_base() -> Tuple[pd.DataFrame, str]:
     possible_paths = [
-        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",
-        BASE_DIR / "data" / "clientes.csv",
-        BASE_DIR / "perfil_sidebar_clientes.csv",
-        BASE_DIR / "clientes.csv",
+        BASE_DIR / "data" / "amostra_perfil_sidebar.csv",
+        BASE_DIR / "data" / "amostra_clientes.csv",
+        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",  # fallback
+        BASE_DIR / "data" / "clientes.csv",                 # fallback
     ]
 
     for path in possible_paths:
@@ -155,7 +155,7 @@ def load_clients_base() -> Tuple[pd.DataFrame, str]:
             df.columns = [str(c).strip() for c in df.columns]
             return df, f"Base carregada: {path.name}"
 
-    return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
+    return pd.DataFrame(), "Base não encontrada na pasta /data"
 
 
 # =========================================================
