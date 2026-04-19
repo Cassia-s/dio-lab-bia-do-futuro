@@ -1,0 +1,5 @@
+﻿Base de Conhecimento - Agente de Cr‚dito Personalizada;
+Descri‡Æo;Base tratada com nomes sint‚ticos para personaliza‡Æo do CreditAI
+Arquivos principais;clientes.csv, emprestimos_ativos.csv, historico_credito.csv, base_modelagem_agente.csv e perfil_sidebar_clientes.csv
+Observa‡Æo;Os nomes e datas de relacionamento sÆo fict¡cios e foram criados apenas para fins de experiˆncia no agente.
+Uso no app;A aplica‡Æo chama o cliente pelo nome, usa hist¢rico da base e personaliza a conversa.

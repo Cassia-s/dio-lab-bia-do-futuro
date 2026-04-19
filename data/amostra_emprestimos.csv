@@ -1,4 +1,4 @@
-user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_estate;qtd_other;possui_emprestimo_ativo;nome_cliente;iniciais;cliente_desde;primeiro_nome
+ï»¿user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_estate;qtd_other;possui_emprestimo_ativo;nome_cliente;iniciais;cliente_desde;primeiro_nome
 1;3;1;other;0;3;1;Cassia Silva Silverio;CSS;fev/21;Cassia
 2;20;2;other, real_estate;1;19;1;Bruno Silverio;BS;mar/21;Bruno
 3;15;2;other, real_estate;1;14;1;Pedro Silva Silva;PS;abr/21;Pedro
@@ -9,9 +9,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 8;14;2;other, real_estate;3;11;1;Felipe Silva Silva;FS;set/21;Felipe
 9;6;2;other, real_estate;3;3;1;Thiago Silva Silva;TS;out/21;Thiago
 10;7;2;other, real_estate;2;5;1;Larissa Silva Silva;LS;nov/21;Larissa
-11;5;2;other, real_estate;2;3;1;Andr‚ Silva Silva;AS;dez/21;Andr‚
+11;5;2;other, real_estate;2;3;1;Andrâ€š Silva Silva;AS;dez/21;Andrâ€š
 12;17;2;other, real_estate;1;16;1;Leonardo Silva Silva;LS;jan/22;Leonardo
-13;2;1;other;0;2;1;Patr¡cia Silva Silva;PS;fev/22;Patr¡cia
+13;2;1;other;0;2;1;PatrÂ¡cia Silva Silva;PS;fev/22;PatrÂ¡cia
 14;9;1;other;0;9;1;Ricardo Silva Silva;RS;mar/22;Ricardo
 15;19;2;other, real_estate;5;14;1;Daniel Silva Silva;DS;abr/22;Daniel
 16;7;2;other, real_estate;2;5;1;Tatiane Silva Silva;TS;mai/22;Tatiane
@@ -22,11 +22,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 21;5;1;other;0;5;1;Carla Silva Silva;CS;out/22;Carla
 22;6;2;other, real_estate;1;5;1;Murilo Silva Silva;MS;nov/22;Murilo
 23;2;2;other, real_estate;1;1;1;Samuel Silva Silva;SS;dez/22;Samuel
-24;12;2;other, real_estate;1;11;1;Fl via Silva Silva;FS;jan/23;Fl via
+24;12;2;other, real_estate;1;11;1;FlÂ via Silva Silva;FS;jan/23;FlÂ via
 25;5;2;other, real_estate;1;4;1;Arthur Silva Silva;AS;fev/23;Arthur
-26;11;2;other, real_estate;1;10;1;Helo¡sa Silva Silva;HS;mar/23;Helo¡sa
+26;11;2;other, real_estate;1;10;1;HeloÂ¡sa Silva Silva;HS;mar/23;HeloÂ¡sa
 27;15;2;other, real_estate;1;14;1;Bernardo Silva Silva;BS;abr/23;Bernardo
-28;11;2;other, real_estate;2;9;1;Ot vio Silva Silva;OS;mai/23;Ot vio
+28;11;2;other, real_estate;2;9;1;OtÂ vio Silva Silva;OS;mai/23;OtÂ vio
 29;8;2;other, real_estate;1;7;1;Heitor Silva Silva;HS;jun/23;Heitor
 30;7;2;other, real_estate;2;5;1;Manuela Silva Silva;MS;jul/23;Manuela
 31;8;2;other, real_estate;3;5;1;Pietro Silva Silva;PS;ago/23;Pietro
@@ -34,27 +34,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 33;9;2;other, real_estate;1;8;1;Priscila Silva Silva;PS;out/23;Priscila
 34;4;2;other, real_estate;1;3;1;Igor Silva Silva;IS;nov/23;Igor
 35;6;2;other, real_estate;1;5;1;Renato Silva Silva;RS;dez/23;Renato
-36;8;2;other, real_estate;1;7;1;Tain  Silva Silva;TS;jan/24;Tain 
-37;4;1;other;0;4;1;C‚sar Silva Silva;CS;fev/24;C‚sar
+36;8;2;other, real_estate;1;7;1;TainÂ  Silva Silva;TS;jan/24;TainÂ 
+37;4;1;other;0;4;1;Câ€šsar Silva Silva;CS;fev/24;Câ€šsar
 38;8;1;other;0;8;1;Aline Silva Silva;AS;mar/24;Aline
 39;4;2;other, real_estate;1;3;1;Bruna Silva Silva;BS;abr/24;Bruna
 40;3;2;other, real_estate;1;2;1;Alan Silva Silva;AS;mai/24;Alan
 41;16;2;other, real_estate;3;13;1;Daiane Silva Silva;DS;jun/24;Daiane
 42;4;1;other;0;4;1;Breno Silva Silva;BS;jul/24;Breno
-43;6;2;other, real_estate;1;5;1;CauÆ Silva Silva;CS;ago/24;CauÆ
+43;6;2;other, real_estate;1;5;1;CauÃ† Silva Silva;CS;ago/24;CauÃ†
 44;4;1;other;0;4;1;Geovana Silva Silva;GS;set/24;Geovana
-45;11;2;other, real_estate;1;10;1;Cl udio Silva Silva;CS;out/24;Cl udio
-46;11;1;other;0;11;1;J‚ssica Silva Silva;JS;nov/24;J‚ssica
+45;11;2;other, real_estate;1;10;1;ClÂ udio Silva Silva;CS;out/24;ClÂ udio
+46;11;1;other;0;11;1;Jâ€šssica Silva Silva;JS;nov/24;Jâ€šssica
 47;8;2;other, real_estate;2;6;1;Elias Silva Silva;ES;dez/24;Elias
 48;16;1;other;0;16;1;Fernando Silva Silva;FS;jan/21;Fernando
-49;8;2;other, real_estate;1;7;1;J£lio Silva Silva;JS;fev/21;J£lio
+49;8;2;other, real_estate;1;7;1;JÂ£lio Silva Silva;JS;fev/21;JÂ£lio
 50;8;2;other, real_estate;2;6;1;Paula Silva Silva;PS;mar/21;Paula
-51;3;1;other;0;3;1;M rcio Silva Silva;MS;abr/21;M rcio
+51;3;1;other;0;3;1;MÂ rcio Silva Silva;MS;abr/21;MÂ rcio
 52;17;2;other, real_estate;2;15;1;Nicolas Silva Silva;NS;mai/21;Nicolas
 53;5;1;other;0;5;1;Talita Silva Silva;TS;jun/21;Talita
-54;11;1;other;0;11;1;S‚rgio Silva Silva;SS;jul/21;S‚rgio
+54;11;1;other;0;11;1;Sâ€šrgio Silva Silva;SS;jul/21;Sâ€šrgio
 55;4;2;other, real_estate;1;3;1;Tadeu Silva Silva;TS;ago/21;Tadeu
-56;0;0;sem_emprestimo;0;0;0;Z‚lia Silva Silva;ZS;set/21;Z‚lia
+56;0;0;sem_emprestimo;0;0;0;Zâ€šlia Silva Silva;ZS;set/21;Zâ€šlia
 57;7;2;other, real_estate;1;6;1;William Silva Silva;WS;out/21;William
 58;9;2;other, real_estate;1;8;1;Lorena Silva Silva;LS;nov/21;Lorena
 59;0;0;sem_emprestimo;0;0;0;Mirela Silva Silva;MS;dez/21;Mirela
@@ -69,9 +69,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 68;10;1;other;0;10;1;Felipe Santos Silva;FS;set/22;Felipe
 69;7;1;other;0;7;1;Thiago Santos Silva;TS;out/22;Thiago
 70;6;2;other, real_estate;1;5;1;Larissa Santos Silva;LS;nov/22;Larissa
-71;7;2;other, real_estate;1;6;1;Andr‚ Santos Silva;AS;dez/22;Andr‚
+71;7;2;other, real_estate;1;6;1;Andrâ€š Santos Silva;AS;dez/22;Andrâ€š
 72;5;1;other;0;5;1;Leonardo Santos Silva;LS;jan/23;Leonardo
-73;4;1;other;0;4;1;Patr¡cia Santos Silva;PS;fev/23;Patr¡cia
+73;4;1;other;0;4;1;PatrÂ¡cia Santos Silva;PS;fev/23;PatrÂ¡cia
 74;6;2;other, real_estate;1;5;1;Ricardo Santos Silva;RS;mar/23;Ricardo
 75;13;2;other, real_estate;2;11;1;Daniel Santos Silva;DS;abr/23;Daniel
 76;21;2;other, real_estate;1;20;1;Tatiane Santos Silva;TS;mai/23;Tatiane
@@ -82,11 +82,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 81;8;2;other, real_estate;3;5;1;Carla Santos Silva;CS;out/23;Carla
 82;4;2;other, real_estate;1;3;1;Murilo Santos Silva;MS;nov/23;Murilo
 83;15;1;other;0;15;1;Samuel Santos Silva;SS;dez/23;Samuel
-84;5;2;other, real_estate;1;4;1;Fl via Santos Silva;FS;jan/24;Fl via
+84;5;2;other, real_estate;1;4;1;FlÂ via Santos Silva;FS;jan/24;FlÂ via
 85;8;2;other, real_estate;1;7;1;Arthur Santos Silva;AS;fev/24;Arthur
-86;9;1;other;0;9;1;Helo¡sa Santos Silva;HS;mar/24;Helo¡sa
+86;9;1;other;0;9;1;HeloÂ¡sa Santos Silva;HS;mar/24;HeloÂ¡sa
 87;4;1;other;0;4;1;Bernardo Santos Silva;BS;abr/24;Bernardo
-88;7;2;other, real_estate;1;6;1;Ot vio Santos Silva;OS;mai/24;Ot vio
+88;7;2;other, real_estate;1;6;1;OtÂ vio Santos Silva;OS;mai/24;OtÂ vio
 89;7;2;other, real_estate;1;6;1;Heitor Santos Silva;HS;jun/24;Heitor
 90;8;1;other;0;8;1;Manuela Santos Silva;MS;jul/24;Manuela
 91;5;1;other;0;5;1;Pietro Santos Silva;PS;ago/24;Pietro
@@ -94,27 +94,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 93;3;1;other;0;3;1;Priscila Santos Silva;PS;out/24;Priscila
 94;2;1;other;0;2;1;Igor Santos Silva;IS;nov/24;Igor
 95;9;1;other;0;9;1;Renato Santos Silva;RS;dez/24;Renato
-96;5;1;other;0;5;1;Tain  Santos Silva;TS;jan/21;Tain 
-97;9;2;other, real_estate;1;8;1;C‚sar Santos Silva;CS;fev/21;C‚sar
+96;5;1;other;0;5;1;TainÂ  Santos Silva;TS;jan/21;TainÂ 
+97;9;2;other, real_estate;1;8;1;Câ€šsar Santos Silva;CS;fev/21;Câ€šsar
 98;11;2;other, real_estate;2;9;1;Aline Santos Silva;AS;mar/21;Aline
 99;3;1;other;0;3;1;Bruna Santos Silva;BS;abr/21;Bruna
 100;19;2;other, real_estate;1;18;1;Alan Santos Silva;AS;mai/21;Alan
 101;1;1;other;0;1;1;Daiane Santos Silva;DS;jun/21;Daiane
 102;9;1;other;0;9;1;Breno Santos Silva;BS;jul/21;Breno
-103;4;1;other;0;4;1;CauÆ Santos Silva;CS;ago/21;CauÆ
+103;4;1;other;0;4;1;CauÃ† Santos Silva;CS;ago/21;CauÃ†
 104;3;2;other, real_estate;1;2;1;Geovana Santos Silva;GS;set/21;Geovana
-105;10;1;other;0;10;1;Cl udio Santos Silva;CS;out/21;Cl udio
-106;5;1;other;0;5;1;J‚ssica Santos Silva;JS;nov/21;J‚ssica
+105;10;1;other;0;10;1;ClÂ udio Santos Silva;CS;out/21;ClÂ udio
+106;5;1;other;0;5;1;Jâ€šssica Santos Silva;JS;nov/21;Jâ€šssica
 107;9;2;other, real_estate;1;8;1;Elias Santos Silva;ES;dez/21;Elias
 108;10;1;other;0;10;1;Fernando Santos Silva;FS;jan/22;Fernando
-109;9;2;other, real_estate;2;7;1;J£lio Santos Silva;JS;fev/22;J£lio
+109;9;2;other, real_estate;2;7;1;JÂ£lio Santos Silva;JS;fev/22;JÂ£lio
 110;4;1;other;0;4;1;Paula Santos Silva;PS;mar/22;Paula
-111;9;2;other, real_estate;4;5;1;M rcio Santos Silva;MS;abr/22;M rcio
+111;9;2;other, real_estate;4;5;1;MÂ rcio Santos Silva;MS;abr/22;MÂ rcio
 112;5;2;other, real_estate;1;4;1;Nicolas Santos Silva;NS;mai/22;Nicolas
 113;5;2;other, real_estate;1;4;1;Talita Santos Silva;TS;jun/22;Talita
-114;5;2;other, real_estate;1;4;1;S‚rgio Santos Silva;SS;jul/22;S‚rgio
+114;5;2;other, real_estate;1;4;1;Sâ€šrgio Santos Silva;SS;jul/22;Sâ€šrgio
 115;11;1;other;0;11;1;Tadeu Santos Silva;TS;ago/22;Tadeu
-116;4;2;other, real_estate;1;3;1;Z‚lia Santos Silva;ZS;set/22;Z‚lia
+116;4;2;other, real_estate;1;3;1;Zâ€šlia Santos Silva;ZS;set/22;Zâ€šlia
 117;17;2;other, real_estate;3;14;1;William Santos Silva;WS;out/22;William
 118;4;1;other;0;4;1;Lorena Santos Silva;LS;nov/22;Lorena
 119;4;2;other, real_estate;1;3;1;Mirela Santos Silva;MS;dez/22;Mirela
@@ -129,9 +129,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 128;11;2;other, real_estate;4;7;1;Felipe Oliveira Silva;FO;set/23;Felipe
 129;15;2;other, real_estate;1;14;1;Thiago Oliveira Silva;TO;out/23;Thiago
 130;7;1;other;0;7;1;Larissa Oliveira Silva;LO;nov/23;Larissa
-131;3;2;other, real_estate;2;1;1;Andr‚ Oliveira Silva;AO;dez/23;Andr‚
+131;3;2;other, real_estate;2;1;1;Andrâ€š Oliveira Silva;AO;dez/23;Andrâ€š
 132;6;2;other, real_estate;1;5;1;Leonardo Oliveira Silva;LO;jan/24;Leonardo
-133;11;2;other, real_estate;1;10;1;Patr¡cia Oliveira Silva;PO;fev/24;Patr¡cia
+133;11;2;other, real_estate;1;10;1;PatrÂ¡cia Oliveira Silva;PO;fev/24;PatrÂ¡cia
 134;5;1;other;0;5;1;Ricardo Oliveira Silva;RO;mar/24;Ricardo
 135;3;1;other;0;3;1;Daniel Oliveira Silva;DO;abr/24;Daniel
 136;12;2;other, real_estate;4;8;1;Tatiane Oliveira Silva;TO;mai/24;Tatiane
@@ -142,11 +142,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 141;2;1;other;0;2;1;Carla Oliveira Silva;CO;out/24;Carla
 142;9;2;other, real_estate;1;8;1;Murilo Oliveira Silva;MO;nov/24;Murilo
 143;9;2;other, real_estate;1;8;1;Samuel Oliveira Silva;SO;dez/24;Samuel
-144;7;2;other, real_estate;1;6;1;Fl via Oliveira Silva;FO;jan/21;Fl via
+144;7;2;other, real_estate;1;6;1;FlÂ via Oliveira Silva;FO;jan/21;FlÂ via
 145;11;2;other, real_estate;1;10;1;Arthur Oliveira Silva;AO;fev/21;Arthur
-146;7;1;other;0;7;1;Helo¡sa Oliveira Silva;HO;mar/21;Helo¡sa
+146;7;1;other;0;7;1;HeloÂ¡sa Oliveira Silva;HO;mar/21;HeloÂ¡sa
 147;8;2;other, real_estate;1;7;1;Bernardo Oliveira Silva;BO;abr/21;Bernardo
-148;9;2;other, real_estate;2;7;1;Ot vio Oliveira Silva;OO;mai/21;Ot vio
+148;9;2;other, real_estate;2;7;1;OtÂ vio Oliveira Silva;OO;mai/21;OtÂ vio
 149;6;1;other;0;6;1;Heitor Oliveira Silva;HO;jun/21;Heitor
 150;13;2;other, real_estate;3;10;1;Manuela Oliveira Silva;MO;jul/21;Manuela
 151;16;2;other, real_estate;1;15;1;Pietro Oliveira Silva;PO;ago/21;Pietro
@@ -154,27 +154,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 153;6;2;other, real_estate;2;4;1;Priscila Oliveira Silva;PO;out/21;Priscila
 154;8;2;other, real_estate;1;7;1;Igor Oliveira Silva;IO;nov/21;Igor
 155;5;2;other, real_estate;1;4;1;Renato Oliveira Silva;RO;dez/21;Renato
-156;5;2;other, real_estate;1;4;1;Tain  Oliveira Silva;TO;jan/22;Tain 
-157;8;1;other;0;8;1;C‚sar Oliveira Silva;CO;fev/22;C‚sar
+156;5;2;other, real_estate;1;4;1;TainÂ  Oliveira Silva;TO;jan/22;TainÂ 
+157;8;1;other;0;8;1;Câ€šsar Oliveira Silva;CO;fev/22;Câ€šsar
 158;10;2;other, real_estate;2;8;1;Aline Oliveira Silva;AO;mar/22;Aline
 159;9;1;other;0;9;1;Bruna Oliveira Silva;BO;abr/22;Bruna
 160;12;2;other, real_estate;2;10;1;Alan Oliveira Silva;AO;mai/22;Alan
 161;2;1;other;0;2;1;Daiane Oliveira Silva;DO;jun/22;Daiane
 162;7;1;other;0;7;1;Breno Oliveira Silva;BO;jul/22;Breno
-163;3;1;other;0;3;1;CauÆ Oliveira Silva;CO;ago/22;CauÆ
+163;3;1;other;0;3;1;CauÃ† Oliveira Silva;CO;ago/22;CauÃ†
 164;18;2;other, real_estate;1;17;1;Geovana Oliveira Silva;GO;set/22;Geovana
-165;7;2;other, real_estate;1;6;1;Cl udio Oliveira Silva;CO;out/22;Cl udio
-166;6;2;other, real_estate;1;5;1;J‚ssica Oliveira Silva;JO;nov/22;J‚ssica
+165;7;2;other, real_estate;1;6;1;ClÂ udio Oliveira Silva;CO;out/22;ClÂ udio
+166;6;2;other, real_estate;1;5;1;Jâ€šssica Oliveira Silva;JO;nov/22;Jâ€šssica
 167;4;1;other;0;4;1;Elias Oliveira Silva;EO;dez/22;Elias
 168;10;1;other;0;10;1;Fernando Oliveira Silva;FO;jan/23;Fernando
-169;0;0;sem_emprestimo;0;0;0;J£lio Oliveira Silva;JO;fev/23;J£lio
+169;0;0;sem_emprestimo;0;0;0;JÂ£lio Oliveira Silva;JO;fev/23;JÂ£lio
 170;4;1;other;0;4;1;Paula Oliveira Silva;PO;mar/23;Paula
-171;16;2;other, real_estate;1;15;1;M rcio Oliveira Silva;MO;abr/23;M rcio
+171;16;2;other, real_estate;1;15;1;MÂ rcio Oliveira Silva;MO;abr/23;MÂ rcio
 172;7;2;other, real_estate;1;6;1;Nicolas Oliveira Silva;NO;mai/23;Nicolas
 173;11;2;other, real_estate;2;9;1;Talita Oliveira Silva;TO;jun/23;Talita
-174;13;2;other, real_estate;2;11;1;S‚rgio Oliveira Silva;SO;jul/23;S‚rgio
+174;13;2;other, real_estate;2;11;1;Sâ€šrgio Oliveira Silva;SO;jul/23;Sâ€šrgio
 175;11;1;other;0;11;1;Tadeu Oliveira Silva;TO;ago/23;Tadeu
-176;3;2;other, real_estate;1;2;1;Z‚lia Oliveira Silva;ZO;set/23;Z‚lia
+176;3;2;other, real_estate;1;2;1;Zâ€šlia Oliveira Silva;ZO;set/23;Zâ€šlia
 177;6;1;other;0;6;1;William Oliveira Silva;WO;out/23;William
 178;17;2;other, real_estate;1;16;1;Lorena Oliveira Silva;LO;nov/23;Lorena
 179;9;2;other, real_estate;2;7;1;Mirela Oliveira Silva;MO;dez/23;Mirela
@@ -189,9 +189,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 188;6;1;other;0;6;1;Felipe Souza Silva;FS;set/24;Felipe
 189;5;2;other, real_estate;1;4;1;Thiago Souza Silva;TS;out/24;Thiago
 190;5;2;other, real_estate;1;4;1;Larissa Souza Silva;LS;nov/24;Larissa
-191;15;1;other;0;15;1;Andr‚ Souza Silva;AS;dez/24;Andr‚
+191;15;1;other;0;15;1;Andrâ€š Souza Silva;AS;dez/24;Andrâ€š
 192;6;1;other;0;6;1;Leonardo Souza Silva;LS;jan/21;Leonardo
-193;15;2;other, real_estate;2;13;1;Patr¡cia Souza Silva;PS;fev/21;Patr¡cia
+193;15;2;other, real_estate;2;13;1;PatrÂ¡cia Souza Silva;PS;fev/21;PatrÂ¡cia
 194;14;2;other, real_estate;2;12;1;Ricardo Souza Silva;RS;mar/21;Ricardo
 195;9;1;other;0;9;1;Daniel Souza Silva;DS;abr/21;Daniel
 196;13;1;other;0;13;1;Tatiane Souza Silva;TS;mai/21;Tatiane
@@ -202,11 +202,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 201;6;2;other, real_estate;1;5;1;Carla Souza Silva;CS;out/21;Carla
 202;4;1;other;0;4;1;Murilo Souza Silva;MS;nov/21;Murilo
 203;4;2;other, real_estate;1;3;1;Samuel Souza Silva;SS;dez/21;Samuel
-204;8;1;other;0;8;1;Fl via Souza Silva;FS;jan/22;Fl via
+204;8;1;other;0;8;1;FlÂ via Souza Silva;FS;jan/22;FlÂ via
 205;3;1;other;0;3;1;Arthur Souza Silva;AS;fev/22;Arthur
-206;5;2;other, real_estate;1;4;1;Helo¡sa Souza Silva;HS;mar/22;Helo¡sa
+206;5;2;other, real_estate;1;4;1;HeloÂ¡sa Souza Silva;HS;mar/22;HeloÂ¡sa
 207;6;2;other, real_estate;1;5;1;Bernardo Souza Silva;BS;abr/22;Bernardo
-208;0;0;sem_emprestimo;0;0;0;Ot vio Souza Silva;OS;mai/22;Ot vio
+208;0;0;sem_emprestimo;0;0;0;OtÂ vio Souza Silva;OS;mai/22;OtÂ vio
 209;7;2;other, real_estate;1;6;1;Heitor Souza Silva;HS;jun/22;Heitor
 210;10;2;other, real_estate;1;9;1;Manuela Souza Silva;MS;jul/22;Manuela
 211;7;1;other;0;7;1;Pietro Souza Silva;PS;ago/22;Pietro
@@ -214,27 +214,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 213;6;1;other;0;6;1;Priscila Souza Silva;PS;out/22;Priscila
 214;3;1;other;0;3;1;Igor Souza Silva;IS;nov/22;Igor
 215;8;1;other;0;8;1;Renato Souza Silva;RS;dez/22;Renato
-216;5;1;other;0;5;1;Tain  Souza Silva;TS;jan/23;Tain 
-217;11;2;other, real_estate;1;10;1;C‚sar Souza Silva;CS;fev/23;C‚sar
+216;5;1;other;0;5;1;TainÂ  Souza Silva;TS;jan/23;TainÂ 
+217;11;2;other, real_estate;1;10;1;Câ€šsar Souza Silva;CS;fev/23;Câ€šsar
 218;4;1;other;0;4;1;Aline Souza Silva;AS;mar/23;Aline
 219;8;1;other;0;8;1;Bruna Souza Silva;BS;abr/23;Bruna
 220;9;1;other;0;9;1;Alan Souza Silva;AS;mai/23;Alan
 221;5;1;other;0;5;1;Daiane Souza Silva;DS;jun/23;Daiane
 222;4;1;other;0;4;1;Breno Souza Silva;BS;jul/23;Breno
-223;1;1;other;0;1;1;CauÆ Souza Silva;CS;ago/23;CauÆ
+223;1;1;other;0;1;1;CauÃ† Souza Silva;CS;ago/23;CauÃ†
 224;4;2;other, real_estate;2;2;1;Geovana Souza Silva;GS;set/23;Geovana
-225;6;1;other;0;6;1;Cl udio Souza Silva;CS;out/23;Cl udio
-226;6;2;other, real_estate;1;5;1;J‚ssica Souza Silva;JS;nov/23;J‚ssica
+225;6;1;other;0;6;1;ClÂ udio Souza Silva;CS;out/23;ClÂ udio
+226;6;2;other, real_estate;1;5;1;Jâ€šssica Souza Silva;JS;nov/23;Jâ€šssica
 227;20;2;other, real_estate;1;19;1;Elias Souza Silva;ES;dez/23;Elias
 228;15;2;other, real_estate;3;12;1;Fernando Souza Silva;FS;jan/24;Fernando
-229;9;2;other, real_estate;1;8;1;J£lio Souza Silva;JS;fev/24;J£lio
+229;9;2;other, real_estate;1;8;1;JÂ£lio Souza Silva;JS;fev/24;JÂ£lio
 230;8;1;other;0;8;1;Paula Souza Silva;PS;mar/24;Paula
-231;11;1;other;0;11;1;M rcio Souza Silva;MS;abr/24;M rcio
+231;11;1;other;0;11;1;MÂ rcio Souza Silva;MS;abr/24;MÂ rcio
 232;5;2;other, real_estate;1;4;1;Nicolas Souza Silva;NS;mai/24;Nicolas
 233;5;2;other, real_estate;1;4;1;Talita Souza Silva;TS;jun/24;Talita
-234;9;2;other, real_estate;1;8;1;S‚rgio Souza Silva;SS;jul/24;S‚rgio
+234;9;2;other, real_estate;1;8;1;Sâ€šrgio Souza Silva;SS;jul/24;Sâ€šrgio
 235;7;2;other, real_estate;1;6;1;Tadeu Souza Silva;TS;ago/24;Tadeu
-236;10;2;other, real_estate;2;8;1;Z‚lia Souza Silva;ZS;set/24;Z‚lia
+236;10;2;other, real_estate;2;8;1;Zâ€šlia Souza Silva;ZS;set/24;Zâ€šlia
 237;12;2;other, real_estate;1;11;1;William Souza Silva;WS;out/24;William
 238;6;2;other, real_estate;1;5;1;Lorena Souza Silva;LS;nov/24;Lorena
 239;21;2;other, real_estate;2;19;1;Mirela Souza Silva;MS;dez/24;Mirela
@@ -249,9 +249,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 248;14;2;other, real_estate;2;12;1;Felipe Lima Silva;FL;set/21;Felipe
 249;1;1;other;0;1;1;Thiago Lima Silva;TL;out/21;Thiago
 250;7;2;other, real_estate;1;6;1;Larissa Lima Silva;LL;nov/21;Larissa
-251;8;2;other, real_estate;2;6;1;Andr‚ Lima Silva;AL;dez/21;Andr‚
+251;8;2;other, real_estate;2;6;1;Andrâ€š Lima Silva;AL;dez/21;Andrâ€š
 252;0;0;sem_emprestimo;0;0;0;Leonardo Lima Silva;LL;jan/22;Leonardo
-253;2;1;other;0;2;1;Patr¡cia Lima Silva;PL;fev/22;Patr¡cia
+253;2;1;other;0;2;1;PatrÂ¡cia Lima Silva;PL;fev/22;PatrÂ¡cia
 254;7;2;other, real_estate;2;5;1;Ricardo Lima Silva;RL;mar/22;Ricardo
 255;5;1;other;0;5;1;Daniel Lima Silva;DL;abr/22;Daniel
 256;6;2;other, real_estate;1;5;1;Tatiane Lima Silva;TL;mai/22;Tatiane
@@ -262,11 +262,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 261;4;1;other;0;4;1;Carla Lima Silva;CL;out/22;Carla
 262;7;1;other;0;7;1;Murilo Lima Silva;ML;nov/22;Murilo
 263;11;2;other, real_estate;2;9;1;Samuel Lima Silva;SL;dez/22;Samuel
-264;5;2;other, real_estate;1;4;1;Fl via Lima Silva;FL;jan/23;Fl via
+264;5;2;other, real_estate;1;4;1;FlÂ via Lima Silva;FL;jan/23;FlÂ via
 265;7;2;other, real_estate;1;6;1;Arthur Lima Silva;AL;fev/23;Arthur
-266;8;2;other, real_estate;1;7;1;Helo¡sa Lima Silva;HL;mar/23;Helo¡sa
+266;8;2;other, real_estate;1;7;1;HeloÂ¡sa Lima Silva;HL;mar/23;HeloÂ¡sa
 267;12;2;other, real_estate;3;9;1;Bernardo Lima Silva;BL;abr/23;Bernardo
-268;2;2;other, real_estate;1;1;1;Ot vio Lima Silva;OL;mai/23;Ot vio
+268;2;2;other, real_estate;1;1;1;OtÂ vio Lima Silva;OL;mai/23;OtÂ vio
 269;14;2;other, real_estate;2;12;1;Heitor Lima Silva;HL;jun/23;Heitor
 270;12;2;other, real_estate;1;11;1;Manuela Lima Silva;ML;jul/23;Manuela
 271;3;1;other;0;3;1;Pietro Lima Silva;PL;ago/23;Pietro
@@ -274,27 +274,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 273;6;1;other;0;6;1;Priscila Lima Silva;PL;out/23;Priscila
 274;10;2;other, real_estate;3;7;1;Igor Lima Silva;IL;nov/23;Igor
 275;4;2;other, real_estate;1;3;1;Renato Lima Silva;RL;dez/23;Renato
-276;4;2;other, real_estate;2;2;1;Tain  Lima Silva;TL;jan/24;Tain 
-277;2;1;other;0;2;1;C‚sar Lima Silva;CL;fev/24;C‚sar
+276;4;2;other, real_estate;2;2;1;TainÂ  Lima Silva;TL;jan/24;TainÂ 
+277;2;1;other;0;2;1;Câ€šsar Lima Silva;CL;fev/24;Câ€šsar
 278;14;2;other, real_estate;5;9;1;Aline Lima Silva;AL;mar/24;Aline
 279;13;2;other, real_estate;1;12;1;Bruna Lima Silva;BL;abr/24;Bruna
 280;2;1;other;0;2;1;Alan Lima Silva;AL;mai/24;Alan
 281;8;2;other, real_estate;1;7;1;Daiane Lima Silva;DL;jun/24;Daiane
 282;6;2;other, real_estate;1;5;1;Breno Lima Silva;BL;jul/24;Breno
-283;4;1;other;0;4;1;CauÆ Lima Silva;CL;ago/24;CauÆ
+283;4;1;other;0;4;1;CauÃ† Lima Silva;CL;ago/24;CauÃ†
 284;13;1;other;0;13;1;Geovana Lima Silva;GL;set/24;Geovana
-285;10;2;other, real_estate;1;9;1;Cl udio Lima Silva;CL;out/24;Cl udio
-286;10;2;other, real_estate;2;8;1;J‚ssica Lima Silva;JL;nov/24;J‚ssica
+285;10;2;other, real_estate;1;9;1;ClÂ udio Lima Silva;CL;out/24;ClÂ udio
+286;10;2;other, real_estate;2;8;1;Jâ€šssica Lima Silva;JL;nov/24;Jâ€šssica
 287;12;2;other, real_estate;2;10;1;Elias Lima Silva;EL;dez/24;Elias
 288;3;1;other;0;3;1;Fernando Lima Silva;FL;jan/21;Fernando
-289;4;1;other;0;4;1;J£lio Lima Silva;JL;fev/21;J£lio
+289;4;1;other;0;4;1;JÂ£lio Lima Silva;JL;fev/21;JÂ£lio
 290;13;2;other, real_estate;1;12;1;Paula Lima Silva;PL;mar/21;Paula
-291;4;1;other;0;4;1;M rcio Lima Silva;ML;abr/21;M rcio
+291;4;1;other;0;4;1;MÂ rcio Lima Silva;ML;abr/21;MÂ rcio
 292;9;1;other;0;9;1;Nicolas Lima Silva;NL;mai/21;Nicolas
 293;7;2;other, real_estate;2;5;1;Talita Lima Silva;TL;jun/21;Talita
-294;11;2;other, real_estate;2;9;1;S‚rgio Lima Silva;SL;jul/21;S‚rgio
+294;11;2;other, real_estate;2;9;1;Sâ€šrgio Lima Silva;SL;jul/21;Sâ€šrgio
 295;4;1;other;0;4;1;Tadeu Lima Silva;TL;ago/21;Tadeu
-296;1;1;other;0;1;1;Z‚lia Lima Silva;ZL;set/21;Z‚lia
+296;1;1;other;0;1;1;Zâ€šlia Lima Silva;ZL;set/21;Zâ€šlia
 297;0;0;sem_emprestimo;0;0;0;William Lima Silva;WL;out/21;William
 298;5;2;other, real_estate;2;3;1;Lorena Lima Silva;LL;nov/21;Lorena
 299;2;2;other, real_estate;1;1;1;Mirela Lima Silva;ML;dez/21;Mirela
@@ -309,9 +309,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 308;7;2;other, real_estate;1;6;1;Felipe Pereira Silva;FP;set/22;Felipe
 309;2;1;other;0;2;1;Thiago Pereira Silva;TP;out/22;Thiago
 310;4;2;other, real_estate;1;3;1;Larissa Pereira Silva;LP;nov/22;Larissa
-311;14;2;other, real_estate;1;13;1;Andr‚ Pereira Silva;AP;dez/22;Andr‚
+311;14;2;other, real_estate;1;13;1;Andrâ€š Pereira Silva;AP;dez/22;Andrâ€š
 312;12;2;other, real_estate;1;11;1;Leonardo Pereira Silva;LP;jan/23;Leonardo
-313;9;2;other, real_estate;1;8;1;Patr¡cia Pereira Silva;PP;fev/23;Patr¡cia
+313;9;2;other, real_estate;1;8;1;PatrÂ¡cia Pereira Silva;PP;fev/23;PatrÂ¡cia
 314;13;1;other;0;13;1;Ricardo Pereira Silva;RP;mar/23;Ricardo
 315;9;1;other;0;9;1;Daniel Pereira Silva;DP;abr/23;Daniel
 316;4;1;other;0;4;1;Tatiane Pereira Silva;TP;mai/23;Tatiane
@@ -322,11 +322,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 321;9;2;other, real_estate;4;5;1;Carla Pereira Silva;CP;out/23;Carla
 322;5;2;other, real_estate;1;4;1;Murilo Pereira Silva;MP;nov/23;Murilo
 323;6;1;other;0;6;1;Samuel Pereira Silva;SP;dez/23;Samuel
-324;4;2;other, real_estate;1;3;1;Fl via Pereira Silva;FP;jan/24;Fl via
+324;4;2;other, real_estate;1;3;1;FlÂ via Pereira Silva;FP;jan/24;FlÂ via
 325;13;2;other, real_estate;1;12;1;Arthur Pereira Silva;AP;fev/24;Arthur
-326;18;2;other, real_estate;2;16;1;Helo¡sa Pereira Silva;HP;mar/24;Helo¡sa
+326;18;2;other, real_estate;2;16;1;HeloÂ¡sa Pereira Silva;HP;mar/24;HeloÂ¡sa
 327;4;2;other, real_estate;1;3;1;Bernardo Pereira Silva;BP;abr/24;Bernardo
-328;6;2;other, real_estate;1;5;1;Ot vio Pereira Silva;OP;mai/24;Ot vio
+328;6;2;other, real_estate;1;5;1;OtÂ vio Pereira Silva;OP;mai/24;OtÂ vio
 329;12;2;other, real_estate;6;6;1;Heitor Pereira Silva;HP;jun/24;Heitor
 330;14;2;other, real_estate;2;12;1;Manuela Pereira Silva;MP;jul/24;Manuela
 331;3;1;other;0;3;1;Pietro Pereira Silva;PP;ago/24;Pietro
@@ -334,27 +334,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 333;5;2;other, real_estate;1;4;1;Priscila Pereira Silva;PP;out/24;Priscila
 334;5;2;other, real_estate;1;4;1;Igor Pereira Silva;IP;nov/24;Igor
 335;10;2;other, real_estate;1;9;1;Renato Pereira Silva;RP;dez/24;Renato
-336;2;1;other;0;2;1;Tain  Pereira Silva;TP;jan/21;Tain 
-337;2;1;other;0;2;1;C‚sar Pereira Silva;CP;fev/21;C‚sar
+336;2;1;other;0;2;1;TainÂ  Pereira Silva;TP;jan/21;TainÂ 
+337;2;1;other;0;2;1;Câ€šsar Pereira Silva;CP;fev/21;Câ€šsar
 338;10;2;other, real_estate;1;9;1;Aline Pereira Silva;AP;mar/21;Aline
 339;5;1;other;0;5;1;Bruna Pereira Silva;BP;abr/21;Bruna
 340;15;2;other, real_estate;2;13;1;Alan Pereira Silva;AP;mai/21;Alan
 341;8;1;other;0;8;1;Daiane Pereira Silva;DP;jun/21;Daiane
 342;10;1;other;0;10;1;Breno Pereira Silva;BP;jul/21;Breno
-343;1;1;other;0;1;1;CauÆ Pereira Silva;CP;ago/21;CauÆ
+343;1;1;other;0;1;1;CauÃ† Pereira Silva;CP;ago/21;CauÃ†
 344;1;1;other;0;1;1;Geovana Pereira Silva;GP;set/21;Geovana
-345;4;2;other, real_estate;1;3;1;Cl udio Pereira Silva;CP;out/21;Cl udio
-346;17;2;other, real_estate;4;13;1;J‚ssica Pereira Silva;JP;nov/21;J‚ssica
+345;4;2;other, real_estate;1;3;1;ClÂ udio Pereira Silva;CP;out/21;ClÂ udio
+346;17;2;other, real_estate;4;13;1;Jâ€šssica Pereira Silva;JP;nov/21;Jâ€šssica
 347;16;2;other, real_estate;2;14;1;Elias Pereira Silva;EP;dez/21;Elias
 348;0;0;sem_emprestimo;0;0;0;Fernando Pereira Silva;FP;jan/22;Fernando
-349;5;2;other, real_estate;2;3;1;J£lio Pereira Silva;JP;fev/22;J£lio
+349;5;2;other, real_estate;2;3;1;JÂ£lio Pereira Silva;JP;fev/22;JÂ£lio
 350;11;2;other, real_estate;1;10;1;Paula Pereira Silva;PP;mar/22;Paula
-351;9;2;other, real_estate;1;8;1;M rcio Pereira Silva;MP;abr/22;M rcio
+351;9;2;other, real_estate;1;8;1;MÂ rcio Pereira Silva;MP;abr/22;MÂ rcio
 352;4;2;other, real_estate;1;3;1;Nicolas Pereira Silva;NP;mai/22;Nicolas
 353;24;2;other, real_estate;5;19;1;Talita Pereira Silva;TP;jun/22;Talita
-354;8;2;other, real_estate;1;7;1;S‚rgio Pereira Silva;SP;jul/22;S‚rgio
+354;8;2;other, real_estate;1;7;1;Sâ€šrgio Pereira Silva;SP;jul/22;Sâ€šrgio
 355;7;2;other, real_estate;1;6;1;Tadeu Pereira Silva;TP;ago/22;Tadeu
-356;1;1;other;0;1;1;Z‚lia Pereira Silva;ZP;set/22;Z‚lia
+356;1;1;other;0;1;1;Zâ€šlia Pereira Silva;ZP;set/22;Zâ€šlia
 357;8;2;other, real_estate;3;5;1;William Pereira Silva;WP;out/22;William
 358;3;1;other;0;3;1;Lorena Pereira Silva;LP;nov/22;Lorena
 359;10;2;other, real_estate;1;9;1;Mirela Pereira Silva;MP;dez/22;Mirela
@@ -369,9 +369,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 368;7;2;other, real_estate;1;6;1;Felipe Costa Silva;FC;set/23;Felipe
 369;10;2;other, real_estate;2;8;1;Thiago Costa Silva;TC;out/23;Thiago
 370;9;2;other, real_estate;2;7;1;Larissa Costa Silva;LC;nov/23;Larissa
-371;10;2;other, real_estate;1;9;1;Andr‚ Costa Silva;AC;dez/23;Andr‚
+371;10;2;other, real_estate;1;9;1;Andrâ€š Costa Silva;AC;dez/23;Andrâ€š
 372;7;1;other;0;7;1;Leonardo Costa Silva;LC;jan/24;Leonardo
-373;18;2;other, real_estate;3;15;1;Patr¡cia Costa Silva;PC;fev/24;Patr¡cia
+373;18;2;other, real_estate;3;15;1;PatrÂ¡cia Costa Silva;PC;fev/24;PatrÂ¡cia
 374;7;2;other, real_estate;1;6;1;Ricardo Costa Silva;RC;mar/24;Ricardo
 375;6;2;other, real_estate;1;5;1;Daniel Costa Silva;DC;abr/24;Daniel
 376;8;1;other;0;8;1;Tatiane Costa Silva;TC;mai/24;Tatiane
@@ -382,11 +382,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 381;14;2;other, real_estate;1;13;1;Carla Costa Silva;CC;out/24;Carla
 382;7;2;other, real_estate;1;6;1;Murilo Costa Silva;MC;nov/24;Murilo
 383;15;2;other, real_estate;1;14;1;Samuel Costa Silva;SC;dez/24;Samuel
-384;13;2;other, real_estate;1;12;1;Fl via Costa Silva;FC;jan/21;Fl via
+384;13;2;other, real_estate;1;12;1;FlÂ via Costa Silva;FC;jan/21;FlÂ via
 385;21;2;other, real_estate;3;18;1;Arthur Costa Silva;AC;fev/21;Arthur
-386;20;2;other, real_estate;1;19;1;Helo¡sa Costa Silva;HC;mar/21;Helo¡sa
+386;20;2;other, real_estate;1;19;1;HeloÂ¡sa Costa Silva;HC;mar/21;HeloÂ¡sa
 387;20;2;other, real_estate;1;19;1;Bernardo Costa Silva;BC;abr/21;Bernardo
-388;7;1;other;0;7;1;Ot vio Costa Silva;OC;mai/21;Ot vio
+388;7;1;other;0;7;1;OtÂ vio Costa Silva;OC;mai/21;OtÂ vio
 389;2;1;other;0;2;1;Heitor Costa Silva;HC;jun/21;Heitor
 390;5;2;other, real_estate;1;4;1;Manuela Costa Silva;MC;jul/21;Manuela
 391;6;1;other;0;6;1;Pietro Costa Silva;PC;ago/21;Pietro
@@ -394,27 +394,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 393;1;1;other;0;1;1;Priscila Costa Silva;PC;out/21;Priscila
 394;9;2;other, real_estate;2;7;1;Igor Costa Silva;IC;nov/21;Igor
 395;2;1;other;0;2;1;Renato Costa Silva;RC;dez/21;Renato
-396;4;2;other, real_estate;1;3;1;Tain  Costa Silva;TC;jan/22;Tain 
-397;15;2;other, real_estate;1;14;1;C‚sar Costa Silva;CC;fev/22;C‚sar
+396;4;2;other, real_estate;1;3;1;TainÂ  Costa Silva;TC;jan/22;TainÂ 
+397;15;2;other, real_estate;1;14;1;Câ€šsar Costa Silva;CC;fev/22;Câ€šsar
 398;3;1;other;0;3;1;Aline Costa Silva;AC;mar/22;Aline
 399;3;1;other;0;3;1;Bruna Costa Silva;BC;abr/22;Bruna
 400;10;2;other, real_estate;2;8;1;Alan Costa Silva;AC;mai/22;Alan
 401;19;2;other, real_estate;1;18;1;Daiane Costa Silva;DC;jun/22;Daiane
 402;9;1;other;0;9;1;Breno Costa Silva;BC;jul/22;Breno
-403;6;2;other, real_estate;1;5;1;CauÆ Costa Silva;CC;ago/22;CauÆ
+403;6;2;other, real_estate;1;5;1;CauÃ† Costa Silva;CC;ago/22;CauÃ†
 404;31;2;other, real_estate;2;29;1;Geovana Costa Silva;GC;set/22;Geovana
-405;31;2;other, real_estate;9;22;1;Cl udio Costa Silva;CC;out/22;Cl udio
-406;2;1;other;0;2;1;J‚ssica Costa Silva;JC;nov/22;J‚ssica
+405;31;2;other, real_estate;9;22;1;ClÂ udio Costa Silva;CC;out/22;ClÂ udio
+406;2;1;other;0;2;1;Jâ€šssica Costa Silva;JC;nov/22;Jâ€šssica
 407;6;2;other, real_estate;1;5;1;Elias Costa Silva;EC;dez/22;Elias
 408;6;1;other;0;6;1;Fernando Costa Silva;FC;jan/23;Fernando
-409;11;2;other, real_estate;2;9;1;J£lio Costa Silva;JC;fev/23;J£lio
+409;11;2;other, real_estate;2;9;1;JÂ£lio Costa Silva;JC;fev/23;JÂ£lio
 410;7;2;other, real_estate;1;6;1;Paula Costa Silva;PC;mar/23;Paula
-411;4;2;other, real_estate;1;3;1;M rcio Costa Silva;MC;abr/23;M rcio
+411;4;2;other, real_estate;1;3;1;MÂ rcio Costa Silva;MC;abr/23;MÂ rcio
 412;21;2;other, real_estate;2;19;1;Nicolas Costa Silva;NC;mai/23;Nicolas
 413;9;1;other;0;9;1;Talita Costa Silva;TC;jun/23;Talita
-414;5;2;other, real_estate;1;4;1;S‚rgio Costa Silva;SC;jul/23;S‚rgio
+414;5;2;other, real_estate;1;4;1;Sâ€šrgio Costa Silva;SC;jul/23;Sâ€šrgio
 415;2;1;other;0;2;1;Tadeu Costa Silva;TC;ago/23;Tadeu
-416;1;1;other;0;1;1;Z‚lia Costa Silva;ZC;set/23;Z‚lia
+416;1;1;other;0;1;1;Zâ€šlia Costa Silva;ZC;set/23;Zâ€šlia
 417;3;1;other;0;3;1;William Costa Silva;WC;out/23;William
 418;21;2;other, real_estate;4;17;1;Lorena Costa Silva;LC;nov/23;Lorena
 419;6;2;other, real_estate;1;5;1;Mirela Costa Silva;MC;dez/23;Mirela
@@ -429,9 +429,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 428;9;2;other, real_estate;2;7;1;Felipe Ferreira Silva;FF;set/24;Felipe
 429;7;2;other, real_estate;1;6;1;Thiago Ferreira Silva;TF;out/24;Thiago
 430;0;0;sem_emprestimo;0;0;0;Larissa Ferreira Silva;LF;nov/24;Larissa
-431;9;2;other, real_estate;1;8;1;Andr‚ Ferreira Silva;AF;dez/24;Andr‚
+431;9;2;other, real_estate;1;8;1;Andrâ€š Ferreira Silva;AF;dez/24;Andrâ€š
 432;7;2;other, real_estate;1;6;1;Leonardo Ferreira Silva;LF;jan/21;Leonardo
-433;7;2;other, real_estate;1;6;1;Patr¡cia Ferreira Silva;PF;fev/21;Patr¡cia
+433;7;2;other, real_estate;1;6;1;PatrÂ¡cia Ferreira Silva;PF;fev/21;PatrÂ¡cia
 434;7;2;other, real_estate;1;6;1;Ricardo Ferreira Silva;RF;mar/21;Ricardo
 435;4;1;other;0;4;1;Daniel Ferreira Silva;DF;abr/21;Daniel
 436;7;2;other, real_estate;2;5;1;Tatiane Ferreira Silva;TF;mai/21;Tatiane
@@ -442,11 +442,11 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 441;9;2;other, real_estate;1;8;1;Carla Ferreira Silva;CF;out/21;Carla
 442;9;2;other, real_estate;2;7;1;Murilo Ferreira Silva;MF;nov/21;Murilo
 443;3;1;other;0;3;1;Samuel Ferreira Silva;SF;dez/21;Samuel
-444;15;2;other, real_estate;2;13;1;Fl via Ferreira Silva;FF;jan/22;Fl via
+444;15;2;other, real_estate;2;13;1;FlÂ via Ferreira Silva;FF;jan/22;FlÂ via
 445;3;1;other;0;3;1;Arthur Ferreira Silva;AF;fev/22;Arthur
-446;8;1;other;0;8;1;Helo¡sa Ferreira Silva;HF;mar/22;Helo¡sa
+446;8;1;other;0;8;1;HeloÂ¡sa Ferreira Silva;HF;mar/22;HeloÂ¡sa
 447;9;2;other, real_estate;1;8;1;Bernardo Ferreira Silva;BF;abr/22;Bernardo
-448;6;2;other, real_estate;1;5;1;Ot vio Ferreira Silva;OF;mai/22;Ot vio
+448;6;2;other, real_estate;1;5;1;OtÂ vio Ferreira Silva;OF;mai/22;OtÂ vio
 449;9;2;other, real_estate;2;7;1;Heitor Ferreira Silva;HF;jun/22;Heitor
 450;4;1;other;0;4;1;Manuela Ferreira Silva;MF;jul/22;Manuela
 451;4;2;other, real_estate;1;3;1;Pietro Ferreira Silva;PF;ago/22;Pietro
@@ -454,27 +454,27 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 453;10;2;other, real_estate;1;9;1;Priscila Ferreira Silva;PF;out/22;Priscila
 454;9;1;other;0;9;1;Igor Ferreira Silva;IF;nov/22;Igor
 455;3;1;other;0;3;1;Renato Ferreira Silva;RF;dez/22;Renato
-456;8;2;other, real_estate;1;7;1;Tain  Ferreira Silva;TF;jan/23;Tain 
-457;10;1;other;0;10;1;C‚sar Ferreira Silva;CF;fev/23;C‚sar
+456;8;2;other, real_estate;1;7;1;TainÂ  Ferreira Silva;TF;jan/23;TainÂ 
+457;10;1;other;0;10;1;Câ€šsar Ferreira Silva;CF;fev/23;Câ€šsar
 458;3;1;other;0;3;1;Aline Ferreira Silva;AF;mar/23;Aline
 459;5;2;other, real_estate;1;4;1;Bruna Ferreira Silva;BF;abr/23;Bruna
 460;2;2;other, real_estate;1;1;1;Alan Ferreira Silva;AF;mai/23;Alan
 461;6;1;other;0;6;1;Daiane Ferreira Silva;DF;jun/23;Daiane
 462;18;2;other, real_estate;1;17;1;Breno Ferreira Silva;BF;jul/23;Breno
-463;8;2;other, real_estate;1;7;1;CauÆ Ferreira Silva;CF;ago/23;CauÆ
+463;8;2;other, real_estate;1;7;1;CauÃ† Ferreira Silva;CF;ago/23;CauÃ†
 464;4;2;other, real_estate;2;2;1;Geovana Ferreira Silva;GF;set/23;Geovana
-465;5;2;other, real_estate;1;4;1;Cl udio Ferreira Silva;CF;out/23;Cl udio
-466;18;2;other, real_estate;3;15;1;J‚ssica Ferreira Silva;JF;nov/23;J‚ssica
+465;5;2;other, real_estate;1;4;1;ClÂ udio Ferreira Silva;CF;out/23;ClÂ udio
+466;18;2;other, real_estate;3;15;1;Jâ€šssica Ferreira Silva;JF;nov/23;Jâ€šssica
 467;10;2;other, real_estate;2;8;1;Elias Ferreira Silva;EF;dez/23;Elias
 468;4;2;other, real_estate;2;2;1;Fernando Ferreira Silva;FF;jan/24;Fernando
-469;6;2;other, real_estate;1;5;1;J£lio Ferreira Silva;JF;fev/24;J£lio
+469;6;2;other, real_estate;1;5;1;JÂ£lio Ferreira Silva;JF;fev/24;JÂ£lio
 470;11;1;other;0;11;1;Paula Ferreira Silva;PF;mar/24;Paula
-471;6;2;other, real_estate;2;4;1;M rcio Ferreira Silva;MF;abr/24;M rcio
+471;6;2;other, real_estate;2;4;1;MÂ rcio Ferreira Silva;MF;abr/24;MÂ rcio
 472;8;1;other;0;8;1;Nicolas Ferreira Silva;NF;mai/24;Nicolas
 473;3;1;other;0;3;1;Talita Ferreira Silva;TF;jun/24;Talita
-474;17;2;other, real_estate;2;15;1;S‚rgio Ferreira Silva;SF;jul/24;S‚rgio
+474;17;2;other, real_estate;2;15;1;Sâ€šrgio Ferreira Silva;SF;jul/24;Sâ€šrgio
 475;5;2;other, real_estate;1;4;1;Tadeu Ferreira Silva;TF;ago/24;Tadeu
-476;6;1;other;0;6;1;Z‚lia Ferreira Silva;ZF;set/24;Z‚lia
+476;6;1;other;0;6;1;Zâ€šlia Ferreira Silva;ZF;set/24;Zâ€šlia
 477;18;2;other, real_estate;1;17;1;William Ferreira Silva;WF;out/24;William
 478;8;1;other;0;8;1;Lorena Ferreira Silva;LF;nov/24;Lorena
 479;7;1;other;0;7;1;Mirela Ferreira Silva;MF;dez/24;Mirela
@@ -489,9 +489,9 @@ user_id;qtd_emprestimos_ativos;qtd_tipos_emprestimo;tipos_emprestimo;qtd_real_es
 488;6;2;other, real_estate;1;5;1;Felipe Rodrigues Silva;FR;set/21;Felipe
 489;6;2;other, real_estate;2;4;1;Thiago Rodrigues Silva;TR;out/21;Thiago
 490;11;2;other, real_estate;2;9;1;Larissa Rodrigues Silva;LR;nov/21;Larissa
-491;5;2;other, real_estate;1;4;1;Andr‚ Rodrigues Silva;AR;dez/21;Andr‚
+491;5;2;other, real_estate;1;4;1;Andrâ€š Rodrigues Silva;AR;dez/21;Andrâ€š
 492;12;2;other, real_estate;2;10;1;Leonardo Rodrigues Silva;LR;jan/22;Leonardo
-493;4;1;other;0;4;1;Patr¡cia Rodrigues Silva;PR;fev/22;Patr¡cia
+493;4;1;other;0;4;1;PatrÂ¡cia Rodrigues Silva;PR;fev/22;PatrÂ¡cia
 494;5;1;other;0;5;1;Ricardo Rodrigues Silva;RR;mar/22;Ricardo
 495;9;1;other;0;9;1;Daniel Rodrigues Silva;DR;abr/22;Daniel
 496;8;2;other, real_estate;1;7;1;Tatiane Rodrigues Silva;TR;mai/22;Tatiane

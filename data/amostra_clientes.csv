@@ -1,501 +1,501 @@
-user_id;idade;sexo;renda_mensal;renda_mensal_imputada;numero_dependentes;dependentes_imputados;default_flag;historico_default;faixa_etaria;faixa_salarial;salario_por_dependente;idade_outlier_flag;renda_outlier_flag;nome_cliente;iniciais;cliente_desde;primeiro_nome
-1;55;F;2200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Cassia Silva Silverio;CSS;fev/21;Cassia
-2;44;M;7499;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Bruno Silverio;BS;mar/21;Bruno
-3;54;M;5900;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Pedro Silva Silva;PS;abr/21;Pedro
-4;54;F;2167;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Eduarda Silva Silva;ES;mai/21;Eduarda
-5;42;M;10415;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5207,5;0;0;Rafael Silva Silva;RS;jun/21;Rafael
-6;63;F;4368;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Gabriela Silva Silva;GS;jul/21;Gabriela
-7;76;M;1700;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Carlos Silva Silva;CS;ago/21;Carlos
-8;55;M;15658;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Felipe Silva Silva;FS;set/21;Felipe
-9;41;M;8441;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Thiago Silva Silva;TS;out/21;Thiago
-10;49;F;200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Larissa Silva Silva;LS;nov/21;Larissa
-11;56;M;6400;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6400;0;0;Andr‚ Silva Silva;AS;dez/21;Andr‚
-12;77;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Leonardo Silva Silva;LS;jan/22;Leonardo
-13;66;F;2150;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;2150;0;0;Patr¡cia Silva Silva;PS;fev/22;Patr¡cia
-14;41;M;10749;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Ricardo Silva Silva;RS;mar/22;Ricardo
-15;64;M;7083;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Daniel Silva Silva;DS;abr/22;Daniel
-16;69;F;5188;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tatiane Silva Silva;TS;mai/22;Tatiane
-17;79;M;10500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Eduardo Silva Silva;ES;jun/22;Eduardo
-18;73;F;3922;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Yasmin Silva Silva;YS;jul/22;Yasmin
-19;51;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Amanda Silva Silva;AS;ago/22;Amanda
-20;42;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Diego Silva Silva;DS;set/22;Diego
-21;65;F;5000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;2500;0;0;Carla Silva Silva;CS;out/22;Carla
-22;75;M;0;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Murilo Silva Silva;MS;nov/22;Murilo
-23;41;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Samuel Silva Silva;SS;dez/22;Samuel
-24;53;F;9939;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Fl via Silva Silva;FS;jan/23;Fl via
-25;59;M;7930;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3965;0;0;Arthur Silva Silva;AS;fev/23;Arthur
-26;55;F;5562;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Helo¡sa Silva Silva;HS;mar/23;Helo¡sa
-27;76;M;2500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Bernardo Silva Silva;BS;abr/23;Bernardo
-28;56;M;2835;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Ot vio Silva Silva;OS;mai/23;Ot vio
-29;43;M;5833;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Heitor Silva Silva;HS;jun/23;Heitor
-30;31;F;8160;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Manuela Silva Silva;MS;jul/23;Manuela
-31;74;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pietro Silva Silva;PS;ago/23;Pietro
-32;67;M;6862;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Yuri Silva Silva;YS;set/23;Yuri
-33;63;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Priscila Silva Silva;PS;out/23;Priscila
-34;62;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Igor Silva Silva;IS;nov/23;Igor
-35;57;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Renato Silva Silva;RS;dez/23;Renato
-36;72;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tain  Silva Silva;TS;jan/24;Tain 
-37;69;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;C‚sar Silva Silva;CS;fev/24;C‚sar
-38;67;F;4453;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Aline Silva Silva;AS;mar/24;Aline
-39;50;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Bruna Silva Silva;BS;abr/24;Bruna
-40;49;M;5866;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Alan Silva Silva;AS;mai/24;Alan
-41;62;F;6500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Daiane Silva Silva;DS;jun/24;Daiane
-42;34;M;5800;0;4;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1450;0;0;Breno Silva Silva;BS;jul/24;Breno
-43;59;M;5416;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5416;0;0;CauÆ Silva Silva;CS;ago/24;CauÆ
-44;46;F;3732;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Geovana Silva Silva;GS;set/24;Geovana
-45;54;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Cl udio Silva Silva;CS;out/24;Cl udio
-46;73;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J‚ssica Silva Silva;JS;nov/24;J‚ssica
-47;49;M;8900;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Elias Silva Silva;ES;dez/24;Elias
-48;53;M;4166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Fernando Silva Silva;FS;jan/21;Fernando
-49;83;M;4694;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J£lio Silva Silva;JS;fev/21;J£lio
-50;34;F;1000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Paula Silva Silva;PS;mar/21;Paula
-51;65;M;3750;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;M rcio Silva Silva;MS;abr/21;M rcio
-52;72;M;5866;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;5866;0;0;Nicolas Silva Silva;NS;mai/21;Nicolas
-53;84;F;3001;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;3001;0;0;Talita Silva Silva;TS;jun/21;Talita
-54;71;M;6000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;6000;0;0;S‚rgio Silva Silva;SS;jul/21;S‚rgio
-55;56;M;12000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;12000;0;0;Tadeu Silva Silva;TS;ago/21;Tadeu
-56;41;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Z‚lia Silva Silva;ZS;set/21;Z‚lia
-57;45;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;William Silva Silva;WS;out/21;William
-58;65;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Lorena Silva Silva;LS;nov/21;Lorena
-59;57;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Mirela Silva Silva;MS;dez/21;Mirela
-60;50;M;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Gabriel Santos Silva;GS;jan/22;Gabriel
-61;49;F;6600;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3300;0;0;Beatriz Santos Silva;BS;fev/22;Beatriz
-62;88;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Mateus Santos Silva;MS;mar/22;Mateus
-63;79;M;4273;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pedro Santos Silva;PS;abr/22;Pedro
-64;48;F;15000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Eduarda Santos Silva;ES;mai/22;Eduarda
-65;37;M;6232;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Rafael Santos Silva;RS;jun/22;Rafael
-66;59;F;3213;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Gabriela Santos Silva;GS;jul/22;Gabriela
-67;55;M;10916;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;10916;0;0;Carlos Santos Silva;CS;ago/22;Carlos
-68;47;M;5560;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1853,3333;0;0;Felipe Santos Silva;FS;set/22;Felipe
-69;23;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Thiago Santos Silva;TS;out/22;Thiago
-70;56;F;6860;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3430;0;0;Larissa Santos Silva;LS;nov/22;Larissa
-71;54;M;0;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;0;0;0;Andr‚ Santos Silva;AS;dez/22;Andr‚
-72;69;M;3668;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Leonardo Santos Silva;LS;jan/23;Leonardo
-73;52;F;5115;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Patr¡cia Santos Silva;PS;fev/23;Patr¡cia
-74;76;M;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Ricardo Santos Silva;RS;mar/23;Ricardo
-75;46;M;12040;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;12040;0;0;Daniel Santos Silva;DS;abr/23;Daniel
-76;76;F;2714;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tatiane Santos Silva;TS;mai/23;Tatiane
-77;70;M;7500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;3750;0;0;Eduardo Santos Silva;ES;jun/23;Eduardo
-78;67;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Yasmin Santos Silva;YS;jul/23;Yasmin
-79;56;F;5583;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5583;0;0;Amanda Santos Silva;AS;ago/23;Amanda
-80;37;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Diego Santos Silva;DS;set/23;Diego
-81;51;F;11000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;11000;0;0;Carla Santos Silva;CS;out/23;Carla
-82;43;M;1333;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;666,5;0;0;Murilo Santos Silva;MS;nov/23;Murilo
-83;79;M;2600;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Samuel Santos Silva;SS;dez/23;Samuel
-84;43;F;4000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1333,3333;0;0;Fl via Santos Silva;FS;jan/24;Fl via
-85;45;M;5666;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1888,6667;0;0;Arthur Santos Silva;AS;fev/24;Arthur
-86;38;F;4583;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4583;0;0;Helo¡sa Santos Silva;HS;mar/24;Helo¡sa
-87;28;M;5500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Bernardo Santos Silva;BS;abr/24;Bernardo
-88;44;M;51140;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;17046,6667;0;1;Ot vio Santos Silva;OS;mai/24;Ot vio
-89;43;M;9166;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4583;0;0;Heitor Santos Silva;HS;jun/24;Heitor
-90;58;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Manuela Santos Silva;MS;jul/24;Manuela
-91;80;M;6500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Pietro Santos Silva;PS;ago/24;Pietro
-92;25;M;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Yuri Santos Silva;YS;set/24;Yuri
-93;40;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Priscila Santos Silva;PS;out/24;Priscila
-94;52;M;3000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Igor Santos Silva;IS;nov/24;Igor
-95;27;M;2800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Renato Santos Silva;RS;dez/24;Renato
-96;28;F;3500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Tain  Santos Silva;TS;jan/21;Tain 
-97;59;M;8110;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;C‚sar Santos Silva;CS;fev/21;C‚sar
-98;45;F;5600;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5600;0;0;Aline Santos Silva;AS;mar/21;Aline
-99;23;F;2200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Bruna Santos Silva;BS;abr/21;Bruna
-100;62;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Alan Santos Silva;AS;mai/21;Alan
-101;45;F;5200;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2600;0;0;Daiane Santos Silva;DS;jun/21;Daiane
-102;90;M;7083;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Breno Santos Silva;BS;jul/21;Breno
-103;64;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;CauÆ Santos Silva;CS;ago/21;CauÆ
-104;43;F;5708;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2854;0;0;Geovana Santos Silva;GS;set/21;Geovana
-105;51;M;13455;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;13455;0;0;Cl udio Santos Silva;CS;out/21;Cl udio
-106;63;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J‚ssica Santos Silva;JS;nov/21;J‚ssica
-107;37;M;12996;0;4;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3249;0;0;Elias Santos Silva;ES;dez/21;Elias
-108;83;M;2000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Fernando Santos Silva;FS;jan/22;Fernando
-109;63;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J£lio Santos Silva;JS;fev/22;J£lio
-110;89;F;3400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Paula Santos Silva;PS;mar/22;Paula
-111;50;M;15000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;7500;0;0;M rcio Santos Silva;MS;abr/22;M rcio
-112;40;M;5600;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5600;0;0;Nicolas Santos Silva;NS;mai/22;Nicolas
-113;50;F;4667;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2333,5;0;0;Talita Santos Silva;TS;jun/22;Talita
-114;49;M;4000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2000;0;0;S‚rgio Santos Silva;SS;jul/22;S‚rgio
-115;63;M;2500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tadeu Santos Silva;TS;ago/22;Tadeu
-116;47;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Z‚lia Santos Silva;ZS;set/22;Z‚lia
-117;45;M;10483;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;William Santos Silva;WS;out/22;William
-118;62;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Lorena Santos Silva;LS;nov/22;Lorena
-119;63;F;9500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Mirela Santos Silva;MS;dez/22;Mirela
-120;39;M;5400;1;0;0;1;Inadimplente;Adultos (31-59 anos);M‚dia;;0;0;Gabriel Oliveira Silva;GO;jan/23;Gabriel
-121;54;F;3600;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Beatriz Oliveira Silva;BO;fev/23;Beatriz
-122;64;M;32000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;1;Mateus Oliveira Silva;MO;mar/23;Mateus
-123;43;M;8804;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Pedro Oliveira Silva;PO;abr/23;Pedro
-124;45;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Eduarda Oliveira Silva;EO;mai/23;Eduarda
-125;43;M;5400;1;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2700;0;0;Rafael Oliveira Silva;RO;jun/23;Rafael
-126;43;F;8500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4250;0;0;Gabriela Oliveira Silva;GO;jul/23;Gabriela
-127;53;M;9100;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Carlos Oliveira Silva;CO;ago/23;Carlos
-128;38;M;12800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Felipe Oliveira Silva;FO;set/23;Felipe
-129;57;M;6667;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Thiago Oliveira Silva;TO;out/23;Thiago
-130;31;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Larissa Oliveira Silva;LO;nov/23;Larissa
-131;35;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Andr‚ Oliveira Silva;AO;dez/23;Andr‚
-132;56;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Leonardo Oliveira Silva;LO;jan/24;Leonardo
-133;52;F;4500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2250;0;0;Patr¡cia Oliveira Silva;PO;fev/24;Patr¡cia
-134;39;M;2608;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1304;0;0;Ricardo Oliveira Silva;RO;mar/24;Ricardo
-135;109;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;1;0;Daniel Oliveira Silva;DO;abr/24;Daniel
-136;50;F;7000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Tatiane Oliveira Silva;TO;mai/24;Tatiane
-137;46;M;10000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Eduardo Oliveira Silva;EO;jun/24;Eduardo
-138;54;F;3800;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;3800;0;0;Yasmin Oliveira Silva;YO;jul/24;Yasmin
-139;43;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Amanda Oliveira Silva;AO;ago/24;Amanda
-140;37;M;6833;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3416,5;0;0;Diego Oliveira Silva;DO;set/24;Diego
-141;64;F;30452;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;1;Carla Oliveira Silva;CO;out/24;Carla
-142;49;M;4320;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4320;0;0;Murilo Oliveira Silva;MO;nov/24;Murilo
-143;40;M;5000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1666,6667;0;0;Samuel Oliveira Silva;SO;dez/24;Samuel
-144;54;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Fl via Oliveira Silva;FO;jan/21;Fl via
-145;69;M;6477;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;6477;0;0;Arthur Oliveira Silva;AO;fev/21;Arthur
-146;80;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Helo¡sa Oliveira Silva;HO;mar/21;Helo¡sa
-147;54;M;4930;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Bernardo Oliveira Silva;BO;abr/21;Bernardo
-148;44;M;3666;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Ot vio Oliveira Silva;OO;mai/21;Ot vio
-149;78;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Heitor Oliveira Silva;HO;jun/21;Heitor
-150;39;F;8452;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;8452;0;0;Manuela Oliveira Silva;MO;jul/21;Manuela
-151;59;M;15000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Pietro Oliveira Silva;PO;ago/21;Pietro
-152;45;M;2383;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Yuri Oliveira Silva;YO;set/21;Yuri
-153;49;F;8400;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4200;0;0;Priscila Oliveira Silva;PO;out/21;Priscila
-154;45;M;4300;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2150;0;0;Igor Oliveira Silva;IO;nov/21;Igor
-155;44;M;1000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Renato Oliveira Silva;RO;dez/21;Renato
-156;42;F;2000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Tain  Oliveira Silva;TO;jan/22;Tain 
-157;68;M;10000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;10000;0;0;C‚sar Oliveira Silva;CO;fev/22;C‚sar
-158;62;F;1500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;750;0;0;Aline Oliveira Silva;AO;mar/22;Aline
-159;32;F;10630;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Bruna Oliveira Silva;BO;abr/22;Bruna
-160;63;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Alan Oliveira Silva;AO;mai/22;Alan
-161;25;F;4166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Daiane Oliveira Silva;DO;jun/22;Daiane
-162;33;M;2716;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Breno Oliveira Silva;BO;jul/22;Breno
-163;57;M;9166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;CauÆ Oliveira Silva;CO;ago/22;CauÆ
-164;62;F;17750;0;3;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;5916,6667;0;0;Geovana Oliveira Silva;GO;set/22;Geovana
-165;59;M;10300;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Cl udio Oliveira Silva;CO;out/22;Cl udio
-166;64;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J‚ssica Oliveira Silva;JO;nov/22;J‚ssica
-167;39;M;5916;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2958;0;0;Elias Oliveira Silva;EO;dez/22;Elias
-168;56;M;2720;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2720;0;0;Fernando Oliveira Silva;FO;jan/23;Fernando
-169;79;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J£lio Oliveira Silva;JO;fev/23;J£lio
-170;40;F;1600;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Paula Oliveira Silva;PO;mar/23;Paula
-171;59;M;7000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3500;0;0;M rcio Oliveira Silva;MO;abr/23;M rcio
-172;50;M;5596;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Nicolas Oliveira Silva;NO;mai/23;Nicolas
-173;60;F;8136;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;8136;0;0;Talita Oliveira Silva;TO;jun/23;Talita
-174;51;M;24020;0;1;0;1;Inadimplente;Adultos (31-59 anos);Alta;24020;0;1;S‚rgio Oliveira Silva;SO;jul/23;S‚rgio
-175;51;M;10728;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5364;0;0;Tadeu Oliveira Silva;TO;ago/23;Tadeu
-176;72;F;4083;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;2041,5;0;0;Z‚lia Oliveira Silva;ZO;set/23;Z‚lia
-177;46;M;3700;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1233,3333;0;0;William Oliveira Silva;WO;out/23;William
-178;63;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Lorena Oliveira Silva;LO;nov/23;Lorena
-179;42;F;18000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6000;0;0;Mirela Oliveira Silva;MO;dez/23;Mirela
-180;66;M;8000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Gabriel Souza Silva;GS;jan/24;Gabriel
-181;73;F;26500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;1;Beatriz Souza Silva;BS;fev/24;Beatriz
-182;51;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Mateus Souza Silva;MS;mar/24;Mateus
-183;82;M;2607;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pedro Souza Silva;PS;abr/24;Pedro
-184;46;F;2000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Eduarda Souza Silva;ES;mai/24;Eduarda
-185;37;M;6777;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6777;0;0;Rafael Souza Silva;RS;jun/24;Rafael
-186;55;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Gabriela Souza Silva;GS;jul/24;Gabriela
-187;63;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Carlos Souza Silva;CS;ago/24;Carlos
-188;63;M;4153;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Felipe Souza Silva;FS;set/24;Felipe
-189;33;M;3333;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Thiago Souza Silva;TS;out/24;Thiago
-190;47;F;9000;0;4;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;2250;0;0;Larissa Souza Silva;LS;nov/24;Larissa
-191;54;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Andr‚ Souza Silva;AS;dez/24;Andr‚
-192;82;M;9049;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Leonardo Souza Silva;LS;jan/21;Leonardo
-193;37;F;5417;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2708,5;0;0;Patr¡cia Souza Silva;PS;fev/21;Patr¡cia
-194;52;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Ricardo Souza Silva;RS;mar/21;Ricardo
-195;52;M;5400;1;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5400;0;0;Daniel Souza Silva;DS;abr/21;Daniel
-196;53;F;5822;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5822;0;0;Tatiane Souza Silva;TS;mai/21;Tatiane
-197;41;M;8350;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Eduardo Souza Silva;ES;jun/21;Eduardo
-198;42;F;7000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3500;0;0;Yasmin Souza Silva;YS;jul/21;Yasmin
-199;53;F;6300;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3150;0;0;Amanda Souza Silva;AS;ago/21;Amanda
-200;40;M;3600;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1800;0;0;Diego Souza Silva;DS;set/21;Diego
-201;47;F;5200;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2600;0;0;Carla Souza Silva;CS;out/21;Carla
-202;44;M;8500;0;4;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;2125;0;0;Murilo Souza Silva;MS;nov/21;Murilo
-203;35;M;10000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3333,3333;0;0;Samuel Souza Silva;SS;dez/21;Samuel
-204;34;F;4810;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4810;0;0;Fl via Souza Silva;FS;jan/22;Fl via
-205;80;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Arthur Souza Silva;AS;fev/22;Arthur
-206;61;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Helo¡sa Souza Silva;HS;mar/22;Helo¡sa
-207;54;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Bernardo Souza Silva;BS;abr/22;Bernardo
-208;47;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Ot vio Souza Silva;OS;mai/22;Ot vio
-209;67;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Heitor Souza Silva;HS;jun/22;Heitor
-210;64;F;4272;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Manuela Souza Silva;MS;jul/22;Manuela
-211;71;M;5116;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pietro Souza Silva;PS;ago/22;Pietro
-212;56;M;7000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;2333,3333;0;0;Yuri Souza Silva;YS;set/22;Yuri
-213;66;F;887;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Priscila Souza Silva;PS;out/22;Priscila
-214;76;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Igor Souza Silva;IS;nov/22;Igor
-215;50;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Renato Souza Silva;RS;dez/22;Renato
-216;29;F;3975;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Tain  Souza Silva;TS;jan/23;Tain 
-217;48;M;6000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;3000;0;0;C‚sar Souza Silva;CS;fev/23;C‚sar
-218;25;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Aline Souza Silva;AS;mar/23;Aline
-219;34;F;1800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Bruna Souza Silva;BS;abr/23;Bruna
-220;40;M;3750;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Alan Souza Silva;AS;mai/23;Alan
-221;68;F;3500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Daiane Souza Silva;DS;jun/23;Daiane
-222;51;M;12500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Breno Souza Silva;BS;jul/23;Breno
-223;23;M;1200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;CauÆ Souza Silva;CS;ago/23;CauÆ
-224;54;F;17433;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;17433;0;0;Geovana Souza Silva;GS;set/23;Geovana
-225;45;M;17000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5666,6667;0;0;Cl udio Souza Silva;CS;out/23;Cl udio
-226;68;F;10772;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;5386;0;0;J‚ssica Souza Silva;JS;nov/23;J‚ssica
-227;56;M;12500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Elias Souza Silva;ES;dez/23;Elias
-228;47;M;6500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3250;0;0;Fernando Souza Silva;FS;jan/24;Fernando
-229;57;M;8183;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;8183;0;0;J£lio Souza Silva;JS;fev/24;J£lio
-230;63;F;7427;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;7427;0;0;Paula Souza Silva;PS;mar/24;Paula
-231;77;M;1772;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;M rcio Souza Silva;MS;abr/24;M rcio
-232;46;M;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Nicolas Souza Silva;NS;mai/24;Nicolas
-233;53;F;2400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Talita Souza Silva;TS;jun/24;Talita
-234;50;M;15000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;15000;0;0;S‚rgio Souza Silva;SS;jul/24;S‚rgio
-235;38;M;10666;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5333;0;0;Tadeu Souza Silva;TS;ago/24;Tadeu
-236;54;F;2474;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Z‚lia Souza Silva;ZS;set/24;Z‚lia
-237;54;M;4884;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4884;0;0;William Souza Silva;WS;out/24;William
-238;41;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Lorena Souza Silva;LS;nov/24;Lorena
-239;57;F;9166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Mirela Souza Silva;MS;dez/24;Mirela
-240;37;M;8584;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Gabriel Lima Silva;GL;jan/21;Gabriel
-241;41;F;4828;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2414;0;0;Beatriz Lima Silva;BL;fev/21;Beatriz
-242;51;M;10000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3333,3333;0;0;Mateus Lima Silva;ML;mar/21;Mateus
-243;42;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Pedro Lima Silva;PL;abr/21;Pedro
-244;60;F;6284;0;3;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;2094,6667;0;0;Eduarda Lima Silva;EL;mai/21;Eduarda
-245;78;M;12855;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Rafael Lima Silva;RL;jun/21;Rafael
-246;47;F;5533;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5533;0;0;Gabriela Lima Silva;GL;jul/21;Gabriela
-247;51;M;2500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Carlos Lima Silva;CL;ago/21;Carlos
-248;59;M;12451;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Felipe Lima Silva;FL;set/21;Felipe
-249;75;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Thiago Lima Silva;TL;out/21;Thiago
-250;63;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Larissa Lima Silva;LL;nov/21;Larissa
-251;48;M;10500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Andr‚ Lima Silva;AL;dez/21;Andr‚
-252;23;M;800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;Leonardo Lima Silva;LL;jan/22;Leonardo
-253;35;F;3500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1750;0;0;Patr¡cia Lima Silva;PL;fev/22;Patr¡cia
-254;41;M;12500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6250;0;0;Ricardo Lima Silva;RL;mar/22;Ricardo
-255;77;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Daniel Lima Silva;DL;abr/22;Daniel
-256;70;F;3139;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tatiane Lima Silva;TL;mai/22;Tatiane
-257;66;M;3710;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;3710;0;0;Eduardo Lima Silva;EL;jun/22;Eduardo
-258;46;F;6000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;3000;0;0;Yasmin Lima Silva;YL;jul/22;Yasmin
-259;35;F;3333;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1666,5;0;0;Amanda Lima Silva;AL;ago/22;Amanda
-260;59;M;6150;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6150;0;0;Diego Lima Silva;DL;set/22;Diego
-261;74;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Carla Lima Silva;CL;out/22;Carla
-262;27;M;1500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;Murilo Lima Silva;ML;nov/22;Murilo
-263;41;M;8000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;8000;0;0;Samuel Lima Silva;SL;dez/22;Samuel
-264;40;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Fl via Lima Silva;FL;jan/23;Fl via
-265;61;M;12814;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;12814;0;0;Arthur Lima Silva;AL;fev/23;Arthur
-266;43;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Helo¡sa Lima Silva;HL;mar/23;Helo¡sa
-267;45;M;2145;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1072,5;0;0;Bernardo Lima Silva;BL;abr/23;Bernardo
-268;88;M;0;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Ot vio Lima Silva;OL;mai/23;Ot vio
+ï»¿user_id;idade;sexo;renda_mensal;renda_mensal_imputada;numero_dependentes;dependentes_imputados;default_flag;historico_default;faixa_etaria;faixa_salarial;salario_por_dependente;idade_outlier_flag;renda_outlier_flag;nome_cliente;iniciais;cliente_desde;primeiro_nome
+1;55;F;2200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Cassia Silva Silverio;CSS;fev/21;Cassia
+2;44;M;7499;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Bruno Silverio;BS;mar/21;Bruno
+3;54;M;5900;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Pedro Silva Silva;PS;abr/21;Pedro
+4;54;F;2167;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Eduarda Silva Silva;ES;mai/21;Eduarda
+5;42;M;10415;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5207,5;0;0;Rafael Silva Silva;RS;jun/21;Rafael
+6;63;F;4368;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Gabriela Silva Silva;GS;jul/21;Gabriela
+7;76;M;1700;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Carlos Silva Silva;CS;ago/21;Carlos
+8;55;M;15658;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Felipe Silva Silva;FS;set/21;Felipe
+9;41;M;8441;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Thiago Silva Silva;TS;out/21;Thiago
+10;49;F;200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Larissa Silva Silva;LS;nov/21;Larissa
+11;56;M;6400;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6400;0;0;Andrâ€š Silva Silva;AS;dez/21;Andrâ€š
+12;77;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Leonardo Silva Silva;LS;jan/22;Leonardo
+13;66;F;2150;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;2150;0;0;PatrÂ¡cia Silva Silva;PS;fev/22;PatrÂ¡cia
+14;41;M;10749;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Ricardo Silva Silva;RS;mar/22;Ricardo
+15;64;M;7083;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Daniel Silva Silva;DS;abr/22;Daniel
+16;69;F;5188;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tatiane Silva Silva;TS;mai/22;Tatiane
+17;79;M;10500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Eduardo Silva Silva;ES;jun/22;Eduardo
+18;73;F;3922;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Yasmin Silva Silva;YS;jul/22;Yasmin
+19;51;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Amanda Silva Silva;AS;ago/22;Amanda
+20;42;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Diego Silva Silva;DS;set/22;Diego
+21;65;F;5000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;2500;0;0;Carla Silva Silva;CS;out/22;Carla
+22;75;M;0;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Murilo Silva Silva;MS;nov/22;Murilo
+23;41;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Samuel Silva Silva;SS;dez/22;Samuel
+24;53;F;9939;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;FlÂ via Silva Silva;FS;jan/23;FlÂ via
+25;59;M;7930;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3965;0;0;Arthur Silva Silva;AS;fev/23;Arthur
+26;55;F;5562;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;HeloÂ¡sa Silva Silva;HS;mar/23;HeloÂ¡sa
+27;76;M;2500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Bernardo Silva Silva;BS;abr/23;Bernardo
+28;56;M;2835;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;OtÂ vio Silva Silva;OS;mai/23;OtÂ vio
+29;43;M;5833;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Heitor Silva Silva;HS;jun/23;Heitor
+30;31;F;8160;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Manuela Silva Silva;MS;jul/23;Manuela
+31;74;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pietro Silva Silva;PS;ago/23;Pietro
+32;67;M;6862;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Yuri Silva Silva;YS;set/23;Yuri
+33;63;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Priscila Silva Silva;PS;out/23;Priscila
+34;62;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Igor Silva Silva;IS;nov/23;Igor
+35;57;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Renato Silva Silva;RS;dez/23;Renato
+36;72;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;TainÂ  Silva Silva;TS;jan/24;TainÂ 
+37;69;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Câ€šsar Silva Silva;CS;fev/24;Câ€šsar
+38;67;F;4453;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Aline Silva Silva;AS;mar/24;Aline
+39;50;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Bruna Silva Silva;BS;abr/24;Bruna
+40;49;M;5866;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Alan Silva Silva;AS;mai/24;Alan
+41;62;F;6500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Daiane Silva Silva;DS;jun/24;Daiane
+42;34;M;5800;0;4;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1450;0;0;Breno Silva Silva;BS;jul/24;Breno
+43;59;M;5416;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5416;0;0;CauÃ† Silva Silva;CS;ago/24;CauÃ†
+44;46;F;3732;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Geovana Silva Silva;GS;set/24;Geovana
+45;54;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;ClÂ udio Silva Silva;CS;out/24;ClÂ udio
+46;73;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Jâ€šssica Silva Silva;JS;nov/24;Jâ€šssica
+47;49;M;8900;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Elias Silva Silva;ES;dez/24;Elias
+48;53;M;4166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Fernando Silva Silva;FS;jan/21;Fernando
+49;83;M;4694;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;JÂ£lio Silva Silva;JS;fev/21;JÂ£lio
+50;34;F;1000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Paula Silva Silva;PS;mar/21;Paula
+51;65;M;3750;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;MÂ rcio Silva Silva;MS;abr/21;MÂ rcio
+52;72;M;5866;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;5866;0;0;Nicolas Silva Silva;NS;mai/21;Nicolas
+53;84;F;3001;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;3001;0;0;Talita Silva Silva;TS;jun/21;Talita
+54;71;M;6000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;6000;0;0;Sâ€šrgio Silva Silva;SS;jul/21;Sâ€šrgio
+55;56;M;12000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;12000;0;0;Tadeu Silva Silva;TS;ago/21;Tadeu
+56;41;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Zâ€šlia Silva Silva;ZS;set/21;Zâ€šlia
+57;45;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;William Silva Silva;WS;out/21;William
+58;65;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Lorena Silva Silva;LS;nov/21;Lorena
+59;57;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Mirela Silva Silva;MS;dez/21;Mirela
+60;50;M;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Gabriel Santos Silva;GS;jan/22;Gabriel
+61;49;F;6600;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3300;0;0;Beatriz Santos Silva;BS;fev/22;Beatriz
+62;88;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Mateus Santos Silva;MS;mar/22;Mateus
+63;79;M;4273;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pedro Santos Silva;PS;abr/22;Pedro
+64;48;F;15000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Eduarda Santos Silva;ES;mai/22;Eduarda
+65;37;M;6232;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Rafael Santos Silva;RS;jun/22;Rafael
+66;59;F;3213;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Gabriela Santos Silva;GS;jul/22;Gabriela
+67;55;M;10916;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;10916;0;0;Carlos Santos Silva;CS;ago/22;Carlos
+68;47;M;5560;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1853,3333;0;0;Felipe Santos Silva;FS;set/22;Felipe
+69;23;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Thiago Santos Silva;TS;out/22;Thiago
+70;56;F;6860;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3430;0;0;Larissa Santos Silva;LS;nov/22;Larissa
+71;54;M;0;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;0;0;0;Andrâ€š Santos Silva;AS;dez/22;Andrâ€š
+72;69;M;3668;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Leonardo Santos Silva;LS;jan/23;Leonardo
+73;52;F;5115;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;PatrÂ¡cia Santos Silva;PS;fev/23;PatrÂ¡cia
+74;76;M;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Ricardo Santos Silva;RS;mar/23;Ricardo
+75;46;M;12040;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;12040;0;0;Daniel Santos Silva;DS;abr/23;Daniel
+76;76;F;2714;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tatiane Santos Silva;TS;mai/23;Tatiane
+77;70;M;7500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;3750;0;0;Eduardo Santos Silva;ES;jun/23;Eduardo
+78;67;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Yasmin Santos Silva;YS;jul/23;Yasmin
+79;56;F;5583;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5583;0;0;Amanda Santos Silva;AS;ago/23;Amanda
+80;37;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Diego Santos Silva;DS;set/23;Diego
+81;51;F;11000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;11000;0;0;Carla Santos Silva;CS;out/23;Carla
+82;43;M;1333;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;666,5;0;0;Murilo Santos Silva;MS;nov/23;Murilo
+83;79;M;2600;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Samuel Santos Silva;SS;dez/23;Samuel
+84;43;F;4000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1333,3333;0;0;FlÂ via Santos Silva;FS;jan/24;FlÂ via
+85;45;M;5666;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1888,6667;0;0;Arthur Santos Silva;AS;fev/24;Arthur
+86;38;F;4583;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4583;0;0;HeloÂ¡sa Santos Silva;HS;mar/24;HeloÂ¡sa
+87;28;M;5500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Bernardo Santos Silva;BS;abr/24;Bernardo
+88;44;M;51140;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;17046,6667;0;1;OtÂ vio Santos Silva;OS;mai/24;OtÂ vio
+89;43;M;9166;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4583;0;0;Heitor Santos Silva;HS;jun/24;Heitor
+90;58;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Manuela Santos Silva;MS;jul/24;Manuela
+91;80;M;6500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Pietro Santos Silva;PS;ago/24;Pietro
+92;25;M;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Yuri Santos Silva;YS;set/24;Yuri
+93;40;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Priscila Santos Silva;PS;out/24;Priscila
+94;52;M;3000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Igor Santos Silva;IS;nov/24;Igor
+95;27;M;2800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Renato Santos Silva;RS;dez/24;Renato
+96;28;F;3500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;TainÂ  Santos Silva;TS;jan/21;TainÂ 
+97;59;M;8110;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Câ€šsar Santos Silva;CS;fev/21;Câ€šsar
+98;45;F;5600;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5600;0;0;Aline Santos Silva;AS;mar/21;Aline
+99;23;F;2200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Bruna Santos Silva;BS;abr/21;Bruna
+100;62;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Alan Santos Silva;AS;mai/21;Alan
+101;45;F;5200;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2600;0;0;Daiane Santos Silva;DS;jun/21;Daiane
+102;90;M;7083;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Breno Santos Silva;BS;jul/21;Breno
+103;64;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;CauÃ† Santos Silva;CS;ago/21;CauÃ†
+104;43;F;5708;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2854;0;0;Geovana Santos Silva;GS;set/21;Geovana
+105;51;M;13455;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;13455;0;0;ClÂ udio Santos Silva;CS;out/21;ClÂ udio
+106;63;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Jâ€šssica Santos Silva;JS;nov/21;Jâ€šssica
+107;37;M;12996;0;4;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3249;0;0;Elias Santos Silva;ES;dez/21;Elias
+108;83;M;2000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Fernando Santos Silva;FS;jan/22;Fernando
+109;63;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;JÂ£lio Santos Silva;JS;fev/22;JÂ£lio
+110;89;F;3400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Paula Santos Silva;PS;mar/22;Paula
+111;50;M;15000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;7500;0;0;MÂ rcio Santos Silva;MS;abr/22;MÂ rcio
+112;40;M;5600;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5600;0;0;Nicolas Santos Silva;NS;mai/22;Nicolas
+113;50;F;4667;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2333,5;0;0;Talita Santos Silva;TS;jun/22;Talita
+114;49;M;4000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2000;0;0;Sâ€šrgio Santos Silva;SS;jul/22;Sâ€šrgio
+115;63;M;2500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tadeu Santos Silva;TS;ago/22;Tadeu
+116;47;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Zâ€šlia Santos Silva;ZS;set/22;Zâ€šlia
+117;45;M;10483;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;William Santos Silva;WS;out/22;William
+118;62;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Lorena Santos Silva;LS;nov/22;Lorena
+119;63;F;9500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Mirela Santos Silva;MS;dez/22;Mirela
+120;39;M;5400;1;0;0;1;Inadimplente;Adultos (31-59 anos);Mâ€šdia;;0;0;Gabriel Oliveira Silva;GO;jan/23;Gabriel
+121;54;F;3600;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Beatriz Oliveira Silva;BO;fev/23;Beatriz
+122;64;M;32000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;1;Mateus Oliveira Silva;MO;mar/23;Mateus
+123;43;M;8804;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Pedro Oliveira Silva;PO;abr/23;Pedro
+124;45;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Eduarda Oliveira Silva;EO;mai/23;Eduarda
+125;43;M;5400;1;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2700;0;0;Rafael Oliveira Silva;RO;jun/23;Rafael
+126;43;F;8500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4250;0;0;Gabriela Oliveira Silva;GO;jul/23;Gabriela
+127;53;M;9100;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Carlos Oliveira Silva;CO;ago/23;Carlos
+128;38;M;12800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Felipe Oliveira Silva;FO;set/23;Felipe
+129;57;M;6667;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Thiago Oliveira Silva;TO;out/23;Thiago
+130;31;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Larissa Oliveira Silva;LO;nov/23;Larissa
+131;35;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Andrâ€š Oliveira Silva;AO;dez/23;Andrâ€š
+132;56;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Leonardo Oliveira Silva;LO;jan/24;Leonardo
+133;52;F;4500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2250;0;0;PatrÂ¡cia Oliveira Silva;PO;fev/24;PatrÂ¡cia
+134;39;M;2608;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1304;0;0;Ricardo Oliveira Silva;RO;mar/24;Ricardo
+135;109;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;1;0;Daniel Oliveira Silva;DO;abr/24;Daniel
+136;50;F;7000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Tatiane Oliveira Silva;TO;mai/24;Tatiane
+137;46;M;10000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Eduardo Oliveira Silva;EO;jun/24;Eduardo
+138;54;F;3800;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;3800;0;0;Yasmin Oliveira Silva;YO;jul/24;Yasmin
+139;43;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Amanda Oliveira Silva;AO;ago/24;Amanda
+140;37;M;6833;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3416,5;0;0;Diego Oliveira Silva;DO;set/24;Diego
+141;64;F;30452;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;1;Carla Oliveira Silva;CO;out/24;Carla
+142;49;M;4320;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4320;0;0;Murilo Oliveira Silva;MO;nov/24;Murilo
+143;40;M;5000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1666,6667;0;0;Samuel Oliveira Silva;SO;dez/24;Samuel
+144;54;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;FlÂ via Oliveira Silva;FO;jan/21;FlÂ via
+145;69;M;6477;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;6477;0;0;Arthur Oliveira Silva;AO;fev/21;Arthur
+146;80;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;HeloÂ¡sa Oliveira Silva;HO;mar/21;HeloÂ¡sa
+147;54;M;4930;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Bernardo Oliveira Silva;BO;abr/21;Bernardo
+148;44;M;3666;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;OtÂ vio Oliveira Silva;OO;mai/21;OtÂ vio
+149;78;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Heitor Oliveira Silva;HO;jun/21;Heitor
+150;39;F;8452;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;8452;0;0;Manuela Oliveira Silva;MO;jul/21;Manuela
+151;59;M;15000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Pietro Oliveira Silva;PO;ago/21;Pietro
+152;45;M;2383;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Yuri Oliveira Silva;YO;set/21;Yuri
+153;49;F;8400;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4200;0;0;Priscila Oliveira Silva;PO;out/21;Priscila
+154;45;M;4300;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2150;0;0;Igor Oliveira Silva;IO;nov/21;Igor
+155;44;M;1000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Renato Oliveira Silva;RO;dez/21;Renato
+156;42;F;2000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;TainÂ  Oliveira Silva;TO;jan/22;TainÂ 
+157;68;M;10000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;10000;0;0;Câ€šsar Oliveira Silva;CO;fev/22;Câ€šsar
+158;62;F;1500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;750;0;0;Aline Oliveira Silva;AO;mar/22;Aline
+159;32;F;10630;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Bruna Oliveira Silva;BO;abr/22;Bruna
+160;63;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Alan Oliveira Silva;AO;mai/22;Alan
+161;25;F;4166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Daiane Oliveira Silva;DO;jun/22;Daiane
+162;33;M;2716;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Breno Oliveira Silva;BO;jul/22;Breno
+163;57;M;9166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;CauÃ† Oliveira Silva;CO;ago/22;CauÃ†
+164;62;F;17750;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;5916,6667;0;0;Geovana Oliveira Silva;GO;set/22;Geovana
+165;59;M;10300;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;ClÂ udio Oliveira Silva;CO;out/22;ClÂ udio
+166;64;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Jâ€šssica Oliveira Silva;JO;nov/22;Jâ€šssica
+167;39;M;5916;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2958;0;0;Elias Oliveira Silva;EO;dez/22;Elias
+168;56;M;2720;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2720;0;0;Fernando Oliveira Silva;FO;jan/23;Fernando
+169;79;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;JÂ£lio Oliveira Silva;JO;fev/23;JÂ£lio
+170;40;F;1600;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Paula Oliveira Silva;PO;mar/23;Paula
+171;59;M;7000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3500;0;0;MÂ rcio Oliveira Silva;MO;abr/23;MÂ rcio
+172;50;M;5596;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Nicolas Oliveira Silva;NO;mai/23;Nicolas
+173;60;F;8136;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;8136;0;0;Talita Oliveira Silva;TO;jun/23;Talita
+174;51;M;24020;0;1;0;1;Inadimplente;Adultos (31-59 anos);Alta;24020;0;1;Sâ€šrgio Oliveira Silva;SO;jul/23;Sâ€šrgio
+175;51;M;10728;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5364;0;0;Tadeu Oliveira Silva;TO;ago/23;Tadeu
+176;72;F;4083;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;2041,5;0;0;Zâ€šlia Oliveira Silva;ZO;set/23;Zâ€šlia
+177;46;M;3700;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1233,3333;0;0;William Oliveira Silva;WO;out/23;William
+178;63;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Lorena Oliveira Silva;LO;nov/23;Lorena
+179;42;F;18000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6000;0;0;Mirela Oliveira Silva;MO;dez/23;Mirela
+180;66;M;8000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Gabriel Souza Silva;GS;jan/24;Gabriel
+181;73;F;26500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;1;Beatriz Souza Silva;BS;fev/24;Beatriz
+182;51;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Mateus Souza Silva;MS;mar/24;Mateus
+183;82;M;2607;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pedro Souza Silva;PS;abr/24;Pedro
+184;46;F;2000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Eduarda Souza Silva;ES;mai/24;Eduarda
+185;37;M;6777;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6777;0;0;Rafael Souza Silva;RS;jun/24;Rafael
+186;55;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Gabriela Souza Silva;GS;jul/24;Gabriela
+187;63;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Carlos Souza Silva;CS;ago/24;Carlos
+188;63;M;4153;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Felipe Souza Silva;FS;set/24;Felipe
+189;33;M;3333;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Thiago Souza Silva;TS;out/24;Thiago
+190;47;F;9000;0;4;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;2250;0;0;Larissa Souza Silva;LS;nov/24;Larissa
+191;54;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Andrâ€š Souza Silva;AS;dez/24;Andrâ€š
+192;82;M;9049;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Leonardo Souza Silva;LS;jan/21;Leonardo
+193;37;F;5417;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2708,5;0;0;PatrÂ¡cia Souza Silva;PS;fev/21;PatrÂ¡cia
+194;52;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Ricardo Souza Silva;RS;mar/21;Ricardo
+195;52;M;5400;1;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5400;0;0;Daniel Souza Silva;DS;abr/21;Daniel
+196;53;F;5822;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5822;0;0;Tatiane Souza Silva;TS;mai/21;Tatiane
+197;41;M;8350;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Eduardo Souza Silva;ES;jun/21;Eduardo
+198;42;F;7000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3500;0;0;Yasmin Souza Silva;YS;jul/21;Yasmin
+199;53;F;6300;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3150;0;0;Amanda Souza Silva;AS;ago/21;Amanda
+200;40;M;3600;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1800;0;0;Diego Souza Silva;DS;set/21;Diego
+201;47;F;5200;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2600;0;0;Carla Souza Silva;CS;out/21;Carla
+202;44;M;8500;0;4;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;2125;0;0;Murilo Souza Silva;MS;nov/21;Murilo
+203;35;M;10000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3333,3333;0;0;Samuel Souza Silva;SS;dez/21;Samuel
+204;34;F;4810;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4810;0;0;FlÂ via Souza Silva;FS;jan/22;FlÂ via
+205;80;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Arthur Souza Silva;AS;fev/22;Arthur
+206;61;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;HeloÂ¡sa Souza Silva;HS;mar/22;HeloÂ¡sa
+207;54;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Bernardo Souza Silva;BS;abr/22;Bernardo
+208;47;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;OtÂ vio Souza Silva;OS;mai/22;OtÂ vio
+209;67;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Heitor Souza Silva;HS;jun/22;Heitor
+210;64;F;4272;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Manuela Souza Silva;MS;jul/22;Manuela
+211;71;M;5116;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pietro Souza Silva;PS;ago/22;Pietro
+212;56;M;7000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;2333,3333;0;0;Yuri Souza Silva;YS;set/22;Yuri
+213;66;F;887;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Priscila Souza Silva;PS;out/22;Priscila
+214;76;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Igor Souza Silva;IS;nov/22;Igor
+215;50;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Renato Souza Silva;RS;dez/22;Renato
+216;29;F;3975;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;TainÂ  Souza Silva;TS;jan/23;TainÂ 
+217;48;M;6000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;3000;0;0;Câ€šsar Souza Silva;CS;fev/23;Câ€šsar
+218;25;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Aline Souza Silva;AS;mar/23;Aline
+219;34;F;1800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Bruna Souza Silva;BS;abr/23;Bruna
+220;40;M;3750;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Alan Souza Silva;AS;mai/23;Alan
+221;68;F;3500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Daiane Souza Silva;DS;jun/23;Daiane
+222;51;M;12500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Breno Souza Silva;BS;jul/23;Breno
+223;23;M;1200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;CauÃ† Souza Silva;CS;ago/23;CauÃ†
+224;54;F;17433;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;17433;0;0;Geovana Souza Silva;GS;set/23;Geovana
+225;45;M;17000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5666,6667;0;0;ClÂ udio Souza Silva;CS;out/23;ClÂ udio
+226;68;F;10772;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;5386;0;0;Jâ€šssica Souza Silva;JS;nov/23;Jâ€šssica
+227;56;M;12500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Elias Souza Silva;ES;dez/23;Elias
+228;47;M;6500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3250;0;0;Fernando Souza Silva;FS;jan/24;Fernando
+229;57;M;8183;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;8183;0;0;JÂ£lio Souza Silva;JS;fev/24;JÂ£lio
+230;63;F;7427;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;7427;0;0;Paula Souza Silva;PS;mar/24;Paula
+231;77;M;1772;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;MÂ rcio Souza Silva;MS;abr/24;MÂ rcio
+232;46;M;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Nicolas Souza Silva;NS;mai/24;Nicolas
+233;53;F;2400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Talita Souza Silva;TS;jun/24;Talita
+234;50;M;15000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;15000;0;0;Sâ€šrgio Souza Silva;SS;jul/24;Sâ€šrgio
+235;38;M;10666;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5333;0;0;Tadeu Souza Silva;TS;ago/24;Tadeu
+236;54;F;2474;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Zâ€šlia Souza Silva;ZS;set/24;Zâ€šlia
+237;54;M;4884;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4884;0;0;William Souza Silva;WS;out/24;William
+238;41;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Lorena Souza Silva;LS;nov/24;Lorena
+239;57;F;9166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Mirela Souza Silva;MS;dez/24;Mirela
+240;37;M;8584;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Gabriel Lima Silva;GL;jan/21;Gabriel
+241;41;F;4828;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2414;0;0;Beatriz Lima Silva;BL;fev/21;Beatriz
+242;51;M;10000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3333,3333;0;0;Mateus Lima Silva;ML;mar/21;Mateus
+243;42;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Pedro Lima Silva;PL;abr/21;Pedro
+244;60;F;6284;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;2094,6667;0;0;Eduarda Lima Silva;EL;mai/21;Eduarda
+245;78;M;12855;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Rafael Lima Silva;RL;jun/21;Rafael
+246;47;F;5533;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5533;0;0;Gabriela Lima Silva;GL;jul/21;Gabriela
+247;51;M;2500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Carlos Lima Silva;CL;ago/21;Carlos
+248;59;M;12451;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Felipe Lima Silva;FL;set/21;Felipe
+249;75;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Thiago Lima Silva;TL;out/21;Thiago
+250;63;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Larissa Lima Silva;LL;nov/21;Larissa
+251;48;M;10500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Andrâ€š Lima Silva;AL;dez/21;Andrâ€š
+252;23;M;800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Leonardo Lima Silva;LL;jan/22;Leonardo
+253;35;F;3500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1750;0;0;PatrÂ¡cia Lima Silva;PL;fev/22;PatrÂ¡cia
+254;41;M;12500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6250;0;0;Ricardo Lima Silva;RL;mar/22;Ricardo
+255;77;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Daniel Lima Silva;DL;abr/22;Daniel
+256;70;F;3139;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tatiane Lima Silva;TL;mai/22;Tatiane
+257;66;M;3710;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;3710;0;0;Eduardo Lima Silva;EL;jun/22;Eduardo
+258;46;F;6000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;3000;0;0;Yasmin Lima Silva;YL;jul/22;Yasmin
+259;35;F;3333;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1666,5;0;0;Amanda Lima Silva;AL;ago/22;Amanda
+260;59;M;6150;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6150;0;0;Diego Lima Silva;DL;set/22;Diego
+261;74;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Carla Lima Silva;CL;out/22;Carla
+262;27;M;1500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Murilo Lima Silva;ML;nov/22;Murilo
+263;41;M;8000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;8000;0;0;Samuel Lima Silva;SL;dez/22;Samuel
+264;40;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;FlÂ via Lima Silva;FL;jan/23;FlÂ via
+265;61;M;12814;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;12814;0;0;Arthur Lima Silva;AL;fev/23;Arthur
+266;43;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;HeloÂ¡sa Lima Silva;HL;mar/23;HeloÂ¡sa
+267;45;M;2145;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1072,5;0;0;Bernardo Lima Silva;BL;abr/23;Bernardo
+268;88;M;0;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;OtÂ vio Lima Silva;OL;mai/23;OtÂ vio
 269;38;M;8000;0;1;0;1;Inadimplente;Adultos (31-59 anos);Alta;8000;0;0;Heitor Lima Silva;HL;jun/23;Heitor
-270;67;F;3855;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Manuela Lima Silva;ML;jul/23;Manuela
-271;77;M;4000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pietro Lima Silva;PL;ago/23;Pietro
-272;35;M;3200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Yuri Lima Silva;YL;set/23;Yuri
-273;24;F;2000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Priscila Lima Silva;PL;out/23;Priscila
-274;53;M;4440;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4440;0;0;Igor Lima Silva;IL;nov/23;Igor
-275;60;M;10416;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;5208;0;0;Renato Lima Silva;RL;dez/23;Renato
-276;42;F;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Tain  Lima Silva;TL;jan/24;Tain 
-277;47;M;5400;1;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1800;0;0;C‚sar Lima Silva;CL;fev/24;C‚sar
-278;56;F;10000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Aline Lima Silva;AL;mar/24;Aline
-279;64;F;981;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Bruna Lima Silva;BL;abr/24;Bruna
-280;21;M;4000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Alan Lima Silva;AL;mai/24;Alan
-281;64;F;5352;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Daiane Lima Silva;DL;jun/24;Daiane
-282;41;M;11600;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;11600;0;0;Breno Lima Silva;BL;jul/24;Breno
-283;59;M;2539;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;CauÆ Lima Silva;CL;ago/24;CauÆ
-284;88;F;1316;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Geovana Lima Silva;GL;set/24;Geovana
-285;51;M;6500;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;2166,6667;0;0;Cl udio Lima Silva;CL;out/24;Cl udio
-286;35;F;6473;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;J‚ssica Lima Silva;JL;nov/24;J‚ssica
-287;60;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Elias Lima Silva;EL;dez/24;Elias
-288;49;M;5400;1;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2700;0;0;Fernando Lima Silva;FL;jan/21;Fernando
-289;76;M;2500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J£lio Lima Silva;JL;fev/21;J£lio
-290;65;F;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Paula Lima Silva;PL;mar/21;Paula
-291;61;M;4500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;M rcio Lima Silva;ML;abr/21;M rcio
-292;83;M;1972;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Nicolas Lima Silva;NL;mai/21;Nicolas
-293;63;F;13740;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;13740;0;0;Talita Lima Silva;TL;jun/21;Talita
-294;61;M;10500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;S‚rgio Lima Silva;SL;jul/21;S‚rgio
-295;27;M;1160;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;Tadeu Lima Silva;TL;ago/21;Tadeu
-296;24;F;800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;Z‚lia Lima Silva;ZL;set/21;Z‚lia
-297;38;M;3000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1500;0;0;William Lima Silva;WL;out/21;William
-298;63;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Lorena Lima Silva;LL;nov/21;Lorena
-299;46;F;3001;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Mirela Lima Silva;ML;dez/21;Mirela
-300;39;M;7700;0;5;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;1540;0;0;Gabriel Pereira Silva;GP;jan/22;Gabriel
-301;62;F;9166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Beatriz Pereira Silva;BP;fev/22;Beatriz
-302;38;M;44574;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;14858;0;1;Mateus Pereira Silva;MP;mar/22;Mateus
-303;44;M;9283;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;9283;0;0;Pedro Pereira Silva;PP;abr/22;Pedro
-304;64;F;3139;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Eduarda Pereira Silva;EP;mai/22;Eduarda
-305;27;M;2500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Rafael Pereira Silva;RP;jun/22;Rafael
-306;48;F;10833;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3611;0;0;Gabriela Pereira Silva;GP;jul/22;Gabriela
-307;31;M;4150;0;1;0;1;Inadimplente;Adultos (31-59 anos);M‚dia;4150;0;0;Carlos Pereira Silva;CP;ago/22;Carlos
-308;47;M;5502;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Felipe Pereira Silva;FP;set/22;Felipe
-309;81;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Thiago Pereira Silva;TP;out/22;Thiago
-310;66;F;7500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Larissa Pereira Silva;LP;nov/22;Larissa
-311;74;M;10119;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Andr‚ Pereira Silva;AP;dez/22;Andr‚
-312;69;M;1630;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Leonardo Pereira Silva;LP;jan/23;Leonardo
-313;44;F;4166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Patr¡cia Pereira Silva;PP;fev/23;Patr¡cia
-314;62;M;23000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Ricardo Pereira Silva;RP;mar/23;Ricardo
-315;48;M;6110;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3055;0;0;Daniel Pereira Silva;DP;abr/23;Daniel
-316;50;F;125;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;125;0;0;Tatiane Pereira Silva;TP;mai/23;Tatiane
-317;75;M;4240;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Eduardo Pereira Silva;EP;jun/23;Eduardo
-318;49;F;1702;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Yasmin Pereira Silva;YP;jul/23;Yasmin
-319;45;F;1;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;0,5;0;0;Amanda Pereira Silva;AP;ago/23;Amanda
-320;58;M;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Diego Pereira Silva;DP;set/23;Diego
-321;52;F;8000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4000;0;0;Carla Pereira Silva;CP;out/23;Carla
-322;50;M;2800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Murilo Pereira Silva;MP;nov/23;Murilo
-323;34;M;6250;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3125;0;0;Samuel Pereira Silva;SP;dez/23;Samuel
-324;36;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Fl via Pereira Silva;FP;jan/24;Fl via
-325;55;M;4100;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1366,6667;0;0;Arthur Pereira Silva;AP;fev/24;Arthur
-326;57;F;25473;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;25473;0;1;Helo¡sa Pereira Silva;HP;mar/24;Helo¡sa
-327;48;M;2924;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Bernardo Pereira Silva;BP;abr/24;Bernardo
-328;70;M;4237;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Ot vio Pereira Silva;OP;mai/24;Ot vio
-329;33;M;11372;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Heitor Pereira Silva;HP;jun/24;Heitor
-330;47;F;9000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Manuela Pereira Silva;MP;jul/24;Manuela
+270;67;F;3855;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Manuela Lima Silva;ML;jul/23;Manuela
+271;77;M;4000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pietro Lima Silva;PL;ago/23;Pietro
+272;35;M;3200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Yuri Lima Silva;YL;set/23;Yuri
+273;24;F;2000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Priscila Lima Silva;PL;out/23;Priscila
+274;53;M;4440;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4440;0;0;Igor Lima Silva;IL;nov/23;Igor
+275;60;M;10416;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;5208;0;0;Renato Lima Silva;RL;dez/23;Renato
+276;42;F;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;TainÂ  Lima Silva;TL;jan/24;TainÂ 
+277;47;M;5400;1;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1800;0;0;Câ€šsar Lima Silva;CL;fev/24;Câ€šsar
+278;56;F;10000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Aline Lima Silva;AL;mar/24;Aline
+279;64;F;981;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Bruna Lima Silva;BL;abr/24;Bruna
+280;21;M;4000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Alan Lima Silva;AL;mai/24;Alan
+281;64;F;5352;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Daiane Lima Silva;DL;jun/24;Daiane
+282;41;M;11600;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;11600;0;0;Breno Lima Silva;BL;jul/24;Breno
+283;59;M;2539;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;CauÃ† Lima Silva;CL;ago/24;CauÃ†
+284;88;F;1316;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Geovana Lima Silva;GL;set/24;Geovana
+285;51;M;6500;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;2166,6667;0;0;ClÂ udio Lima Silva;CL;out/24;ClÂ udio
+286;35;F;6473;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Jâ€šssica Lima Silva;JL;nov/24;Jâ€šssica
+287;60;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Elias Lima Silva;EL;dez/24;Elias
+288;49;M;5400;1;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2700;0;0;Fernando Lima Silva;FL;jan/21;Fernando
+289;76;M;2500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;JÂ£lio Lima Silva;JL;fev/21;JÂ£lio
+290;65;F;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Paula Lima Silva;PL;mar/21;Paula
+291;61;M;4500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;MÂ rcio Lima Silva;ML;abr/21;MÂ rcio
+292;83;M;1972;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Nicolas Lima Silva;NL;mai/21;Nicolas
+293;63;F;13740;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;13740;0;0;Talita Lima Silva;TL;jun/21;Talita
+294;61;M;10500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Sâ€šrgio Lima Silva;SL;jul/21;Sâ€šrgio
+295;27;M;1160;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Tadeu Lima Silva;TL;ago/21;Tadeu
+296;24;F;800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Zâ€šlia Lima Silva;ZL;set/21;Zâ€šlia
+297;38;M;3000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1500;0;0;William Lima Silva;WL;out/21;William
+298;63;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Lorena Lima Silva;LL;nov/21;Lorena
+299;46;F;3001;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Mirela Lima Silva;ML;dez/21;Mirela
+300;39;M;7700;0;5;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;1540;0;0;Gabriel Pereira Silva;GP;jan/22;Gabriel
+301;62;F;9166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Beatriz Pereira Silva;BP;fev/22;Beatriz
+302;38;M;44574;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;14858;0;1;Mateus Pereira Silva;MP;mar/22;Mateus
+303;44;M;9283;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;9283;0;0;Pedro Pereira Silva;PP;abr/22;Pedro
+304;64;F;3139;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Eduarda Pereira Silva;EP;mai/22;Eduarda
+305;27;M;2500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Rafael Pereira Silva;RP;jun/22;Rafael
+306;48;F;10833;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3611;0;0;Gabriela Pereira Silva;GP;jul/22;Gabriela
+307;31;M;4150;0;1;0;1;Inadimplente;Adultos (31-59 anos);Mâ€šdia;4150;0;0;Carlos Pereira Silva;CP;ago/22;Carlos
+308;47;M;5502;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Felipe Pereira Silva;FP;set/22;Felipe
+309;81;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Thiago Pereira Silva;TP;out/22;Thiago
+310;66;F;7500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Larissa Pereira Silva;LP;nov/22;Larissa
+311;74;M;10119;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Andrâ€š Pereira Silva;AP;dez/22;Andrâ€š
+312;69;M;1630;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Leonardo Pereira Silva;LP;jan/23;Leonardo
+313;44;F;4166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;PatrÂ¡cia Pereira Silva;PP;fev/23;PatrÂ¡cia
+314;62;M;23000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Ricardo Pereira Silva;RP;mar/23;Ricardo
+315;48;M;6110;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3055;0;0;Daniel Pereira Silva;DP;abr/23;Daniel
+316;50;F;125;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;125;0;0;Tatiane Pereira Silva;TP;mai/23;Tatiane
+317;75;M;4240;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Eduardo Pereira Silva;EP;jun/23;Eduardo
+318;49;F;1702;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Yasmin Pereira Silva;YP;jul/23;Yasmin
+319;45;F;1;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;0,5;0;0;Amanda Pereira Silva;AP;ago/23;Amanda
+320;58;M;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Diego Pereira Silva;DP;set/23;Diego
+321;52;F;8000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4000;0;0;Carla Pereira Silva;CP;out/23;Carla
+322;50;M;2800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Murilo Pereira Silva;MP;nov/23;Murilo
+323;34;M;6250;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3125;0;0;Samuel Pereira Silva;SP;dez/23;Samuel
+324;36;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;FlÂ via Pereira Silva;FP;jan/24;FlÂ via
+325;55;M;4100;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1366,6667;0;0;Arthur Pereira Silva;AP;fev/24;Arthur
+326;57;F;25473;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;25473;0;1;HeloÂ¡sa Pereira Silva;HP;mar/24;HeloÂ¡sa
+327;48;M;2924;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Bernardo Pereira Silva;BP;abr/24;Bernardo
+328;70;M;4237;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;OtÂ vio Pereira Silva;OP;mai/24;OtÂ vio
+329;33;M;11372;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Heitor Pereira Silva;HP;jun/24;Heitor
+330;47;F;9000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Manuela Pereira Silva;MP;jul/24;Manuela
 331;27;M;1280;0;0;0;1;Inadimplente;Jovens (18-30 anos);Baixa;;0;0;Pietro Pereira Silva;PP;ago/24;Pietro
-332;32;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Yuri Pereira Silva;YP;set/24;Yuri
-333;48;F;9023;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4511,5;0;0;Priscila Pereira Silva;PP;out/24;Priscila
-334;39;M;6400;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3200;0;0;Igor Pereira Silva;IP;nov/24;Igor
-335;62;M;5500;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;5500;0;0;Renato Pereira Silva;RP;dez/24;Renato
-336;48;F;5500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Tain  Pereira Silva;TP;jan/21;Tain 
-337;23;M;820;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;C‚sar Pereira Silva;CP;fev/21;C‚sar
-338;59;F;6000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Aline Pereira Silva;AP;mar/21;Aline
-339;44;F;2666;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Bruna Pereira Silva;BP;abr/21;Bruna
-340;62;M;4000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Alan Pereira Silva;AP;mai/21;Alan
-341;67;F;5000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Daiane Pereira Silva;DP;jun/21;Daiane
-342;65;M;3000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Breno Pereira Silva;BP;jul/21;Breno
-343;50;M;3300;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;CauÆ Pereira Silva;CP;ago/21;CauÆ
-344;66;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Geovana Pereira Silva;GP;set/21;Geovana
-345;45;M;11900;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Cl udio Pereira Silva;CP;out/21;Cl udio
-346;59;F;45000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;15000;0;1;J‚ssica Pereira Silva;JP;nov/21;J‚ssica
-347;67;M;4000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Elias Pereira Silva;EP;dez/21;Elias
-348;41;M;3916;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1305,3333;0;0;Fernando Pereira Silva;FP;jan/22;Fernando
-349;52;M;8916;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4458;0;0;J£lio Pereira Silva;JP;fev/22;J£lio
-350;53;F;7500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3750;0;0;Paula Pereira Silva;PP;mar/22;Paula
-351;64;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;M rcio Pereira Silva;MP;abr/22;M rcio
-352;62;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Nicolas Pereira Silva;NP;mai/22;Nicolas
-353;59;F;4200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Talita Pereira Silva;TP;jun/22;Talita
-354;43;M;8500;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;8500;0;0;S‚rgio Pereira Silva;SP;jul/22;S‚rgio
-355;64;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tadeu Pereira Silva;TP;ago/22;Tadeu
-356;51;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Z‚lia Pereira Silva;ZP;set/22;Z‚lia
-357;67;M;11300;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;11300;0;0;William Pereira Silva;WP;out/22;William
-358;41;F;5400;1;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2700;0;0;Lorena Pereira Silva;LP;nov/22;Lorena
-359;63;F;3500;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;3500;0;0;Mirela Pereira Silva;MP;dez/22;Mirela
-360;60;M;2000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Gabriel Costa Silva;GC;jan/23;Gabriel
-361;48;F;5800;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1933,3333;0;0;Beatriz Costa Silva;BC;fev/23;Beatriz
-362;60;M;7800;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;7800;0;0;Mateus Costa Silva;MC;mar/23;Mateus
-363;61;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pedro Costa Silva;PC;abr/23;Pedro
-364;53;F;7116;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Eduarda Costa Silva;EC;mai/23;Eduarda
-365;60;M;4500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Rafael Costa Silva;RC;jun/23;Rafael
-366;29;F;3750;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Gabriela Costa Silva;GC;jul/23;Gabriela
-367;63;M;5400;1;5;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;1080;0;0;Carlos Costa Silva;CC;ago/23;Carlos
-368;31;M;9165;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4582,5;0;0;Felipe Costa Silva;FC;set/23;Felipe
-369;47;M;8916;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4458;0;0;Thiago Costa Silva;TC;out/23;Thiago
-370;49;F;7800;0;5;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;1560;0;0;Larissa Costa Silva;LC;nov/23;Larissa
-371;52;M;13587;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4529;0;0;Andr‚ Costa Silva;AC;dez/23;Andr‚
-372;53;M;1400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Leonardo Costa Silva;LC;jan/24;Leonardo
-373;52;F;8902;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4451;0;0;Patr¡cia Costa Silva;PC;fev/24;Patr¡cia
-374;47;M;6224;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6224;0;0;Ricardo Costa Silva;RC;mar/24;Ricardo
-375;41;M;8328;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4164;0;0;Daniel Costa Silva;DC;abr/24;Daniel
-376;55;F;5000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2500;0;0;Tatiane Costa Silva;TC;mai/24;Tatiane
-377;57;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Eduardo Costa Silva;EC;jun/24;Eduardo
-378;40;F;2700;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Yasmin Costa Silva;YC;jul/24;Yasmin
-379;52;F;2540;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;846,6667;0;0;Amanda Costa Silva;AC;ago/24;Amanda
-380;34;M;4200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Diego Costa Silva;DC;set/24;Diego
-381;31;F;5800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Carla Costa Silva;CC;out/24;Carla
-382;68;M;12000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Murilo Costa Silva;MC;nov/24;Murilo
-383;44;M;10332;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Samuel Costa Silva;SC;dez/24;Samuel
-384;70;F;2083;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Fl via Costa Silva;FC;jan/21;Fl via
-385;54;M;851;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Arthur Costa Silva;AC;fev/21;Arthur
-386;53;F;2337;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Helo¡sa Costa Silva;HC;mar/21;Helo¡sa
-387;54;M;15000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Bernardo Costa Silva;BC;abr/21;Bernardo
-388;80;M;4000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Ot vio Costa Silva;OC;mai/21;Ot vio
-389;57;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Heitor Costa Silva;HC;jun/21;Heitor
-390;38;F;3433;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1716,5;0;0;Manuela Costa Silva;MC;jul/21;Manuela
-391;43;M;5000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1666,6667;0;0;Pietro Costa Silva;PC;ago/21;Pietro
-392;39;M;3500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1750;0;0;Yuri Costa Silva;YC;set/21;Yuri
-393;40;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Priscila Costa Silva;PC;out/21;Priscila
-394;52;M;6600;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Igor Costa Silva;IC;nov/21;Igor
-395;46;M;3340;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;1670;0;0;Renato Costa Silva;RC;dez/21;Renato
-396;43;F;5000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2500;0;0;Tain  Costa Silva;TC;jan/22;Tain 
-397;43;M;9533;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;C‚sar Costa Silva;CC;fev/22;C‚sar
-398;23;F;2557;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Aline Costa Silva;AC;mar/22;Aline
-399;39;F;10054;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3351,3333;0;0;Bruna Costa Silva;BC;abr/22;Bruna
-400;51;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Alan Costa Silva;AC;mai/22;Alan
-401;53;F;13000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;4333,3333;0;0;Daiane Costa Silva;DC;jun/22;Daiane
-402;25;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Breno Costa Silva;BC;jul/22;Breno
-403;73;M;6292;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;CauÆ Costa Silva;CC;ago/22;CauÆ
-404;56;F;6700;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;6700;0;0;Geovana Costa Silva;GC;set/22;Geovana
-405;69;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Cl udio Costa Silva;CC;out/22;Cl udio
-406;34;F;5400;1;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;5400;0;0;J‚ssica Costa Silva;JC;nov/22;J‚ssica
-407;64;M;9750;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;4875;0;0;Elias Costa Silva;EC;dez/22;Elias
-408;31;M;8333;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Fernando Costa Silva;FC;jan/23;Fernando
-409;61;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;J£lio Costa Silva;JC;fev/23;J£lio
-410;47;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Paula Costa Silva;PC;mar/23;Paula
-411;34;M;6334;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;M rcio Costa Silva;MC;abr/23;M rcio
-412;66;M;8600;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;8600;0;0;Nicolas Costa Silva;NC;mai/23;Nicolas
-413;68;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Talita Costa Silva;TC;jun/23;Talita
-414;48;M;3500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;S‚rgio Costa Silva;SC;jul/23;S‚rgio
-415;34;M;3000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Tadeu Costa Silva;TC;ago/23;Tadeu
-416;28;F;1785;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);Baixa;;0;0;Z‚lia Costa Silva;ZC;set/23;Z‚lia
-417;58;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;William Costa Silva;WC;out/23;William
-418;58;F;23250;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Lorena Costa Silva;LC;nov/23;Lorena
-419;37;F;6506;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Mirela Costa Silva;MC;dez/23;Mirela
-420;60;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Gabriel Ferreira Silva;GF;jan/24;Gabriel
-421;45;F;5000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2500;0;0;Beatriz Ferreira Silva;BF;fev/24;Beatriz
-422;78;M;3500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Mateus Ferreira Silva;MF;mar/24;Mateus
-423;64;M;6000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pedro Ferreira Silva;PF;abr/24;Pedro
-424;63;F;11323;0;2;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;5661,5;0;0;Eduarda Ferreira Silva;EF;mai/24;Eduarda
-425;45;M;3516;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Rafael Ferreira Silva;RF;jun/24;Rafael
-426;40;F;16250;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5416,6667;0;0;Gabriela Ferreira Silva;GF;jul/24;Gabriela
-427;40;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Carlos Ferreira Silva;CF;ago/24;Carlos
-428;57;M;6000;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2000;0;0;Felipe Ferreira Silva;FF;set/24;Felipe
-429;34;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Thiago Ferreira Silva;TF;out/24;Thiago
-430;31;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Larissa Ferreira Silva;LF;nov/24;Larissa
-431;43;M;6583;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3291,5;0;0;Andr‚ Ferreira Silva;AF;dez/24;Andr‚
-432;43;M;5400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Leonardo Ferreira Silva;LF;jan/21;Leonardo
-433;61;F;3750;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Patr¡cia Ferreira Silva;PF;fev/21;Patr¡cia
-434;46;M;13333;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Ricardo Ferreira Silva;RF;mar/21;Ricardo
-435;87;M;5400;1;0;1;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Daniel Ferreira Silva;DF;abr/21;Daniel
-436;39;F;6083;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Tatiane Ferreira Silva;TF;mai/21;Tatiane
-437;36;M;5400;1;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2700;0;0;Eduardo Ferreira Silva;EF;jun/21;Eduardo
-438;61;F;2301;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Yasmin Ferreira Silva;YF;jul/21;Yasmin
-439;58;F;6750;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3375;0;0;Amanda Ferreira Silva;AF;ago/21;Amanda
-440;31;M;5350;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Diego Ferreira Silva;DF;set/21;Diego
-441;68;F;6459;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Carla Ferreira Silva;CF;out/21;Carla
-442;75;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Murilo Ferreira Silva;MF;nov/21;Murilo
-443;45;M;11833;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5916,5;0;0;Samuel Ferreira Silva;SF;dez/21;Samuel
-444;54;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Fl via Ferreira Silva;FF;jan/22;Fl via
-445;36;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Arthur Ferreira Silva;AF;fev/22;Arthur
-446;76;F;10487;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Helo¡sa Ferreira Silva;HF;mar/22;Helo¡sa
-447;35;M;6666;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3333;0;0;Bernardo Ferreira Silva;BF;abr/22;Bernardo
-448;54;M;7583;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;7583;0;0;Ot vio Ferreira Silva;OF;mai/22;Ot vio
-449;29;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Heitor Ferreira Silva;HF;jun/22;Heitor
-450;70;F;25000;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;1;Manuela Ferreira Silva;MF;jul/22;Manuela
-451;68;M;23200;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;23200;0;0;Pietro Ferreira Silva;PF;ago/22;Pietro
-452;47;M;7914;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Yuri Ferreira Silva;YF;set/22;Yuri
-453;67;F;7700;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Priscila Ferreira Silva;PF;out/22;Priscila
-454;33;M;10784;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Igor Ferreira Silva;IF;nov/22;Igor
-455;27;M;3400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Jovens (18-30 anos);M‚dia;;0;0;Renato Ferreira Silva;RF;dez/22;Renato
-456;32;F;5800;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2900;0;0;Tain  Ferreira Silva;TF;jan/23;Tain 
-457;68;M;4200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;C‚sar Ferreira Silva;CF;fev/23;C‚sar
-458;48;F;11000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;11000;0;0;Aline Ferreira Silva;AF;mar/23;Aline
-459;64;F;3250;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Bruna Ferreira Silva;BF;abr/23;Bruna
-460;50;M;8654;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Alan Ferreira Silva;AF;mai/23;Alan
-461;55;F;1750;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Baixa;;0;0;Daiane Ferreira Silva;DF;jun/23;Daiane
-462;59;M;4050;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4050;0;0;Breno Ferreira Silva;BF;jul/23;Breno
-463;53;M;7005;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;CauÆ Ferreira Silva;CF;ago/23;CauÆ
+332;32;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Yuri Pereira Silva;YP;set/24;Yuri
+333;48;F;9023;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4511,5;0;0;Priscila Pereira Silva;PP;out/24;Priscila
+334;39;M;6400;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3200;0;0;Igor Pereira Silva;IP;nov/24;Igor
+335;62;M;5500;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;5500;0;0;Renato Pereira Silva;RP;dez/24;Renato
+336;48;F;5500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;TainÂ  Pereira Silva;TP;jan/21;TainÂ 
+337;23;M;820;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Câ€šsar Pereira Silva;CP;fev/21;Câ€šsar
+338;59;F;6000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Aline Pereira Silva;AP;mar/21;Aline
+339;44;F;2666;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Bruna Pereira Silva;BP;abr/21;Bruna
+340;62;M;4000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Alan Pereira Silva;AP;mai/21;Alan
+341;67;F;5000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Daiane Pereira Silva;DP;jun/21;Daiane
+342;65;M;3000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Breno Pereira Silva;BP;jul/21;Breno
+343;50;M;3300;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;CauÃ† Pereira Silva;CP;ago/21;CauÃ†
+344;66;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Geovana Pereira Silva;GP;set/21;Geovana
+345;45;M;11900;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;ClÂ udio Pereira Silva;CP;out/21;ClÂ udio
+346;59;F;45000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;15000;0;1;Jâ€šssica Pereira Silva;JP;nov/21;Jâ€šssica
+347;67;M;4000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Elias Pereira Silva;EP;dez/21;Elias
+348;41;M;3916;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1305,3333;0;0;Fernando Pereira Silva;FP;jan/22;Fernando
+349;52;M;8916;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4458;0;0;JÂ£lio Pereira Silva;JP;fev/22;JÂ£lio
+350;53;F;7500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3750;0;0;Paula Pereira Silva;PP;mar/22;Paula
+351;64;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;MÂ rcio Pereira Silva;MP;abr/22;MÂ rcio
+352;62;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Nicolas Pereira Silva;NP;mai/22;Nicolas
+353;59;F;4200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Talita Pereira Silva;TP;jun/22;Talita
+354;43;M;8500;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;8500;0;0;Sâ€šrgio Pereira Silva;SP;jul/22;Sâ€šrgio
+355;64;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tadeu Pereira Silva;TP;ago/22;Tadeu
+356;51;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Zâ€šlia Pereira Silva;ZP;set/22;Zâ€šlia
+357;67;M;11300;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;11300;0;0;William Pereira Silva;WP;out/22;William
+358;41;F;5400;1;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2700;0;0;Lorena Pereira Silva;LP;nov/22;Lorena
+359;63;F;3500;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;3500;0;0;Mirela Pereira Silva;MP;dez/22;Mirela
+360;60;M;2000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Gabriel Costa Silva;GC;jan/23;Gabriel
+361;48;F;5800;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1933,3333;0;0;Beatriz Costa Silva;BC;fev/23;Beatriz
+362;60;M;7800;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;7800;0;0;Mateus Costa Silva;MC;mar/23;Mateus
+363;61;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pedro Costa Silva;PC;abr/23;Pedro
+364;53;F;7116;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Eduarda Costa Silva;EC;mai/23;Eduarda
+365;60;M;4500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Rafael Costa Silva;RC;jun/23;Rafael
+366;29;F;3750;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Gabriela Costa Silva;GC;jul/23;Gabriela
+367;63;M;5400;1;5;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;1080;0;0;Carlos Costa Silva;CC;ago/23;Carlos
+368;31;M;9165;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4582,5;0;0;Felipe Costa Silva;FC;set/23;Felipe
+369;47;M;8916;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4458;0;0;Thiago Costa Silva;TC;out/23;Thiago
+370;49;F;7800;0;5;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;1560;0;0;Larissa Costa Silva;LC;nov/23;Larissa
+371;52;M;13587;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4529;0;0;Andrâ€š Costa Silva;AC;dez/23;Andrâ€š
+372;53;M;1400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Leonardo Costa Silva;LC;jan/24;Leonardo
+373;52;F;8902;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4451;0;0;PatrÂ¡cia Costa Silva;PC;fev/24;PatrÂ¡cia
+374;47;M;6224;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6224;0;0;Ricardo Costa Silva;RC;mar/24;Ricardo
+375;41;M;8328;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4164;0;0;Daniel Costa Silva;DC;abr/24;Daniel
+376;55;F;5000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2500;0;0;Tatiane Costa Silva;TC;mai/24;Tatiane
+377;57;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Eduardo Costa Silva;EC;jun/24;Eduardo
+378;40;F;2700;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Yasmin Costa Silva;YC;jul/24;Yasmin
+379;52;F;2540;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;846,6667;0;0;Amanda Costa Silva;AC;ago/24;Amanda
+380;34;M;4200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Diego Costa Silva;DC;set/24;Diego
+381;31;F;5800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Carla Costa Silva;CC;out/24;Carla
+382;68;M;12000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Murilo Costa Silva;MC;nov/24;Murilo
+383;44;M;10332;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Samuel Costa Silva;SC;dez/24;Samuel
+384;70;F;2083;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;FlÂ via Costa Silva;FC;jan/21;FlÂ via
+385;54;M;851;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Arthur Costa Silva;AC;fev/21;Arthur
+386;53;F;2337;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;HeloÂ¡sa Costa Silva;HC;mar/21;HeloÂ¡sa
+387;54;M;15000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Bernardo Costa Silva;BC;abr/21;Bernardo
+388;80;M;4000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;OtÂ vio Costa Silva;OC;mai/21;OtÂ vio
+389;57;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Heitor Costa Silva;HC;jun/21;Heitor
+390;38;F;3433;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1716,5;0;0;Manuela Costa Silva;MC;jul/21;Manuela
+391;43;M;5000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1666,6667;0;0;Pietro Costa Silva;PC;ago/21;Pietro
+392;39;M;3500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1750;0;0;Yuri Costa Silva;YC;set/21;Yuri
+393;40;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Priscila Costa Silva;PC;out/21;Priscila
+394;52;M;6600;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Igor Costa Silva;IC;nov/21;Igor
+395;46;M;3340;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;1670;0;0;Renato Costa Silva;RC;dez/21;Renato
+396;43;F;5000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2500;0;0;TainÂ  Costa Silva;TC;jan/22;TainÂ 
+397;43;M;9533;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Câ€šsar Costa Silva;CC;fev/22;Câ€šsar
+398;23;F;2557;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Aline Costa Silva;AC;mar/22;Aline
+399;39;F;10054;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3351,3333;0;0;Bruna Costa Silva;BC;abr/22;Bruna
+400;51;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Alan Costa Silva;AC;mai/22;Alan
+401;53;F;13000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;4333,3333;0;0;Daiane Costa Silva;DC;jun/22;Daiane
+402;25;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Breno Costa Silva;BC;jul/22;Breno
+403;73;M;6292;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;CauÃ† Costa Silva;CC;ago/22;CauÃ†
+404;56;F;6700;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;6700;0;0;Geovana Costa Silva;GC;set/22;Geovana
+405;69;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;ClÂ udio Costa Silva;CC;out/22;ClÂ udio
+406;34;F;5400;1;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;5400;0;0;Jâ€šssica Costa Silva;JC;nov/22;Jâ€šssica
+407;64;M;9750;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;4875;0;0;Elias Costa Silva;EC;dez/22;Elias
+408;31;M;8333;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Fernando Costa Silva;FC;jan/23;Fernando
+409;61;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;JÂ£lio Costa Silva;JC;fev/23;JÂ£lio
+410;47;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Paula Costa Silva;PC;mar/23;Paula
+411;34;M;6334;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;MÂ rcio Costa Silva;MC;abr/23;MÂ rcio
+412;66;M;8600;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;8600;0;0;Nicolas Costa Silva;NC;mai/23;Nicolas
+413;68;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Talita Costa Silva;TC;jun/23;Talita
+414;48;M;3500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Sâ€šrgio Costa Silva;SC;jul/23;Sâ€šrgio
+415;34;M;3000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Tadeu Costa Silva;TC;ago/23;Tadeu
+416;28;F;1785;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Baixa;;0;0;Zâ€šlia Costa Silva;ZC;set/23;Zâ€šlia
+417;58;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;William Costa Silva;WC;out/23;William
+418;58;F;23250;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Lorena Costa Silva;LC;nov/23;Lorena
+419;37;F;6506;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Mirela Costa Silva;MC;dez/23;Mirela
+420;60;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Gabriel Ferreira Silva;GF;jan/24;Gabriel
+421;45;F;5000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2500;0;0;Beatriz Ferreira Silva;BF;fev/24;Beatriz
+422;78;M;3500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Mateus Ferreira Silva;MF;mar/24;Mateus
+423;64;M;6000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pedro Ferreira Silva;PF;abr/24;Pedro
+424;63;F;11323;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;5661,5;0;0;Eduarda Ferreira Silva;EF;mai/24;Eduarda
+425;45;M;3516;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Rafael Ferreira Silva;RF;jun/24;Rafael
+426;40;F;16250;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5416,6667;0;0;Gabriela Ferreira Silva;GF;jul/24;Gabriela
+427;40;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Carlos Ferreira Silva;CF;ago/24;Carlos
+428;57;M;6000;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2000;0;0;Felipe Ferreira Silva;FF;set/24;Felipe
+429;34;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Thiago Ferreira Silva;TF;out/24;Thiago
+430;31;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Larissa Ferreira Silva;LF;nov/24;Larissa
+431;43;M;6583;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3291,5;0;0;Andrâ€š Ferreira Silva;AF;dez/24;Andrâ€š
+432;43;M;5400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Leonardo Ferreira Silva;LF;jan/21;Leonardo
+433;61;F;3750;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;PatrÂ¡cia Ferreira Silva;PF;fev/21;PatrÂ¡cia
+434;46;M;13333;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Ricardo Ferreira Silva;RF;mar/21;Ricardo
+435;87;M;5400;1;0;1;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Daniel Ferreira Silva;DF;abr/21;Daniel
+436;39;F;6083;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Tatiane Ferreira Silva;TF;mai/21;Tatiane
+437;36;M;5400;1;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2700;0;0;Eduardo Ferreira Silva;EF;jun/21;Eduardo
+438;61;F;2301;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Yasmin Ferreira Silva;YF;jul/21;Yasmin
+439;58;F;6750;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3375;0;0;Amanda Ferreira Silva;AF;ago/21;Amanda
+440;31;M;5350;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Diego Ferreira Silva;DF;set/21;Diego
+441;68;F;6459;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Carla Ferreira Silva;CF;out/21;Carla
+442;75;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Murilo Ferreira Silva;MF;nov/21;Murilo
+443;45;M;11833;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5916,5;0;0;Samuel Ferreira Silva;SF;dez/21;Samuel
+444;54;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;FlÂ via Ferreira Silva;FF;jan/22;FlÂ via
+445;36;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Arthur Ferreira Silva;AF;fev/22;Arthur
+446;76;F;10487;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;HeloÂ¡sa Ferreira Silva;HF;mar/22;HeloÂ¡sa
+447;35;M;6666;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3333;0;0;Bernardo Ferreira Silva;BF;abr/22;Bernardo
+448;54;M;7583;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;7583;0;0;OtÂ vio Ferreira Silva;OF;mai/22;OtÂ vio
+449;29;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Heitor Ferreira Silva;HF;jun/22;Heitor
+450;70;F;25000;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;1;Manuela Ferreira Silva;MF;jul/22;Manuela
+451;68;M;23200;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;23200;0;0;Pietro Ferreira Silva;PF;ago/22;Pietro
+452;47;M;7914;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Yuri Ferreira Silva;YF;set/22;Yuri
+453;67;F;7700;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Priscila Ferreira Silva;PF;out/22;Priscila
+454;33;M;10784;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Igor Ferreira Silva;IF;nov/22;Igor
+455;27;M;3400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Jovens (18-30 anos);Mâ€šdia;;0;0;Renato Ferreira Silva;RF;dez/22;Renato
+456;32;F;5800;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2900;0;0;TainÂ  Ferreira Silva;TF;jan/23;TainÂ 
+457;68;M;4200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Câ€šsar Ferreira Silva;CF;fev/23;Câ€šsar
+458;48;F;11000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;11000;0;0;Aline Ferreira Silva;AF;mar/23;Aline
+459;64;F;3250;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Bruna Ferreira Silva;BF;abr/23;Bruna
+460;50;M;8654;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Alan Ferreira Silva;AF;mai/23;Alan
+461;55;F;1750;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Baixa;;0;0;Daiane Ferreira Silva;DF;jun/23;Daiane
+462;59;M;4050;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4050;0;0;Breno Ferreira Silva;BF;jul/23;Breno
+463;53;M;7005;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;CauÃ† Ferreira Silva;CF;ago/23;CauÃ†
 464;44;F;1959;0;2;0;1;Inadimplente;Adultos (31-59 anos);Baixa;979,5;0;0;Geovana Ferreira Silva;GF;set/23;Geovana
-465;35;M;5605;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Cl udio Ferreira Silva;CF;out/23;Cl udio
-466;50;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;J‚ssica Ferreira Silva;JF;nov/23;J‚ssica
-467;76;M;8333;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;8333;0;0;Elias Ferreira Silva;EF;dez/23;Elias
-468;46;M;8200;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Fernando Ferreira Silva;FF;jan/24;Fernando
-469;52;M;10976;0;3;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3658,6667;0;0;J£lio Ferreira Silva;JF;fev/24;J£lio
-470;39;F;4333;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;4333;0;0;Paula Ferreira Silva;PF;mar/24;Paula
-471;76;M;8400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;M rcio Ferreira Silva;MF;abr/24;M rcio
-472;73;M;3653;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Nicolas Ferreira Silva;NF;mai/24;Nicolas
-473;37;F;2000;0;2;0;1;Inadimplente;Adultos (31-59 anos);M‚dia;1000;0;0;Talita Ferreira Silva;TF;jun/24;Talita
-474;33;M;2300;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2300;0;0;S‚rgio Ferreira Silva;SF;jul/24;S‚rgio
-475;71;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tadeu Ferreira Silva;TF;ago/24;Tadeu
-476;44;F;15016;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;15016;0;0;Z‚lia Ferreira Silva;ZF;set/24;Z‚lia
-477;47;M;7917;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3958,5;0;0;William Ferreira Silva;WF;out/24;William
-478;41;F;2200;0;1;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;2200;0;0;Lorena Ferreira Silva;LF;nov/24;Lorena
-479;61;F;5427;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Mirela Ferreira Silva;MF;dez/24;Mirela
-480;50;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);M‚dia;;0;0;Gabriel Rodrigues Silva;GR;jan/21;Gabriel
-481;43;F;7933;0;0;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;;0;0;Beatriz Rodrigues Silva;BR;fev/21;Beatriz
-482;46;M;10000;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5000;0;0;Mateus Rodrigues Silva;MR;mar/21;Mateus
-483;69;M;3400;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Pedro Rodrigues Silva;PR;abr/21;Pedro
-484;78;F;8579;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Eduarda Rodrigues Silva;ER;mai/21;Eduarda
-485;74;M;15916;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Rafael Rodrigues Silva;RR;jun/21;Rafael
-486;62;F;9500;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Gabriela Rodrigues Silva;GR;jul/21;Gabriela
-487;89;M;4755;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Carlos Rodrigues Silva;CR;ago/21;Carlos
-488;90;M;7000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;7000;0;0;Felipe Rodrigues Silva;FR;set/21;Felipe
-489;71;M;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Thiago Rodrigues Silva;TR;out/21;Thiago
-490;77;F;4920;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Larissa Rodrigues Silva;LR;nov/21;Larissa
-491;86;M;4583;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Andr‚ Rodrigues Silva;AR;dez/21;Andr‚
-492;36;M;7500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3750;0;0;Leonardo Rodrigues Silva;LR;jan/22;Leonardo
-493;82;F;5400;1;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Patr¡cia Rodrigues Silva;PR;fev/22;Patr¡cia
-494;33;M;10583;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;5291,5;0;0;Ricardo Rodrigues Silva;RR;mar/22;Ricardo
-495;90;M;11000;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;11000;0;0;Daniel Rodrigues Silva;DR;abr/22;Daniel
-496;73;F;4166;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;;0;0;Tatiane Rodrigues Silva;TR;mai/22;Tatiane
-497;68;M;800;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Baixa;;0;0;Eduardo Rodrigues Silva;ER;jun/22;Eduardo
-498;65;F;4450;0;1;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);M‚dia;4450;0;0;Yasmin Rodrigues Silva;YR;jul/22;Yasmin
-499;47;F;6500;0;2;0;0;Sem hist¢rico de inadimplˆncia;Adultos (31-59 anos);Alta;3250;0;0;Amanda Rodrigues Silva;AR;ago/22;Amanda
-500;70;M;11348;0;0;0;0;Sem hist¢rico de inadimplˆncia;Sˆnior (60+);Alta;;0;0;Diego Rodrigues Silva;DR;set/22;Diego
+465;35;M;5605;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;ClÂ udio Ferreira Silva;CF;out/23;ClÂ udio
+466;50;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Jâ€šssica Ferreira Silva;JF;nov/23;Jâ€šssica
+467;76;M;8333;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;8333;0;0;Elias Ferreira Silva;EF;dez/23;Elias
+468;46;M;8200;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Fernando Ferreira Silva;FF;jan/24;Fernando
+469;52;M;10976;0;3;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3658,6667;0;0;JÂ£lio Ferreira Silva;JF;fev/24;JÂ£lio
+470;39;F;4333;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;4333;0;0;Paula Ferreira Silva;PF;mar/24;Paula
+471;76;M;8400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;MÂ rcio Ferreira Silva;MF;abr/24;MÂ rcio
+472;73;M;3653;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Nicolas Ferreira Silva;NF;mai/24;Nicolas
+473;37;F;2000;0;2;0;1;Inadimplente;Adultos (31-59 anos);Mâ€šdia;1000;0;0;Talita Ferreira Silva;TF;jun/24;Talita
+474;33;M;2300;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2300;0;0;Sâ€šrgio Ferreira Silva;SF;jul/24;Sâ€šrgio
+475;71;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tadeu Ferreira Silva;TF;ago/24;Tadeu
+476;44;F;15016;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;15016;0;0;Zâ€šlia Ferreira Silva;ZF;set/24;Zâ€šlia
+477;47;M;7917;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3958,5;0;0;William Ferreira Silva;WF;out/24;William
+478;41;F;2200;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;2200;0;0;Lorena Ferreira Silva;LF;nov/24;Lorena
+479;61;F;5427;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Mirela Ferreira Silva;MF;dez/24;Mirela
+480;50;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Mâ€šdia;;0;0;Gabriel Rodrigues Silva;GR;jan/21;Gabriel
+481;43;F;7933;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;;0;0;Beatriz Rodrigues Silva;BR;fev/21;Beatriz
+482;46;M;10000;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5000;0;0;Mateus Rodrigues Silva;MR;mar/21;Mateus
+483;69;M;3400;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Pedro Rodrigues Silva;PR;abr/21;Pedro
+484;78;F;8579;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Eduarda Rodrigues Silva;ER;mai/21;Eduarda
+485;74;M;15916;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Rafael Rodrigues Silva;RR;jun/21;Rafael
+486;62;F;9500;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Gabriela Rodrigues Silva;GR;jul/21;Gabriela
+487;89;M;4755;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Carlos Rodrigues Silva;CR;ago/21;Carlos
+488;90;M;7000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;7000;0;0;Felipe Rodrigues Silva;FR;set/21;Felipe
+489;71;M;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Thiago Rodrigues Silva;TR;out/21;Thiago
+490;77;F;4920;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Larissa Rodrigues Silva;LR;nov/21;Larissa
+491;86;M;4583;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Andrâ€š Rodrigues Silva;AR;dez/21;Andrâ€š
+492;36;M;7500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3750;0;0;Leonardo Rodrigues Silva;LR;jan/22;Leonardo
+493;82;F;5400;1;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;PatrÂ¡cia Rodrigues Silva;PR;fev/22;PatrÂ¡cia
+494;33;M;10583;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;5291,5;0;0;Ricardo Rodrigues Silva;RR;mar/22;Ricardo
+495;90;M;11000;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;11000;0;0;Daniel Rodrigues Silva;DR;abr/22;Daniel
+496;73;F;4166;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;;0;0;Tatiane Rodrigues Silva;TR;mai/22;Tatiane
+497;68;M;800;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Baixa;;0;0;Eduardo Rodrigues Silva;ER;jun/22;Eduardo
+498;65;F;4450;0;1;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Mâ€šdia;4450;0;0;Yasmin Rodrigues Silva;YR;jul/22;Yasmin
+499;47;F;6500;0;2;0;0;Sem histÂ¢rico de inadimplË†ncia;Adultos (31-59 anos);Alta;3250;0;0;Amanda Rodrigues Silva;AR;ago/22;Amanda
+500;70;M;11348;0;0;0;0;Sem histÂ¢rico de inadimplË†ncia;SË†nior (60+);Alta;;0;0;Diego Rodrigues Silva;DR;set/22;Diego

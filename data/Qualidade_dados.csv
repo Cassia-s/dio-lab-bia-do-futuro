@@ -1,4 +1,4 @@
-arquivo_origem;escopo;tratamento_aplicado
+﻿arquivo_origem;escopo;tratamento_aplicado
 user_info.csv;36000 clientes;"7199 rendas ausentes imputadas pela mediana (5400); 943 dependentes ausentes imputados com 0; sexo padronizado para F/M."
 default.csv;36000 clientes;"Sem valores ausentes; flag de default incorporada a tabela clientes."
 loans_detail.csv;36000 clientes;"Campos de atraso renomeados; total_atrasos calculado; flags de outlier criadas para debt_ratio e uso de linhas."
