@@ -145,31 +145,25 @@ def load_clients_base() -> Tuple[pd.DataFrame, str]:
     possible_paths = [
         BASE_DIR / "data" / "amostra_perfil_sidebar.csv",
         BASE_DIR / "data" / "amostra_clientes.csv",
-        BASE_DIR / "data" / "perfil_sidebar_clientes.csv",
-        BASE_DIR / "data" / "clientes.csv",
     ]
 
     encodings = ["utf-8", "utf-8-sig", "latin1", "cp1252"]
-    seps = [",", ";"]
 
     for path in possible_paths:
         if path.exists():
-            last_error = None
-
             for enc in encodings:
-                for sep in seps:
-                    try:
-                        df = pd.read_csv(path, encoding=enc, sep=sep)
-                        df.columns = [str(c).strip() for c in df.columns]
+                try:
+                    df = pd.read_csv(path, encoding=enc, sep=None, engine="python")
+                    df.columns = [str(c).strip() for c in df.columns]
 
-                        if len(df.columns) > 1:
-                            return df, f"Base carregada: {path.name} | encoding: {enc} | sep: '{sep}'"
-                    except Exception as e:
-                        last_error = e
+                    return df, f"✅ Base carregada: {path.name} | {enc}"
 
-            return pd.DataFrame(), f"Erro ao ler {path.name}: {last_error}"
+                except Exception as e:
+                    continue
 
-    return pd.DataFrame(), "Base não encontrada na pasta /data"
+            return pd.DataFrame(), f"❌ Erro ao ler {path.name}"
+
+    return pd.DataFrame(), "❌ Nenhum arquivo encontrado na pasta /data"
 
 
 # =========================================================
