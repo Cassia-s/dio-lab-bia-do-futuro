@@ -155,14 +155,14 @@ def load_clients_base() -> Tuple[pd.DataFrame, str]:
                             )
                         else:
                             df = pd.read_csv(
-                                path,
-                                encoding=enc,
-                                sep=sep,
-                                engine="python",
-                                on_bad_lines="skip",
-                            )
-
-                        df.columns = [str(c).strip().replace("\ufeff", "") for c in df.columns]
+                            path,
+                            encoding="utf-8-sig",
+                            sep=";",
+                            engine="python",
+                            on_bad_lines="skip",
+                        )
+                        
+                        df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
 
                         if df.empty:
                             errors.append(f"{enc} | sep={sep} -> vazio")
