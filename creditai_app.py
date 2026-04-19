@@ -98,10 +98,7 @@ st.markdown(
 # Caminhos e arquivos
 # =========================================================
 BASE_DIR = Path(__file__).parent
-DATA_DIRS = [
-    BASE_DIR / "data",
-    BASE_DIR,
-]
+DATA_DIR = BASE_DIR / "data"
 
 DEFAULT_RULES = {
     "thresholds": {"baixo_max": 0.20, "medio_max": 0.30},
@@ -120,22 +117,13 @@ FIELD_LABELS = {
 }
 
 # =========================================================
-# Utilidades de arquivos
+# Leitura de arquivos
 # =========================================================
-def find_first_existing(possible_names: list[str]) -> Optional[Path]:
-    for data_dir in DATA_DIRS:
-        for name in possible_names:
-            path = data_dir / name
-            if path.exists():
-                return path
-    return None
-
-
 @st.cache_data
 def load_rules() -> Dict[str, Any]:
-    rules_path = find_first_existing(["regras_credito.json"])
-    if rules_path:
-        with open(rules_path, "r", encoding="utf-8") as f:
+    path = DATA_DIR / "regras_credito.json"
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     return DEFAULT_RULES
 
@@ -143,28 +131,55 @@ def load_rules() -> Dict[str, Any]:
 @st.cache_data
 def load_clients_base() -> Tuple[pd.DataFrame, str]:
     possible_paths = [
-        BASE_DIR / "data" / "amostra_perfil_sidebar.csv",
-        BASE_DIR / "data" / "amostra_clientes.csv",
+        DATA_DIR / "amostra_perfil_sidebar.csv",
+        DATA_DIR / "perfil_sidebar_clientes.csv",
     ]
 
     encodings = ["utf-8", "utf-8-sig", "latin1", "cp1252"]
+    seps = [None, ";", ","]
 
     for path in possible_paths:
         if path.exists():
+            errors = []
+
             for enc in encodings:
-                try:
-                    df = pd.read_csv(path, encoding=enc, sep=None, engine="python")
-                    df.columns = [str(c).strip() for c in df.columns]
+                for sep in seps:
+                    try:
+                        if sep is None:
+                            df = pd.read_csv(
+                                path,
+                                encoding=enc,
+                                sep=None,
+                                engine="python",
+                                on_bad_lines="skip",
+                            )
+                        else:
+                            df = pd.read_csv(
+                                path,
+                                encoding=enc,
+                                sep=sep,
+                                engine="python",
+                                on_bad_lines="skip",
+                            )
 
-                    return df, f"✅ Base carregada: {path.name} | {enc}"
+                        df.columns = [str(c).strip().replace("\ufeff", "") for c in df.columns]
 
-                except Exception as e:
-                    continue
+                        if df.empty:
+                            errors.append(f"{enc} | sep={sep} -> vazio")
+                            continue
 
-            return pd.DataFrame(), f"❌ Erro ao ler {path.name}"
+                        if len(df.columns) == 1:
+                            errors.append(f"{enc} | sep={sep} -> 1 coluna")
+                            continue
 
-    return pd.DataFrame(), "❌ Nenhum arquivo encontrado na pasta /data"
+                        return df, f"Base carregada: {path.name}"
 
+                    except Exception as e:
+                        errors.append(f"{enc} | sep={sep} -> {e}")
+
+            return pd.DataFrame(), f"Erro ao ler {path.name}"
+
+    return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
 
 # =========================================================
 # Funções utilitárias
