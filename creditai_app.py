@@ -135,49 +135,25 @@ def load_clients_base() -> Tuple[pd.DataFrame, str]:
         DATA_DIR / "perfil_sidebar_clientes.csv",
     ]
 
-    encodings = ["utf-8", "utf-8-sig", "latin1", "cp1252"]
-    seps = [None, ";", ","]
-
     for path in possible_paths:
         if path.exists():
-            errors = []
+            try:
+                df = pd.read_csv(
+                    path,
+                    encoding="utf-8-sig",
+                    sep=";",
+                    engine="python",
+                    on_bad_lines="skip",
+                )
+                df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
 
-            for enc in encodings:
-                for sep in seps:
-                    try:
-                        if sep is None:
-                            df = pd.read_csv(
-                                path,
-                                encoding=enc,
-                                sep=None,
-                                engine="python",
-                                on_bad_lines="skip",
-                            )
-                        else:
-                            df = pd.read_csv(
-                            path,
-                            encoding="utf-8-sig",
-                            sep=";",
-                            engine="python",
-                            on_bad_lines="skip",
-                        )
-                        
-                        df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
+                if df.empty:
+                    return pd.DataFrame(), f"Arquivo {path.name} foi lido, mas está vazio."
 
-                        if df.empty:
-                            errors.append(f"{enc} | sep={sep} -> vazio")
-                            continue
+                return df, f"Base carregada: {path.name}"
 
-                        if len(df.columns) == 1:
-                            errors.append(f"{enc} | sep={sep} -> 1 coluna")
-                            continue
-
-                        return df, f"Base carregada: {path.name}"
-
-                    except Exception as e:
-                        errors.append(f"{enc} | sep={sep} -> {e}")
-
-            return pd.DataFrame(), f"Erro ao ler {path.name}"
+            except Exception as e:
+                return pd.DataFrame(), f"Erro ao ler {path.name}: {e}"
 
     return pd.DataFrame(), "Base de clientes não encontrada na pasta /data"
 
@@ -295,10 +271,10 @@ def summarize_client(row: pd.Series) -> Dict[str, Any]:
     iniciais = str(get_value(row, ["iniciais"], "".join([p[0] for p in nome.split()[:2]]).upper()))
     cliente_desde = str(get_value(row, ["cliente_desde"], "Mar/2023"))
 
-    score = get_value(row, ["score_credito", "score", "credit_score"], 720)
-    historico_pagamentos = str(get_value(row, ["historico_pagamentos", "payment_history"], "Pontual"))
+    score = get_value(row, ["score_credito", "score", "score_credito_sintetico", "credit_score"], 720)
+    historico_pagamentos = str(get_value(row, ["historico_pagamentos", "historico_pagamento", "payment_history"], "Pontual"))
     consultas = int(float(get_value(row, ["consultas_ultimo_ano", "consultas"], 2)))
-    emprestimos_anteriores = int(float(get_value(row, ["emprestimos_anteriores", "previous_loans"], 1)))
+    emprestimos_anteriores = int(float(get_value(row, ["emprestimos_anteriores", "qtd_emprestimos_ativos", "previous_loans"], 1)))
     ultimo_emprestimo = str(get_value(row, ["ultimo_emprestimo", "status_ultimo_emprestimo"], "Pago em dia"))
     idade = int(float(get_value(row, ["idade", "age"], 32)))
     renda = float(get_value(row, ["renda_mensal", "renda", "income"], 5400))
@@ -338,6 +314,31 @@ def score_class(score: int) -> str:
     return "bad"
 
 
+def out_of_scope_message(step: str) -> str:
+    mensagens = {
+        "nome": (
+            "Sou o CreditAI, seu educador financeiro, e meu foco é ajudar com simulações de crédito. "
+            "Para começar, preciso que você digite seu nome completo para localizar seu histórico."
+        ),
+        "valor": (
+            "Posso te ajudar com decisões financeiras e simulações de crédito. "
+            "Neste momento, preciso que você informe o valor do empréstimo que deseja simular."
+        ),
+        "prazo": (
+            "Entendi. Eu sou o CreditAI e posso te ajudar com essa simulação. "
+            "Agora preciso que você informe o prazo de pagamento em meses."
+        ),
+        "taxa": (
+            "Posso te orientar na simulação de crédito. "
+            "Para continuar, me informe a taxa de juros mensal que deseja considerar, por exemplo: 2,5."
+        ),
+    }
+    return mensagens.get(
+        step,
+        "Sou o CreditAI, seu educador financeiro. Posso te ajudar com simulações de crédito e decisões financeiras."
+    )
+
+
 def local_agent_response(context: Dict[str, Any]) -> str:
     nome = context["primeiro_nome"]
     risco_txt = context["risco"].lower()
@@ -352,6 +353,8 @@ def local_agent_response(context: Dict[str, Any]) -> str:
     return (
         f"Olá, {nome}! Analisei sua simulação. Para um crédito de {format_brl(context['valor'])} em {context['prazo']} meses, "
         f"com taxa de {context['taxa']:.2f}% ao mês, a parcela estimada fica em {format_brl(context['parcela'])}.\n\n"
+        f"O valor total estimado ao final do contrato será de {format_brl(context['valor_total_pago'])}, "
+        f"sendo aproximadamente {format_brl(context['juros_totais'])} em juros.\n\n"
         f"Isso representa {context['comprometimento']:.1%} da sua renda mensal, classificando a operação como risco {risco_txt}.\n\n"
         f"{context['mensagem_base']} {historico_extra}\n\n"
         f"Recomendação: {context['recomendacao']}"
@@ -362,6 +365,8 @@ def build_context(cliente: Dict[str, Any], valor: float, prazo: int, taxa: float
     renda = float(cliente["renda_mensal"])
     monthly_rate = taxa / 100
     parcela = pmt(monthly_rate, prazo, valor)
+    valor_total_pago = parcela * prazo
+    juros_totais = valor_total_pago - valor
     comprometimento = parcela / renda if renda else 0
     risco, mensagem_base = classify_risk(comprometimento, cliente["possui_default"], rules)
     recomendacao = recommendation_text(risco, renda)
@@ -381,6 +386,8 @@ Dados do Cliente:
 
 Resultados Calculados:
 - Valor da parcela: {format_brl(parcela)}
+- Valor total pago: {format_brl(valor_total_pago)}
+- Juros totais: {format_brl(juros_totais)}
 - Comprometimento da renda: {comprometimento:.1%}
 - Classificação de risco: {risco}
 - Explicação base: {mensagem_base}
@@ -396,6 +403,8 @@ Resultados Calculados:
         "prazo": prazo,
         "taxa": taxa,
         "parcela": parcela,
+        "valor_total_pago": valor_total_pago,
+        "juros_totais": juros_totais,
         "comprometimento": comprometimento,
         "risco": risco,
         "mensagem_base": mensagem_base,
@@ -453,31 +462,31 @@ def parse_step_input(step: str, text: str) -> Tuple[bool, Any, str]:
     try:
         if step == "nome":
             if len(raw.split()) < 2:
-                return False, None, "Digite seu nome completo para eu localizar seu histórico corretamente."
+                return False, None, out_of_scope_message(step)
             return True, raw, ""
 
         if step == "valor":
             value = float(cleaned)
             if value <= 0:
-                return False, None, "Informe um valor de empréstimo maior que zero."
+                return False, None, out_of_scope_message(step)
             return True, value, ""
 
         if step == "prazo":
             value = int(cleaned)
             if value < 3 or value > 120:
-                return False, None, "Informe um prazo válido entre 3 e 120 meses."
+                return False, None, out_of_scope_message(step)
             return True, value, ""
 
         if step == "taxa":
             value = float(cleaned)
             if value < 0 or value > 15:
-                return False, None, "Informe uma taxa mensal válida entre 0 e 15."
+                return False, None, out_of_scope_message(step)
             return True, value, ""
 
     except ValueError:
-        return False, None, f"Não consegui entender {FIELD_LABELS[step]}. Tente novamente."
+        return False, None, out_of_scope_message(step)
 
-    return False, None, "Entrada inválida."
+    return False, None, out_of_scope_message(step)
 
 
 def next_step(step: str) -> Optional[str]:
@@ -611,7 +620,12 @@ if user_input:
     valid, parsed_value, error_msg = parse_step_input(current_step, user_input)
 
     if not valid:
-        st.session_state.messages.append({"role": "assistant", "content": error_msg})
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": error_msg if error_msg else out_of_scope_message(current_step),
+            }
+        )
         st.rerun()
 
     if current_step == "nome":
@@ -702,6 +716,8 @@ if st.session_state.analise and st.session_state.cliente:
 
         results = [
             ("Valor da parcela", format_brl(analise["parcela"])),
+            ("Valor total pago", format_brl(analise["valor_total_pago"])),
+            ("Juros totais", format_brl(analise["juros_totais"])),
             ("Comprometimento da renda", f"{analise['comprometimento']:.1%}"),
             ("Classificação de risco", analise["risco"], risco_class),
             ("Explicação base", analise["mensagem_base"]),
