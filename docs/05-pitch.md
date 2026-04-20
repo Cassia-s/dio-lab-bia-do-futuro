@@ -93,4 +93,4 @@ O impacto da solução está diretamente ligado à **educação financeira**, aj
 
 ## 🔗 Link do Vídeo
 
-[Adicionar link do pitch aqui]
+[(https://www.loom.com/share/e08f179acb5e4aaea4c0c5f927d28f16)]
