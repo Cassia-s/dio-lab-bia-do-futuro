@@ -124,6 +124,9 @@ streamlit run creditai_app.py
 * Risco: Médio
 * Recomendação: Ajustar prazo ou valor
 
+<img width="875" height="285" alt="image" src="https://github.com/user-attachments/assets/416af1de-275f-4b6f-9518-c76ad702851c" />
+
+
 ---
 
 ## 🔒 Segurança e Anti-Alucinação
